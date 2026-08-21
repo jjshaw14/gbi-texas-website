@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/theme-atx.css" />
 </head>
 <body>
 
@@ -103,7 +104,7 @@
   <div class="hero-media" style="background-image:url('assets/images/atx/SummitIITwilight1170x432.jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="container">
-    <span class="eyebrow on-dark" style="color:#144b9c;">Commercial Electrical Contractor · Austin, TX</span>
+    <span class="eyebrow on-dark">Commercial Electrical Contractor · Austin, TX</span>
     <h1>Driven. Building.<br/>Excellence, Together.</h1>
     <p class="hero-sub">For over 30 years, GBI Austin's Master Electricians have delivered commercial electrical construction across the Austin market, new construction, tenant finish-outs, and critical facilities, self-performed under one accountable GBI team.</p>
     <div class="hero-actions">
@@ -113,23 +114,27 @@
   </div>
 </section>
 
-<!-- ============ STATS BAR ============ -->
-<section class="stats-bar tight">
+<!-- ============ STATS ============ -->
+<section class="stat-cards-section bg-offwhite">
   <div class="container">
-    <div class="stats-grid">
-      <div>
+    <div class="stat-cards">
+      <div class="stat-card">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></div>
         <div class="stat-num"><span data-count="30">0</span><span class="suf">+</span></div>
         <div class="stat-label">Years Serving Austin</div>
       </div>
-      <div>
+      <div class="stat-card">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M15 20c.2-2.4 1.8-4.4 4-5"/></svg></div>
         <div class="stat-num"><span data-count="100">0</span><span class="suf">+</span></div>
         <div class="stat-label">Yrs. Combined Leadership Experience</div>
       </div>
-      <div>
+      <div class="stat-card">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3h6v3H9z"/><path d="M8.5 13l2 2 4-4"/></svg></div>
         <div class="stat-num"><span data-count="100">0</span><span class="suf">+</span></div>
         <div class="stat-label">Projects Completed in Year One</div>
       </div>
-      <div>
+      <div class="stat-card">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg></div>
         <div class="stat-num"><span data-count="20">0</span><span class="suf">+</span></div>
         <div class="stat-label">Avg. Yrs. Experience, Senior Managers</div>
       </div>
@@ -293,15 +298,17 @@
 </section>
 
 <!-- ============ FINAL CTA ============ -->
-<section class="final-cta">
-  <div class="container">
-    <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+<section class="cta-split">
+  <div class="cta-split-text">
+    <span class="eyebrow on-dark">Talk to the Trade</span>
+    <h2>Get a Straight Answer From a Licensed Electrician.</h2>
+    <p class="hero-sub">No call centers, no runaround. Talk directly with the Master Electricians who'll actually run your job.</p>
     <div class="actions">
-      <a class="btn btn-lime" href="contact.php">Start a Project <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="contact.php">Contact Us <span class="arr">→</span></a>
+      <a class="btn btn-lime" href="contact.php">Get a Quote <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="tel:5126432015">(512) 643-2015</a>
     </div>
   </div>
+  <div class="cta-split-photo" style="background-image:url('assets/images/atx/projects/informatica/InformaticaPic21210wx800h-1024x678.png')"></div>
 </section>
 
 <!-- ============ FOOTER ============ -->

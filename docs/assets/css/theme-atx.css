@@ -1,0 +1,159 @@
+/* ============================================================
+   GBI Austin — distinct visual theme (prototype)
+   Loaded AFTER styles.css. Keeps the corporate site's original
+   navy/blue/lime palette (per client direction — copper/amber was
+   too big a departure from the brand), but still differentiates
+   GBI Austin through shape (rounded, not sharp), motion (scale
+   hover instead of lift), a reworked stats section and final CTA,
+   a distinct heading typeface, and a faint circuit-trace texture
+   as a wink at "electrical."
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap');
+
+:root {
+  /* ---- Original corporate blue/navy/lime palette, unchanged ---- */
+  --gbi-blue:     #2C5DA8;
+  --gbi-navy:     #091933;
+  --gbi-deep:     #183B70;
+  --gbi-mid:      #517DC1;
+  --gbi-tint:     #DEE8F7;
+  --gbi-offwhite: #EAEFF7;
+  --gbi-lime:     #A8C820;
+
+  --rule:         #d6deec;
+
+  /* ---- Rounded, not sharp ---- */
+  --radius:       12px;      /* was 2px "industrial = sharp corners" */
+}
+
+/* Headings get a distinct display face — Poppins instead of Inter */
+h1, h2, h3, h4, .brand {
+  font-family: 'Poppins', var(--font-sans);
+}
+
+/* True near-black footer, one shade darker than the navy header
+   (this one was the client's own original ask, independent of the
+   copper/blue color debate — kept). */
+.site-footer { background: #0A0A0C; }
+
+/* ---------- Rounded shapes everywhere ---------- */
+.btn, .nav-cta {
+  border-radius: var(--radius-pill);
+  transition: all .2s ease, transform .2s ease;
+}
+.btn:hover { transform: translateY(-2px) scale(1.03); box-shadow: var(--shadow-card-hover); }
+.nav-cta:hover { transform: scale(1.05); }
+
+.tile,
+.project-card,
+.photo-tile,
+.office,
+.cap-card,
+.value-card,
+.feature,
+.acronym-card,
+.bio-card,
+.cs-photo,
+.cs-gallery img,
+.gallery-tile,
+.cert-grid .cell {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.field input, .field textarea, .field select {
+  border-radius: 8px;
+}
+
+.brand-logo { border-radius: 0; } /* logo stays untouched */
+
+/* ---------- Hover: scale instead of lift ---------- */
+.tile { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.tile:hover {
+  transform: scale(1.02);
+  border-color: var(--gbi-blue);
+}
+.project-card, .photo-tile {
+  transition: transform .3s ease;
+}
+.project-card:hover, .photo-tile:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- Stat cards (replaces the corporate dark stat-band) ---------- */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: left;
+}
+.stat-icon {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--gbi-tint);
+  color: var(--gbi-blue);
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+}
+.stat-icon svg { width: 22px; height: 22px; }
+.stat-card .stat-num { color: var(--ink); }
+.stat-card .stat-num .suf { color: var(--gbi-blue); }
+.stat-card .stat-label { color: var(--muted); }
+@media (max-width: 880px) {
+  .stat-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .stat-cards { grid-template-columns: 1fr; }
+}
+
+/* ---------- Split final CTA (replaces the corporate full-bleed photo band) ---------- */
+.cta-split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  min-height: 460px;
+}
+.cta-split-text {
+  background-color: var(--gbi-navy);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%232C5DA8' stroke-width='1' opacity='0.18'%3E%3Cpath d='M0 60 H40 M40 60 V20 M40 20 H90 M90 20 V90 M90 90 H120'/%3E%3Ccircle cx='40' cy='60' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='40' cy='20' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='90' cy='20' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='90' cy='90' r='2.5' fill='%232C5DA8'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 120px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  padding-right: 64px;
+  /* Align the text's left edge with .container's inset (max-width:1440px,
+     28px gutter) instead of an arbitrary fixed padding, so it doesn't
+     drift out of alignment with every other section's content on wide
+     screens while this section itself stays full-bleed. */
+  padding-left: max(28px, calc((100vw - 1440px) / 2 + 28px));
+}
+.cta-split-text h2 { color: var(--white); max-width: 18ch; margin: 14px 0 16px; font-size: clamp(1.7rem, 2.8vw, 2.4rem); }
+.cta-split-text .hero-sub { color: rgba(255,255,255,.78); max-width: 440px; margin: 0 0 32px; }
+.cta-split-text .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.cta-split-photo {
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 880px) {
+  .cta-split { grid-template-columns: 1fr; }
+  .cta-split-photo { min-height: 260px; order: -1; }
+  .cta-split-text { padding: 56px 32px; }
+}
+
+/* ---------- Subtle circuit-trace texture on off-white sections ---------- */
+.bg-offwhite {
+  background-color: var(--gbi-offwhite);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%232C5DA8' stroke-width='1' opacity='0.09'%3E%3Cpath d='M0 60 H40 M40 60 V20 M40 20 H90 M90 20 V90 M90 90 H120'/%3E%3Ccircle cx='40' cy='60' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='40' cy='20' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='90' cy='20' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='90' cy='90' r='2.5' fill='%232C5DA8'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 120px 120px;
+}
