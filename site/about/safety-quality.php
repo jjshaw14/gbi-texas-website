@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Safety &amp; Quality, Great Basin Industrial Austin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+
+<header class="site-header is-dark">
+  <div class="container nav-row">
+    <a class="brand" href="../index.php" aria-label="Great Basin Industrial Austin, Home">
+      <img class="brand-logo" src="../assets/images/atx/GBIATXWhitecopy.png" alt="Great Basin Industrial Austin" />
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <div class="nav-item has-dropdown">
+        <a href="our-story.php" class="nav-parent" aria-haspopup="true" aria-expanded="false">About <span class="caret">▾</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="our-story.php" class="dd-overview" role="menuitem"><strong>Our Story</strong><span>Founded 2015. 30+ years serving the Austin electrical market.</span></a>
+          <a href="leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
+          <a href="sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
+          <a href="experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
+          <a href="locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <a href="../services/index.php" class="nav-parent" aria-haspopup="true" aria-expanded="false">Services <span class="caret">▾</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="../services/index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
+          <a href="../services/new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
+          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
+          <a href="../services/tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <a href="../projects/index.php" class="nav-parent" aria-haspopup="true" aria-expanded="false">Projects <span class="caret">▾</span></a>
+        <div class="nav-dropdown" role="menu">
+          <a href="../projects/index.php" class="dd-overview" role="menuitem"><strong>All Projects</strong><span>Recent work across the Austin market.</span></a>
+          <a href="../projects/index.php#new-construction" role="menuitem"><strong>New Construction</strong><span>Ground-up shell buildings and tenant finish projects.</span></a>
+          <a href="../projects/index.php#commercial-construction" role="menuitem"><strong>Commercial Construction</strong><span>Retail, hospitality, and tenant build-outs.</span></a>
+          <a href="../projects/index.php#critical-facilities" role="menuitem"><strong>Critical Facilities</strong><span>Data centers, medical imaging, and critical power.</span></a>
+        </div>
+      </div>
+      <a href="safety-quality.php" class="is-active">Safety &amp; Quality</a>
+      <a href="../careers.php">Careers</a>
+    </nav>
+    <div class="nav-spacer"></div>
+    <a class="nav-cta" href="../contact.php">Contact Us →</a>
+    <button class="nav-mobile" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero hero-sm">
+  <div class="hero-media" style="background-image:url('../assets/images/hero-safety.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="crumbs"><a href="../index.php">Home</a><span>/</span>Safety &amp; Quality</div>
+    <span class="eyebrow on-dark">Safety &amp; Quality</span>
+    <h1>Safety Is Not a Compliance Exercise.</h1>
+    <p class="hero-sub">Great Basin Industrial embraces a philosophy of health and safety excellence. We believe every injury is preventable, and we expect every GBI employee and business partner to fully embrace our Zero Harm culture.</p>
+  </div>
+</section>
+
+<section class="bg-offwhite">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The I-SHARE System</span>
+      <h2>A Daily Habit. Not a Checklist.</h2>
+      <p class="lead">I-SHARE is not a training program. It is a daily operating habit: Stop, Help, Analyze, Recommend, Encourage.</p>
+    </div>
+    <div class="acronym-grid">
+      <div class="acronym-card">
+        <div class="letter">S</div>
+        <div class="word">STOP</div>
+        <p>When something doesn't look right, you stop. You don't keep moving because it's inconvenient.</p>
+      </div>
+      <div class="acronym-card">
+        <div class="letter">H</div>
+        <div class="word">HELP</div>
+        <p>You assess the situation and identify what's needed.</p>
+      </div>
+      <div class="acronym-card">
+        <div class="letter">A</div>
+        <div class="word">ANALYZE</div>
+        <p>You look at the full picture before acting.</p>
+      </div>
+      <div class="acronym-card">
+        <div class="letter">R</div>
+        <div class="word">RECOMMEND</div>
+        <p>You speak up with a solution, not just a problem.</p>
+      </div>
+      <div class="acronym-card">
+        <div class="letter">E</div>
+        <div class="word">ENCOURAGE</div>
+        <p>You recognize safe behavior. You reinforce what good looks like.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Safety Principles</span>
+      <h2>What We Believe.</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card"><div class="marker"></div><h3>All Injuries Preventable</h3><p>We do not accept the idea that injuries are part of the job. We plan accordingly, on every job site.</p></div>
+      <div class="value-card"><div class="marker"></div><h3>A Condition of Employment</h3><p>Every person on a GBI Austin site understands this before they start. Safety is not negotiable.</p></div>
+      <div class="value-card"><div class="marker"></div><h3>Leadership Provides Resources</h3><p>Management is accountable for providing the leadership and resources a safe workplace requires.</p></div>
+      <div class="value-card"><div class="marker"></div><h3>Employees Own Safety</h3><p>Every electrician on our crews is empowered, and expected, to own safety on their task.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-offwhite">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Quality</span>
+      <h2>Built Right the First Time.</h2>
+      <p class="lead">We pride ourselves on the quality of our work and the repeat business we consistently earn. GBI Austin performs every job under strict quality assurance and quality control measures, from a single tenant finish-out to a full critical-facility build.</p>
+    </div>
+    <p>Our licensed Master Electricians and journeymen are trained and code-tested on every job. Every install is inspected against the same standard, whether it's a 5,000 sq. ft. retail finish-out or a 500,000 sq. ft. shell building.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Certifications &amp; Affiliations</span>
+      <h2>The Credentials Behind the Work.</h2>
+      <p class="lead">GBI Austin is a licensed Texas electrical contractor and a pre-qualified contractor through leading third-party safety networks.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cell cell--text"><span class="name">TECL #30911</span><span class="sub">Texas Licensed Electrical Contractor</span></div>
+      <div class="cell"><img src="../assets/images/cert-isnetworld.png" alt="ISNetworld" /></div>
+      <div class="cell"><img src="../assets/images/cert-browz.png" alt="Browz Network Member" /></div>
+      <div class="cell cell--text"><span class="name">NFPA 70E</span><span class="sub">Arc Flash &amp; Electrical Safety</span></div>
+      <div class="cell cell--text"><span class="name">CenTex IEC</span><span class="sub">Apprenticeship Sponsor</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <span class="eyebrow on-dark">Ready to Build Something?</span>
+    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+    <div class="actions">
+      <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>
+</body>
+</html>

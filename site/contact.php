@@ -42,9 +42,9 @@
         <a href="projects/index.php" class="nav-parent " aria-haspopup="true" aria-expanded="false">Projects <span class="caret">▾</span></a>
         <div class="nav-dropdown" role="menu">
           <a href="projects/index.php" class="dd-overview" role="menuitem"><strong>All Projects</strong><span>Recent work across the Austin market.</span></a>
-          <a href="projects/index.php" role="menuitem"><strong>New Construction</strong><span>Ground-up shell buildings and tenant finish projects.</span></a>
-          <a href="projects/index.php" role="menuitem"><strong>Commercial Construction</strong><span>Retail, hospitality, and tenant build-outs.</span></a>
-          <a href="projects/index.php" role="menuitem"><strong>Critical Facilities</strong><span>Data centers, medical imaging, and critical power.</span></a>
+          <a href="projects/index.php#new-construction" role="menuitem"><strong>New Construction</strong><span>Ground-up shell buildings and tenant finish projects.</span></a>
+          <a href="projects/index.php#commercial-construction" role="menuitem"><strong>Commercial Construction</strong><span>Retail, hospitality, and tenant build-outs.</span></a>
+          <a href="projects/index.php#critical-facilities" role="menuitem"><strong>Critical Facilities</strong><span>Data centers, medical imaging, and critical power.</span></a>
         </div>
       </div>
 

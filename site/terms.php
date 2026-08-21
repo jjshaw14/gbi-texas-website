@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Terms & Conditions, Great Basin Industrial</title>
+<title>Terms & Conditions, Great Basin Industrial Austin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,46 +13,43 @@
 
 <header class="site-header is-dark">
   <div class="container nav-row">
-    <a class="brand" href="index.php" aria-label="Great Basin Industrial, Home">
-      <img class="brand-logo" src="assets/images/gbi-logo.png" alt="Great Basin Industrial" />
+    <a class="brand" href="index.php" aria-label="Great Basin Industrial Austin, Home">
+      <img class="brand-logo" src="assets/images/atx/GBIATXWhitecopy.png" alt="Great Basin Industrial Austin" />
     </a>
     <nav class="primary-nav" aria-label="Primary">
       <div class="nav-item has-dropdown">
-        <a href="about/our-story.php" class="nav-parent " aria-haspopup="true" aria-expanded="false">About <span class="caret">▾</span></a>
+        <a href="about/our-story.php" class="nav-parent" aria-haspopup="true" aria-expanded="false">About <span class="caret">▾</span></a>
         <div class="nav-dropdown" role="menu">
-          <a href="about/our-story.php" class="dd-overview" role="menuitem"><strong>Our Story</strong><span>Built by builders. How GBI started and where it's going.</span></a>
-          <a href="about/leadership.php" role="menuitem"><strong>Management Team</strong><span>A company built and run by builders. Meet the leaders.</span></a>
-          <a href="about/safety.php" role="menuitem"><strong>Safety</strong><span>GBI-SHARE &mdash; safety isn't a checkbox, it's a daily operating habit.</span></a>
-          <a href="about/quality.php" role="menuitem"><strong>Quality</strong><span>GBI-CHECK &mdash; built right the first time. ASME, API, AWWA, AISC.</span></a>
-          <a href="services/turnkey-delivery.php" role="menuitem"><strong>Turnkey Delivery</strong><span>Full-scope project execution, coordinating all trades as needed from planning through startup.</span></a>
-          <a href="services/preconstruction-engineering.php" role="menuitem"><strong>Preconstruction Engineering</strong><span>In-house engineering: critical lift plans, erection drawings, design-build.</span></a>
+          <a href="about/our-story.php" class="dd-overview" role="menuitem"><strong>Our Story</strong><span>Founded 2015. 30+ years serving the Austin electrical market.</span></a>
+          <a href="about/leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
+          <a href="about/sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
+          <a href="about/experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
+          <a href="about/locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
         </div>
       </div>
 
       <div class="nav-item has-dropdown">
-        <a href="services/index.php" class="nav-parent " aria-haspopup="true" aria-expanded="false">Services <span class="caret">▾</span></a>
+        <a href="services/index.php" class="nav-parent" aria-haspopup="true" aria-expanded="false">Services <span class="caret">▾</span></a>
         <div class="nav-dropdown" role="menu">
-          <a href="services/index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Four self-performed disciplines under one accountable contractor.</span></a>
-          <a href="services/tanks-plate-steel.php" role="menuitem"><strong>Tanks &amp; Plate Steel</strong><span>API & AWWA tanks, clarifiers, scrubbers, stacks. Shop and field fabrication.</span></a>
-          <a href="services/structural-mechanical-piping.php" role="menuitem"><strong>Structural, Mechanical &amp; Piping</strong><span>Industrial structures, process piping, mechanical installation.</span></a>
-          <a href="services/instrumentation-electrical.php" role="menuitem"><strong>Instrumentation &amp; Electrical</strong><span>I&amp;E construction, MCC buildings, controls, data centers.</span></a>
-          <a href="services/railroad.php" role="menuitem"><strong>Railroad</strong><span>Industrial rail construction, spur installation, derailment response.</span></a>
+          <a href="services/index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
+          <a href="services/new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
+          <a href="services/critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
+          <a href="services/tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
         </div>
       </div>
 
       <div class="nav-item has-dropdown">
-        <a href="industries/index.php" class="nav-parent " aria-haspopup="true" aria-expanded="false">Industries <span class="caret">▾</span></a>
+        <a href="projects/index.php" class="nav-parent" aria-haspopup="true" aria-expanded="false">Projects <span class="caret">▾</span></a>
         <div class="nav-dropdown" role="menu">
-          <a href="industries/index.php" class="dd-overview" role="menuitem"><strong>All Industries</strong><span>Deep experience across the industries that power America.</span></a>
-          <a href="industries/mining.php" role="menuitem"><strong>Mining &amp; Minerals</strong><span>Built for the most demanding environments in industrial construction.</span></a>
-          <a href="industries/power-renewables.php" role="menuitem"><strong>Power &amp; Renewables</strong><span>Carbon capture, renewables, and the next generation of energy infrastructure.</span></a>
-          <a href="industries/oil-gas.php" role="menuitem"><strong>Oil, Gas &amp; Chemicals</strong><span>Maximum-consequence environments. Process safety as the operating standard.</span></a>
-          <a href="industries/water-wastewater.php" role="menuitem"><strong>Water &amp; Wastewater</strong><span>The work communities depend on. Built to last.</span></a>
+          <a href="projects/index.php" class="dd-overview" role="menuitem"><strong>All Projects</strong><span>Recent work across the Austin market.</span></a>
+          <a href="projects/index.php#new-construction" role="menuitem"><strong>New Construction</strong><span>Ground-up shell buildings and tenant finish projects.</span></a>
+          <a href="projects/index.php#commercial-construction" role="menuitem"><strong>Commercial Construction</strong><span>Retail, hospitality, and tenant build-outs.</span></a>
+          <a href="projects/index.php#critical-facilities" role="menuitem"><strong>Critical Facilities</strong><span>Data centers, medical imaging, and critical power.</span></a>
         </div>
       </div>
 
-      <a href="projects/index.php" class="">Projects</a>
-      <a href="careers.php" class="">Careers</a>
+      <a href="about/safety-quality.php">Safety &amp; Quality</a>
+      <a href="careers.php">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
     <a class="nav-cta" href="contact.php">Contact Us &rarr;</a>

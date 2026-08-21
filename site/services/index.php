@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Services, Great Basin Industrial</title>
+<title>Services, Great Basin Industrial Austin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,46 +13,40 @@
 
 <header class="site-header is-dark">
   <div class="container nav-row">
-    <a class="brand" href="../index.php" aria-label="Great Basin Industrial, Home">
-      <img class="brand-logo" src="../assets/images/gbi-logo.png" alt="Great Basin Industrial" />
+    <a class="brand" href="../index.php" aria-label="Great Basin Industrial Austin, Home">
+      <img class="brand-logo" src="../assets/images/atx/GBIATXWhitecopy.png" alt="Great Basin Industrial Austin" />
     </a>
     <nav class="primary-nav" aria-label="Primary">
       <div class="nav-item has-dropdown">
-        <a href="../about/our-story.php" class="nav-parent " aria-haspopup="true" aria-expanded="false">About <span class="caret">▾</span></a>
+        <a href="../about/our-story.php" class="nav-parent" aria-haspopup="true" aria-expanded="false">About <span class="caret">▾</span></a>
         <div class="nav-dropdown" role="menu">
-          <a href="../about/our-story.php" class="dd-overview" role="menuitem"><strong>Our Story</strong><span>Built by builders. How GBI started and where it's going.</span></a>
-          <a href="../about/leadership.php" role="menuitem"><strong>Management Team</strong><span>A company built and run by builders. Meet the leaders.</span></a>
-          <a href="../about/safety.php" role="menuitem"><strong>Safety</strong><span>GBI-SHARE — safety isn't a checkbox, it's a daily operating habit.</span></a>
-          <a href="../about/quality.php" role="menuitem"><strong>Quality</strong><span>GBI-CHECK — built right the first time. ASME, API, AWWA, AISC.</span></a>
-          <a href="turnkey-delivery.php" role="menuitem"><strong>Turnkey Delivery</strong><span>Full-scope project execution, coordinating all trades as needed from planning through startup.</span></a>
-          <a href="preconstruction-engineering.php" role="menuitem"><strong>Preconstruction Engineering</strong><span>In-house engineering: critical lift plans, erection drawings, design-build.</span></a>
+          <a href="../about/our-story.php" class="dd-overview" role="menuitem"><strong>Our Story</strong><span>Founded 2015. 30+ years serving the Austin electrical market.</span></a>
+          <a href="../about/leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
+          <a href="../about/sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
+          <a href="../about/experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
+          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
         </div>
       </div>
-
       <div class="nav-item has-dropdown">
         <a href="index.php" class="nav-parent is-active" aria-haspopup="true" aria-expanded="false">Services <span class="caret">▾</span></a>
         <div class="nav-dropdown" role="menu">
-          <a href="index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Four self-performed disciplines under one accountable contractor.</span></a>
-          <a href="tanks-plate-steel.php" role="menuitem"><strong>Tanks &amp; Plate Steel</strong><span>API & AWWA tanks, clarifiers, scrubbers, stacks. Shop and field fabrication.</span></a>
-          <a href="structural-mechanical-piping.php" role="menuitem"><strong>Structural, Mechanical &amp; Piping</strong><span>Industrial structures, process piping, mechanical installation.</span></a>
-          <a href="instrumentation-electrical.php" role="menuitem"><strong>Instrumentation &amp; Electrical</strong><span>I&amp;E construction, MCC buildings, controls, data centers.</span></a>
-          <a href="railroad.php" role="menuitem"><strong>Railroad</strong><span>Industrial rail construction, spur installation, derailment response.</span></a>
+          <a href="index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
+          <a href="new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
+          <a href="critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
+          <a href="tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
         </div>
       </div>
-
       <div class="nav-item has-dropdown">
-        <a href="../industries/index.php" class="nav-parent " aria-haspopup="true" aria-expanded="false">Industries <span class="caret">▾</span></a>
+        <a href="../projects/index.php" class="nav-parent" aria-haspopup="true" aria-expanded="false">Projects <span class="caret">▾</span></a>
         <div class="nav-dropdown" role="menu">
-          <a href="../industries/index.php" class="dd-overview" role="menuitem"><strong>All Industries</strong><span>Deep experience across the industries that power America.</span></a>
-          <a href="../industries/mining.php" role="menuitem"><strong>Mining &amp; Minerals</strong><span>Built for the most demanding environments in industrial construction.</span></a>
-          <a href="../industries/power-renewables.php" role="menuitem"><strong>Power &amp; Renewables</strong><span>Carbon capture, renewables, and the next generation of energy infrastructure.</span></a>
-          <a href="../industries/oil-gas.php" role="menuitem"><strong>Oil, Gas &amp; Chemicals</strong><span>Maximum-consequence environments. Process safety as the operating standard.</span></a>
-          <a href="../industries/water-wastewater.php" role="menuitem"><strong>Water &amp; Wastewater</strong><span>The work communities depend on. Built to last.</span></a>
+          <a href="../projects/index.php" class="dd-overview" role="menuitem"><strong>All Projects</strong><span>Recent work across the Austin market.</span></a>
+          <a href="../projects/index.php#new-construction" role="menuitem"><strong>New Construction</strong><span>Ground-up shell buildings and tenant finish projects.</span></a>
+          <a href="../projects/index.php#commercial-construction" role="menuitem"><strong>Commercial Construction</strong><span>Retail, hospitality, and tenant build-outs.</span></a>
+          <a href="../projects/index.php#critical-facilities" role="menuitem"><strong>Critical Facilities</strong><span>Data centers, medical imaging, and critical power.</span></a>
         </div>
       </div>
-
-      <a href="../projects/index.php" class="">Projects</a>
-      <a href="../careers.php" class="">Careers</a>
+      <a href="../about/safety-quality.php">Safety &amp; Quality</a>
+      <a href="../careers.php">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
     <a class="nav-cta" href="../contact.php">Contact Us →</a>
@@ -61,17 +55,13 @@
 </header>
 
 <section class="hero hero-sm">
-  <div class="hero-media" style="background-image:url('../assets/images/hero-services.jpg')"></div>
+  <div class="hero-media" style="background-image:url('../assets/images/atx/SummitIITwilight1170x432.jpg')"></div>
   <div class="hero-overlay"></div>
-  <div class="photo-direction">
-    <strong>Photo · Wide-angle multi-trade job site</strong>
-    <span>Wide-angle job site showing multiple trades working, structural steel being erected, pipe racks, field crew. Communicates 'we do it all, on one site.'</span>
-  </div>
   <div class="container">
     <div class="crumbs"><a href="../index.php">Home</a><span>/</span><a href="index.php">Services</a><span>/</span>Services Overview</div>
     <span class="eyebrow on-dark">Services Overview</span>
-    <h1>One Contractor. Multiple Trades.</h1>
-    <p class="hero-sub">GBI self-performs across the full scope of industrial construction, structural, mechanical, electrical, tanks, rail, and fabrication, under a single project team with a single point of accountability.</p>
+    <h1>One Contractor. Every Electrical Trade.</h1>
+    <p class="hero-sub">GBI Austin self-performs commercial electrical construction, new construction, critical facilities, and tenant finish-out, under one Master Electrician-led team with a single point of accountability.</p>
   </div>
 </section>
 
@@ -79,36 +69,29 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">What We Build</span>
-      <h2>One Accountable Contractor. Four Self-Performed Disciplines.</h2>
-      <p class="lead">Most industrial contractors do one or two things well. When a project requires more, the coordination burden falls on the owner, managing interfaces, resolving gaps, and absorbing the risk between contractors.</p>
-      <p class="lead">GBI is built differently. We self-perform across the full scope of industrial construction, structural, mechanical, electrical, tanks, rail, and fabrication, under a single project team with a single point of accountability. When GBI is on your job site, the left hand knows what the right hand is doing.</p>
+      <h2>One Accountable Contractor. Full Electrical Scope.</h2>
+      <p class="lead">A lot of electrical contractors specialize narrowly, new construction only, or finish-out only. GBI Austin self-performs across the full commercial electrical scope: ground-up shell buildings, tenant finish-out, and critical facilities work, so there's no gap between who built it and who finishes it.</p>
     </div>
-    <div class="tile-grid tile-grid--4col">
-      <a class="tile" href="tanks-plate-steel.php">
-        <div class="tile-icon"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 14 C6 10 12 8 20 8 C28 8 34 10 34 14 L34 34 L6 34 Z M6 21 L34 21 L34 24 L6 24 Z"/></svg></div>
-        <h3>Tanks & Plate Steel</h3>
-        <p>API 650/653 atmospheric storage tanks, elevated clarifiers, digesters, scrubbers, and stacks. Our founding craft. The standard everything else is built on.</p>
+    <div class="tile-grid">
+      <a class="tile" href="new-construction.php">
+        <div class="tile-icon"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><rect x="6" y="16" width="9" height="20"/><rect x="17" y="6" width="11" height="30"/><rect x="30" y="20" width="6" height="16"/></svg></div>
+        <h3>New Construction</h3>
+        <p>Shell buildings, tilt-wall construction, data centers, auto dealerships, and free-standing medical buildings. Complete electrical site packages from the ground up.</p>
         <div class="tile-link"><span>Learn More</span><span>→</span></div>
       </a>
-      <a class="tile" href="structural-mechanical-piping.php">
-        <div class="tile-icon"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><rect x="2" y="26" width="12" height="6"/><rect x="26" y="26" width="12" height="6"/><rect x="10" y="22" width="4" height="14"/><rect x="26" y="22" width="4" height="14"/><rect x="14" y="22" width="12" height="14"/><rect x="18" y="10" width="4" height="14"/><rect x="10" y="8" width="20" height="4"/><rect x="16" y="3" width="8" height="6"/></svg></div>
-        <h3>Structural, Mechanical & Piping (SMP)</h3>
-        <p>Industrial structural steel, equipment installation, process piping, and structural concrete. From erection to commissioning.</p>
+      <a class="tile" href="critical-facilities.php">
+        <div class="tile-icon"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="28" height="7"/><rect x="6" y="16.5" width="28" height="7"/><rect x="6" y="27" width="28" height="7"/></svg></div>
+        <h3>Critical Facilities &amp; Data Centers</h3>
+        <p>PDUs, UPS system upgrades, generator system replacements, and power for surgery centers, imaging centers, and technology labs.</p>
         <div class="tile-link"><span>Learn More</span><span>→</span></div>
       </a>
-      <a class="tile" href="instrumentation-electrical.php">
-        <div class="tile-icon"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><polygon points="24,4 8,22 18,22 16,36 32,18 22,18 24,4"/></svg></div>
-        <h3>Instrumentation & Electrical</h3>
-        <p>I&E construction, MCC buildings, control panels, cable tray, conduit, and instrumentation for industrial facilities and processes.</p>
+      <a class="tile" href="tenant-finish-out.php">
+        <div class="tile-icon"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 4c-6.6 0-12 5.4-12 12 0 4.6 2.6 8.6 6.4 10.6L14 30h12l-.4-3.4C29.4 24.6 32 20.6 32 16c0-6.6-5.4-12-12-12z"/><rect x="15" y="32" width="10" height="3"/><rect x="16" y="36" width="8" height="2"/></svg></div>
+        <h3>Commercial Tenant Finish-Out</h3>
+        <p>High-end tenant finish-outs, manufacturing facilities, higher education, hotels and suites, and multi-family apartments.</p>
         <div class="tile-link"><span>Learn More</span><span>→</span></div>
       </a>
-      <a class="tile" href="railroad.php">
-        <div class="tile-icon"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="3"/><line x1="11" y1="11" x2="29" y2="29" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><line x1="29" y1="11" x2="11" y2="29" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><text x="8" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="900">R</text><text x="32" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="900">R</text></svg></div>
-        <h3>Railroad</h3>
-        <p>Industrial rail spur construction, tie replacement, track maintenance, and emergency derailment response for facilities across the country.</p>
-        <div class="tile-link"><span>Learn More</span><span>→</span></div>
-      </a>
-      </div>
+    </div>
   </div>
 </section>
 
@@ -116,11 +99,11 @@
   <div class="container" style="max-width:920px;">
     <div class="section-head">
       <span class="eyebrow">Self-Perform Advantage</span>
-      <h2>Why Self-Performance Matters.</h2>
+      <h2>Why One Electrical Contractor Matters.</h2>
     </div>
-    <p>Every trade GBI self-performs is one less interface you manage. When the same company runs structural and mechanical and electrical and tanks, there is no gap between scopes, no finger-pointing on schedule, no ambiguity on responsibility. That is not theoretical. It is what our 75% repeat customer rate demonstrates, project after project.</p>
+    <p>When the same crew handles new construction, tenant finish-out, and critical facilities work, there's no gap between scopes and no finger-pointing on schedule. GBI Austin's estimators worked the field first, so every bid reflects what's actually practical to install, not just what the drawings show.</p>
     <div class="inline-pullquote">
-      <p>&lsquo;We build it right. Safely. Completely.&rsquo; That is the GBI promise. Not a slogan, a standard we hold ourselves to on every project we take.</p>
+      <p>&lsquo;We pride ourselves on the quality of our work and the repeat business we consistently earn.&rsquo; That's not a slogan. It's a standard we hold ourselves to on every job.</p>
     </div>
   </div>
 </section>
@@ -128,7 +111,7 @@
 <section class="final-cta">
   <div class="container">
     <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
+    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
     <div class="actions">
       <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
