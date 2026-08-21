@@ -13,53 +13,52 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="/index.php" aria-label="Great Basin Industrial, Home">
-          <img class="brand-logo" src="/assets/images/gbi-logo.png" alt="Great Basin Industrial" style="height:48px;" />
+        <a class="brand" href="/index.php" aria-label="Great Basin Industrial Austin, Home">
+          <img class="brand-logo" src="/assets/images/atx/GBIATXWhitecopy.png" alt="Great Basin Industrial Austin" style="height:48px;" />
         </a>
-        <p>Integrated industrial construction across the western United States. Tanks, SMP, I&amp;E, railroad, and fabrication, self-performed under one accountable partner.</p>
+        <p>Commercial electrical contractor serving the Austin, TX market for over 30 years. New construction, tenant finish-out, and critical facilities electrical work, self-performed by licensed Master Electricians.</p>
       </div>
       <div>
         <h5>About</h5>
         <ul>
           <li><a href="/about/our-story.php">Our Story</a></li>
           <li><a href="/about/leadership.php">Management Team</a></li>
-          <li><a href="/about/safety.php">Safety</a></li>
-          <li><a href="/about/quality.php">Quality</a></li>
+          <li><a href="/about/sales.php">Sales</a></li>
+          <li><a href="/about/experience.php">Experience</a></li>
+          <li><a href="/about/locations.php">Locations</a></li>
         </ul>
       </div>
       <div>
         <h5>Services</h5>
         <ul>
-          <li><a href="/services/tanks-plate-steel.php">Tanks &amp; Plate Steel</a></li>
-          <li><a href="/services/structural-mechanical-piping.php">SMP</a></li>
-          <li><a href="/services/instrumentation-electrical.php">I&amp;E</a></li>
-          <li><a href="/services/railroad.php">Railroad</a></li>
+          <li><a href="/services/new-construction.php">New Construction</a></li>
+          <li><a href="/services/critical-facilities.php">Critical Facilities &amp; Data Centers</a></li>
+          <li><a href="/services/tenant-finish-out.php">Commercial Tenant Finish-Out</a></li>
         </ul>
       </div>
       <div>
-        <h5>Industries</h5>
+        <h5>Projects</h5>
         <ul>
-          <li><a href="/industries/mining.php">Mining &amp; Minerals</a></li>
-          <li><a href="/industries/power-renewables.php">Power &amp; Renewables</a></li>
-          <li><a href="/industries/oil-gas.php">Oil, Gas &amp; Chemicals</a></li>
-          <li><a href="/industries/water-wastewater.php">Water &amp; Wastewater</a></li>
+          <li><a href="/projects/index.php">New Construction</a></li>
+          <li><a href="/projects/index.php">Commercial Construction</a></li>
+          <li><a href="/projects/index.php">Critical Facilities</a></li>
         </ul>
       </div>
       <div>
         <h5>Connect</h5>
         <ul>
-          <li><a href="/projects/index.php">Projects</a></li>
+          <li><a href="/about/safety-quality.php">Safety &amp; Quality</a></li>
           <li><a href="/careers.php">Careers</a></li>
           <li><a href="/contact.php">Contact</a></li>
-          <li><a href="/resources/literature-press.php">Literature &amp; Press</a></li>
           <li><a href="#">LinkedIn &#8599;</a></li>
         </ul>
       </div>
     </div>
+    <p style="font-size:11px; color:rgba(255,255,255,.5); margin:0 0 16px; max-width:70ch;">TECL #30911 &mdash; Regulated by the Texas Department of Licensing and Regulation, P.O. Box 12157, Austin, TX 78711. Toll Free: 800-803-9202 &middot; Local: 512-463-6599 &middot; <a href="https://www.tdlr.texas.gov" target="_blank" rel="noopener" style="color:rgba(255,255,255,.6);">www.tdlr.texas.gov</a></p>
     <div class="footer-bottom">
-      <div>&copy; 2026 Great Basin Industrial &middot; 1284 Flint Meadow Dr, Kaysville, UT 84037 &middot; (801) 543-2100</div>
+      <div>&copy; 2026 GBI Austin &middot; Great Basin Industrial &middot; 16813 Calply Dr, Round Rock, TX 78664 &middot; (512) 643-2015</div>
       <div class="legal">
-        <a href="https://www.motivhealth.com/machinereadablefiles/" target="_blank" rel="noopener">ACA &#8599;</a><a href="/terms.php">Terms</a>
+        <a href="https://www.tdlr.texas.gov" target="_blank" rel="noopener">TDLR &#8599;</a><a href="/terms.php">Terms</a>
       </div>
     </div>
   </div>
