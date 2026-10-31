@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/theme-atx.css" />
+<link rel="icon" type="image/png" href="assets/images/favicon.png" />
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <a href="about/leadership.html" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
           <a href="about/sales.html" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
           <a href="about/experience.html" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
-          <a href="about/locations.html" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+          <a href="about/locations.html" role="menuitem"><strong>Locations</strong><span>Rooted in Austin. Backed by GBI.</span></a>
         </div>
       </div>
 
@@ -33,8 +35,8 @@
         <div class="nav-dropdown" role="menu">
           <a href="services/index.html" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
           <a href="services/new-construction.html" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
-          <a href="services/critical-facilities.html" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
-          <a href="services/tenant-finish-out.html" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="services/commercial-construction.html" role="menuitem"><strong>Commercial Construction</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="services/critical-facilities.html" role="menuitem"><strong>Critical Facilities</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
         </div>
       </div>
 
@@ -63,145 +65,130 @@
   <div class="container">
     <div class="crumbs"><a href="index.html">Home</a><span>/</span>Contact</div>
     <span class="eyebrow on-dark">Contact</span>
-    <h1>Let's Talk.</h1>
-    <p class="hero-sub">Whether you have a project to bid, a question about our electrical capabilities, or want to join our team, we're easy to reach and we respond quickly.</p>
+    <h1>Let&rsquo;s Talk.</h1>
+    <p class="hero-sub">Whether you have a project to bid, a question about our capabilities, or want to connect with our team &mdash; we&rsquo;re easy to reach, and we respond quickly.</p>
   </div>
 </section>
 
-<section>
+<section id="start-a-project">
   <div class="container two-col">
+    <div style="background:var(--gbi-offwhite); padding:32px; border:1px solid var(--rule);">
+      <span class="eyebrow">Start a Project</span>
+      <form class="form-grid" onsubmit="return false;" style="margin-top:20px;">
+        <div class="field"><label for="sp-first">First Name</label><input id="sp-first" type="text" /></div>
+        <div class="field"><label for="sp-last">Last Name</label><input id="sp-last" type="text" /></div>
+        <div class="field"><label for="sp-company">Company</label><input id="sp-company" type="text" /></div>
+        <div class="field"><label for="sp-title">Title</label><input id="sp-title" type="text" /></div>
+        <div class="field"><label for="sp-phone">Phone</label><input id="sp-phone" type="tel" /></div>
+        <div class="field"><label for="sp-email">Email</label><input id="sp-email" type="email" /></div>
+        <div class="field full"><label for="sp-location">Project Location</label><input id="sp-location" type="text" /></div>
+        <div class="field full"><label for="sp-type">Project Type</label>
+          <select id="sp-type">
+            <option>New Construction</option>
+            <option>Commercial</option>
+            <option>Critical Facilities</option>
+            <option>Maintenance &amp; Repair</option>
+            <option>Design-Build</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="field full"><label for="sp-desc">Project Description</label><textarea id="sp-desc"></textarea></div>
+        <div class="field full"><label for="sp-hear">How did you hear about us?</label><input id="sp-hear" type="text" /></div>
+        <div class="full"><button type="submit" class="btn btn-primary">Submit <span class="arr">→</span></button></div>
+      </form>
+    </div>
     <div>
-      <span class="eyebrow">Reach Our Team Directly</span>
-      <h2>By Department.</h2>
+      <span class="eyebrow">Reach Our Team</span>
+      <h2>GBI Austin &mdash; Texas Electrical Division</h2>
       <div style="margin-top:24px;">
         <div style="margin-bottom:14px;">
-          <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Sales &amp; Project Bidding</div>
+          <div style="font-size:1.1rem; font-weight:600;">16813 Calply Dr., Round Rock, TX 78664</div>
+        </div>
+        <div style="margin-bottom:14px;">
+          <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Main</div>
           <a href="tel:5126432015" style="font-size:1.1rem; font-weight:600;">(512) 643-2015</a>
         </div>
         <div style="margin-bottom:14px;">
-          <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">General Inquiries</div>
-          <a href="mailto:shannono@mygbi.com" style="font-size:1.1rem; font-weight:600;">shannono@mygbi.com</a>
+          <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Bidding &amp; Project Inquiries</div>
+          <a href="mailto:sales@gbiatx.com" style="font-size:1.1rem; font-weight:600;">sales@gbiatx.com</a>
         </div>
         <div style="margin-bottom:14px;">
+          <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Careers</div>
+          <a href="mailto:careers@gbiatx.com" style="font-size:1.1rem; font-weight:600;">careers@gbiatx.com</a>
+        </div>
+        <p style="font-size:.9rem; color:var(--muted);">TECL #30911 &mdash; Regulated by the Texas Department of Licensing and Regulation, P.O. Box 12157, Austin, TX 78711 &mdash; <a href="tel:8008039202">(800) 803-9202</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="facilities" class="bg-offwhite">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Facilities</span>
+      <h2>Service, Maintenance &amp; Repairs.</h2>
+      <p class="lead">Already have a GBI-built facility, or need a licensed electrical partner to keep one running? Our facilities team handles maintenance, repairs, and upgrades &mdash; including live and critical environments.</p>
+    </div>
+    <p style="font-size:1.1rem;"><strong>Facilities &amp; Service:</strong> <a href="tel:5126432015" style="font-weight:600;">(512) 643-2015</a></p>
+  </div>
+</section>
+
+<section id="sales">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Sales</span>
+      <h2>Bidding a Project?</h2>
+      <p class="lead">Send us the plans or the scope and we&rsquo;ll get you a number grounded in real field experience.</p>
+    </div>
+    <p style="font-size:1.1rem;"><strong>Bidding &amp; Project Inquiries:</strong> <a href="mailto:sales@gbiatx.com" style="font-weight:600;">sales@gbiatx.com</a> &nbsp;|&nbsp; <a href="tel:5126432015" style="font-weight:600;">(512) 643-2015</a></p>
+  </div>
+</section>
+
+<section id="employment" class="bg-offwhite">
+  <div class="container two-col">
+    <div>
+      <span class="eyebrow">Employment</span>
+      <h2>Join a Team Built by Electricians.</h2>
+      <p class="lead">We&rsquo;re always looking for electricians, foremen, and project managers who take pride in the work. If you&rsquo;ve done it right and want to keep getting better, we want to hear from you.</p>
+      <div style="margin-top:24px;">
+        <div style="margin-bottom:14px;">
+          <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Careers</div>
+          <a href="mailto:careers@gbiatx.com" style="font-size:1.1rem; font-weight:600;">careers@gbiatx.com</a>
+        </div>
+        <div>
           <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Careers &mdash; Apprentice Electricians</div>
           <a href="https://apply.teamengine.io/apply/XT0kMIn2z2Hw/B" target="_blank" rel="noopener" style="font-size:1.1rem; font-weight:600;">Apply Online</a>
           <div style="margin-top:4px;">Or text <strong>"apply"</strong> to <a href="sms:4356605841" style="font-weight:600;">(435) 660-5841</a></div>
         </div>
-        <div>
-          <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Fax</div>
-          <span style="font-size:1.1rem; font-weight:600;">(801) 543-1133</span>
-        </div>
       </div>
     </div>
-    <div style="background:var(--gbi-offwhite); padding:32px; border:1px solid var(--rule);">
+    <div style="background:var(--white); padding:32px; border:1px solid var(--rule);">
       <form class="form-grid" onsubmit="return false;">
-        <div class="field"><label>First Name</label><input type="text" /></div>
-        <div class="field"><label>Last Name</label><input type="text" /></div>
-        <div class="field"><label>Company</label><input type="text" /></div>
-        <div class="field"><label>Title</label><input type="text" /></div>
-        <div class="field"><label>Phone</label><input type="tel" /></div>
-        <div class="field"><label>Email</label><input type="email" /></div>
-        <div class="field full"><label>Project Location</label><input type="text" placeholder="City, State" /></div>
-        <div class="field full"><label>Project Type</label>
-          <select>
-            <option>New Construction</option>
-            <option>Critical Facilities / Data Center</option>
-            <option>Commercial Tenant Finish-Out</option>
-            <option>Service &amp; Maintenance</option>
-            <option>Not Sure</option>
-          </select>
-        </div>
-        <div class="field full"><label>Project Description</label><textarea placeholder="Tell us about the scope, timeline, and any constraints..."></textarea></div>
-        <div class="field full"><label>How did you hear about us?</label><input type="text" /></div>
+        <div class="field full"><label for="em-name">Name</label><input id="em-name" type="text" /></div>
+        <div class="field"><label for="em-phone">Phone</label><input id="em-phone" type="tel" /></div>
+        <div class="field"><label for="em-email">Email</label><input id="em-email" type="email" /></div>
+        <div class="field full"><label for="em-position">Position of Interest</label><input id="em-position" type="text" /></div>
+        <div class="field"><label for="em-years">Years of Experience</label><input id="em-years" type="text" /></div>
+        <div class="field"><label for="em-license">License</label><input id="em-license" type="text" /></div>
+        <div class="field full"><label for="em-resume">Upload Resume</label><input id="em-resume" type="file" /></div>
         <div class="full"><button type="submit" class="btn btn-primary">Submit <span class="arr">→</span></button></div>
       </form>
     </div>
   </div>
 </section>
 
-<section class="bg-offwhite">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Now Hiring</span>
-      <h2>Apprentice Electricians.</h2>
-      <p class="lead">GBI Austin is hiring apprentice electricians with commercial experience for full-time, permanent work across the Austin area.</p>
-    </div>
-    <div class="two-col">
-      <div>
-        <p><strong>What we're looking for:</strong></p>
-        <ul style="line-height:1.8; color:var(--ink-soft);">
-          <li>Valid TDLR electrician license</li>
-          <li>Your own hand tools</li>
-          <li>Reliable transportation</li>
-          <li>Ability to pass a drug and background screen</li>
-        </ul>
-      </div>
-      <div>
-        <p><strong>What you get:</strong></p>
-        <ul style="line-height:1.8; color:var(--ink-soft);">
-          <li>Competitive wage</li>
-          <li>Health, dental, vision, and life insurance</li>
-          <li>Paid vacation and holidays</li>
-          <li>401(k)</li>
-          <li>IEC apprenticeship sponsorship available after 6 months in good standing</li>
-        </ul>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:32px;">
-      <a class="btn btn-primary" href="https://apply.teamengine.io/apply/XT0kMIn2z2Hw/B" target="_blank" rel="noopener">Apply Online <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="careers.html">View All Openings <span class="arr">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Office Locations</span>
-      <h2>GBI Offices Across the West.</h2>
-      <p class="lead">Home to our Austin, Texas branch. Great Basin Industrial's offices and field warehouses span the western United States.</p>
-    </div>
-    <div class="office-grid">
-      <div class="office">
-        <h4>GBI Austin (Electrical Division)</h4>
-        <p>Located off I-35<br/>16813 Calply Dr.<br/>Round Rock, TX 78664<br/><a href="tel:5126432015">Tel: (512) 643-2015</a></p>
-      </div>
-      <div class="office">
-        <h4>Headquarters</h4>
-        <p>25 miles north of SLC<br/>1284 Flint Meadow Dr.<br/>Kaysville, UT 84037<br/><a href="tel:8015432100">Tel: (801) 543-2100</a></p>
-      </div>
-      <div class="office">
-        <h4>Fabrication Division</h4>
-        <p>I-15 Exit 392<br/>20655 N 6000 W<br/>Plymouth, UT 84330<br/><a href="tel:4355381250">Tel: (435) 538-1250</a></p>
-      </div>
-      <div class="office">
-        <h4>Field Warehouse</h4>
-        <p>Permian Basin region<br/>3122 National Parks Hwy<br/>Carlsbad, NM 88220<br/><a href="tel:5753956868">Tel: (575) 395-6868</a></p>
-      </div>
-      <div class="office">
-        <h4>WY Field Services</h4>
-        <p>Located off I-80<br/>2000 Mineral Dr.<br/>Rock Springs, WY 82901<br/><a href="tel:3073626543">Tel: (307) 362-6543</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="final-cta">
-  <div class="container">
+<section class="cta-split">
+  <div class="cta-split-text">
     <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+    <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
       <a class="btn btn-lime" href="contact.html">Start a Project <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="contact.html">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
+  <div class="cta-split-photo" style="background-image:url('assets/images/atx/projects/tab/TABPic21200wx800h-1024x683.png')"></div>
 </section>
 
-*
- * All paths inside are ABSOLUTE (start with "/") so they resolve correctly
- * regardless of which page is doing the including.
- */
-?>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -225,8 +212,8 @@
         <h5>Services</h5>
         <ul>
           <li><a href="services/new-construction.html">New Construction</a></li>
-          <li><a href="services/critical-facilities.html">Critical Facilities &amp; Data Centers</a></li>
-          <li><a href="services/tenant-finish-out.html">Commercial Tenant Finish-Out</a></li>
+          <li><a href="services/commercial-construction.html">Commercial Construction</a></li>
+          <li><a href="services/critical-facilities.html">Critical Facilities</a></li>
         </ul>
       </div>
       <div>
@@ -243,7 +230,7 @@
           <li><a href="about/safety-quality.html">Safety &amp; Quality</a></li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="#">LinkedIn &#8599;</a></li>
+          <li><a href="https://www.linkedin.com/company/great-basin-industrial/" target="_blank" rel="noopener">LinkedIn &#8599;</a></li>
         </ul>
       </div>
     </div>

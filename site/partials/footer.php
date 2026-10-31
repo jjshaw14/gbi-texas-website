@@ -32,8 +32,8 @@
         <h5>Services</h5>
         <ul>
           <li><a href="/services/new-construction.php">New Construction</a></li>
-          <li><a href="/services/critical-facilities.php">Critical Facilities &amp; Data Centers</a></li>
-          <li><a href="/services/tenant-finish-out.php">Commercial Tenant Finish-Out</a></li>
+          <li><a href="/services/commercial-construction.php">Commercial Construction</a></li>
+          <li><a href="/services/critical-facilities.php">Critical Facilities</a></li>
         </ul>
       </div>
       <div>
@@ -50,7 +50,7 @@
           <li><a href="/about/safety-quality.php">Safety &amp; Quality</a></li>
           <li><a href="/careers.php">Careers</a></li>
           <li><a href="/contact.php">Contact</a></li>
-          <li><a href="#">LinkedIn &#8599;</a></li>
+          <li><a href="https://www.linkedin.com/company/great-basin-industrial/" target="_blank" rel="noopener">LinkedIn &#8599;</a></li>
         </ul>
       </div>
     </div>

@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/theme-atx.css" />
+<link rel="icon" type="image/png" href="assets/images/favicon.png" />
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <a href="about/leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
           <a href="about/sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
           <a href="about/experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
-          <a href="about/locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+          <a href="about/locations.php" role="menuitem"><strong>Locations</strong><span>Rooted in Austin. Backed by GBI.</span></a>
         </div>
       </div>
 
@@ -33,8 +35,8 @@
         <div class="nav-dropdown" role="menu">
           <a href="services/index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
           <a href="services/new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
-          <a href="services/critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
-          <a href="services/tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="services/commercial-construction.php" role="menuitem"><strong>Commercial Construction</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="services/critical-facilities.php" role="menuitem"><strong>Critical Facilities</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
         </div>
       </div>
 

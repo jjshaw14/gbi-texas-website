@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/theme-atx.css" />
+<link rel="icon" type="image/png" href="assets/images/favicon.png" />
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <a href="about/leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
           <a href="about/sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
           <a href="about/experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
-          <a href="about/locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+          <a href="about/locations.php" role="menuitem"><strong>Locations</strong><span>Rooted in Austin. Backed by GBI.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -32,8 +34,8 @@
         <div class="nav-dropdown" role="menu">
           <a href="services/index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
           <a href="services/new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
-          <a href="services/critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
-          <a href="services/tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="services/commercial-construction.php" role="menuitem"><strong>Commercial Construction</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="services/critical-facilities.php" role="menuitem"><strong>Critical Facilities</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -60,8 +62,8 @@
   <div class="container">
     <div class="crumbs"><a href="index.php">Home</a><span>/</span>Careers</div>
     <span class="eyebrow on-dark">Careers</span>
-    <h1>This Is Great Basin Nation.</h1>
-    <p class="hero-sub">We're hiring apprentice electricians for the Austin market. If you take pride in your work and want to build a career, not just collect a paycheck, we want to talk to you.</p>
+    <h1>Join a Team Built by Electricians.</h1>
+    <p class="hero-sub">We&rsquo;re always looking for electricians, foremen, and project managers who take pride in the work. If you&rsquo;ve done it right and want to keep getting better, we want to hear from you.</p>
   </div>
 </section>
 
@@ -118,7 +120,7 @@
     <div class="section-head">
       <span class="eyebrow">Where We Hire</span>
       <h2>Roles Across the Austin Market.</h2>
-      <p class="lead">GBI Austin hires electricians, foremen, and estimators for commercial electrical work throughout the Austin area, as part of the wider Great Basin Industrial network across the western United States.</p>
+      <p class="lead">GBI Austin hires electricians, foremen, and project managers for commercial electrical work throughout the Austin area, as part of the wider Great Basin Industrial network across the western United States.</p>
     </div>
 
     <div class="careers-fineprint" style="max-width: 820px; margin: 0 auto; text-align: center;">
@@ -133,20 +135,21 @@
       Prefer to text? Text <strong>"apply"</strong> to <a href="sms:4356605841" style="font-weight:700;">(435) 660-5841</a> for the application link.
     </p>
     <p style="text-align:center; margin-top:8px; color:var(--muted);">
-      Don't see your role? Send your resume to <a href="mailto:shannono@mygbi.com" style="font-weight:700;">shannono@mygbi.com</a>.
+      Don't see your role? Send your resume to <a href="mailto:careers@gbiatx.com" style="font-weight:700;">careers@gbiatx.com</a>.
     </p>
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container">
+<section class="cta-split">
+  <div class="cta-split-text">
     <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+    <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
       <a class="btn btn-lime" href="contact.php">Start a Project <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="contact.php">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
+  <div class="cta-split-photo" style="background-image:url('assets/images/atx/projects/informatica/InformaticaPic21210wx800h-1024x678.png')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

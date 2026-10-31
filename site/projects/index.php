@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/styles.css" />
+<link rel="stylesheet" href="../assets/css/theme-atx.css" />
+<link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <a href="../about/leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
           <a href="../about/sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
           <a href="../about/experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
-          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>Rooted in Austin. Backed by GBI.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -32,8 +34,8 @@
         <div class="nav-dropdown" role="menu">
           <a href="../services/index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
           <a href="../services/new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
-          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
-          <a href="../services/tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="../services/commercial-construction.php" role="menuitem"><strong>Commercial Construction</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -59,25 +61,33 @@
     <div class="crumbs"><a href="../index.php">Home</a><span>/</span>Projects</div>
     <span class="eyebrow on-dark">Projects</span>
     <h1>The Work Speaks.</h1>
-    <p class="hero-sub">GBI Austin has completed more than 100 commercial electrical projects across the Austin market. Here's a sample of recent new construction, tenant finish-out, and critical facilities work.</p>
+    <p class="hero-sub">GBI Austin has built across the market&rsquo;s most demanding electrical scopes &mdash; ground-up commercial, high-end finish-outs, and live critical facilities. Below is a selection of our work. Filter by type to find what&rsquo;s relevant to you.</p>
+    <div class="actions" style="margin-top:24px;">
+      <a class="btn btn-ghost" href="#new-construction">New Construction</a>
+      <a class="btn btn-ghost" href="#commercial-construction">Commercial Construction</a>
+      <a class="btn btn-ghost" href="#critical-facilities">Critical Facilities</a>
+    </div>
   </div>
 </section>
 
 <section id="new-construction" style="padding-top:64px;">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">New Construction</span>
-      <h2>Ground-Up Electrical Work.</h2>
-      <p class="lead">Complete electrical site packages for shell buildings, tilt-wall construction, and ground-up commercial buildings across the Austin market.</p>
+      <h2>New Construction</h2>
+      <p class="lead">Clean Scapes &middot; MET Buildings &middot; Summit II &middot; TAB &middot; Titan III &middot; TruHome2</p>
     </div>
     <div class="project-grid">
-      <a class="project-card" href="summit-ii.php" style="background-image:url('../assets/images/atx/projects/summit-ii/SummitIIPic11200wx800h-1024x683.png')">
+      <a class="project-card" href="clean-scapes.php" style="background-image:url('../assets/images/atx/projects/clean-scapes/CleanScapesPic11200wx800h-1024x683.png')">
         <div class="pc-tag">New Construction</div>
-        <div><h3>Summit II</h3><div class="pc-meta">La Frontera, Austin, TX &middot; 95,000 SF &middot; Ground-Up + Tenant Improvements</div></div>
+        <div><h3>Clean Scapes</h3><div class="pc-meta">Austin, TX &middot; 23,000 SF Ground-Up Headquarters</div></div>
       </a>
       <a class="project-card" href="met-buildings.php" style="background-image:url('../assets/images/atx/projects/met-buildings/METPic1875wx575h.png')">
         <div class="pc-tag">New Construction</div>
         <div><h3>MET Buildings</h3><div class="pc-meta">Austin, TX &middot; 6 Buildings &middot; 530,000 SF Shell + 180,000 SF Finish</div></div>
+      </a>
+      <a class="project-card" href="summit-ii.php" style="background-image:url('../assets/images/atx/projects/summit-ii/SummitIIPic11200wx800h-1024x683.png')">
+        <div class="pc-tag">New Construction</div>
+        <div><h3>Summit II</h3><div class="pc-meta">La Frontera, Austin, TX &middot; 95,000 SF &middot; Ground-Up + Tenant Improvements</div></div>
       </a>
       <a class="project-card" href="tab.php" style="background-image:url('../assets/images/atx/projects/tab/TABPic11200wx800h-1024x683.png')">
         <div class="pc-tag">New Construction</div>
@@ -91,10 +101,6 @@
         <div class="pc-tag">New Construction</div>
         <div><h3>TruHome2</h3><div class="pc-meta">Austin, TX &middot; 94,171 SF &middot; 5-Story, 179-Room Hotel</div></div>
       </a>
-      <a class="project-card" href="clean-scapes.php" style="background-image:url('../assets/images/atx/projects/clean-scapes/CleanScapesPic11200wx800h-1024x683.png')">
-        <div class="pc-tag">New Construction</div>
-        <div><h3>Clean Scapes</h3><div class="pc-meta">Austin, TX &middot; 23,000 SF Ground-Up Headquarters</div></div>
-      </a>
     </div>
   </div>
 </section>
@@ -102,34 +108,33 @@
 <section id="commercial-construction" class="bg-offwhite" style="padding-top:80px;">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Commercial Construction</span>
-      <h2>Tenant Finish-Out Work.</h2>
-      <p class="lead">High-end finish-outs for offices, retail, and family entertainment venues, often delivered on an expedited schedule while neighboring tenants stay open.</p>
+      <h2>Commercial Construction</h2>
+      <p class="lead">Firetron &middot; H&amp;M &middot; Informatica &middot; Lone Star Imaging &middot; Urban Air &middot; Vandelay</p>
     </div>
     <div class="project-grid">
+      <a class="project-card" href="firetron.php" style="background-image:url('../assets/images/atx/projects/firetron/FiretronPic2800wx600h.png')">
+        <div class="pc-tag">Commercial Construction</div>
+        <div><h3>Firetron</h3><div class="pc-meta">Austin, TX &middot; 11,550 SF Office + Warehouse</div></div>
+      </a>
+      <a class="project-card" href="h-m.php" style="background-image:url('../assets/images/hero-services.jpg')">
+        <div class="pc-tag">Commercial Construction</div>
+        <div><h3>H&amp;M</h3><div class="pc-meta">Austin, TX &middot; 20,017 SF Retail Finish-Out</div></div>
+      </a>
       <a class="project-card" href="informatica.php" style="background-image:url('../assets/images/atx/projects/informatica/InformaticaPic11210wx500h-1024x423.png')">
-        <div class="pc-tag">Tenant Finish-Out</div>
+        <div class="pc-tag">Commercial Construction</div>
         <div><h3>Informatica</h3><div class="pc-meta">Austin, TX &middot; 35,000 SF High-End Tenant Finish-Out</div></div>
       </a>
       <a class="project-card" href="lone-star-imaging.php" style="background-image:url('../assets/images/atx/projects/lone-star-imaging/LStarPic11200wx800h-1024x683.jpg')">
-        <div class="pc-tag">Medical / Critical Facilities</div>
+        <div class="pc-tag">Critical Facilities | Medical Finish-Out</div>
         <div><h3>Lone Star Imaging</h3><div class="pc-meta">Austin, TX &middot; 5,500 SF Medical Imaging Center</div></div>
       </a>
       <a class="project-card" href="urban-air.php" style="background-image:url('../assets/images/atx/projects/urban-air/UrbanAirPic11200wx800h-1024x683.png')">
-        <div class="pc-tag">Tenant Finish-Out</div>
+        <div class="pc-tag">Commercial Construction</div>
         <div><h3>Urban Air</h3><div class="pc-meta">Austin, TX &middot; 24,076 SF Adventure Park</div></div>
       </a>
-      <a class="project-card" href="firetron.php" style="background-image:url('../assets/images/atx/projects/firetron/FiretronPic2800wx600h.png')">
-        <div class="pc-tag">Tenant Finish-Out</div>
-        <div><h3>Firetron</h3><div class="pc-meta">Austin, TX &middot; 11,550 SF Office + Warehouse</div></div>
-      </a>
       <a class="project-card" href="vandelay.php" style="background-image:url('../assets/images/atx/projects/vandelay/VandelayPic11200wx800h-1024x683.png')">
-        <div class="pc-tag">Tenant Finish-Out</div>
+        <div class="pc-tag">Commercial Construction</div>
         <div><h3>Vandelay Education Center</h3><div class="pc-meta">Austin, TX &middot; 25,000 SF Shell + Finish-Out</div></div>
-      </a>
-      <a class="project-card" href="h-m.php" style="background-image:url('../assets/images/hero-services.jpg')">
-        <div class="pc-tag">Tenant Finish-Out</div>
-        <div><h3>H&amp;M</h3><div class="pc-meta">Austin, TX &middot; 20,017 SF Retail Finish-Out</div></div>
       </a>
     </div>
   </div>
@@ -138,9 +143,8 @@
 <section id="critical-facilities" style="padding-top:80px;">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Critical Facilities</span>
-      <h2>Power Where Downtime Isn't an Option.</h2>
-      <p class="lead">GBI Austin has served major tech and medical clients since 2015, providing PDUs, UPS upgrades, generator systems, and power for data centers and imaging centers.</p>
+      <h2>Critical Facilities</h2>
+      <p class="lead">Data centers &middot; UPS upgrades &middot; generator replacements &middot; imaging suites</p>
     </div>
     <div class="project-grid" style="grid-template-columns:1fr;">
       <a class="project-card" href="lone-star-imaging.php" style="background-image:url('../assets/images/atx/projects/lone-star-imaging/LStarPic21200wx800h-1024x683.jpg'); min-height:280px;">
@@ -154,15 +158,16 @@
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container">
+<section class="cta-split">
+  <div class="cta-split-text">
     <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+    <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
       <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/truhome2/TruHome2Pic21200wx800h-1024x683.png')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

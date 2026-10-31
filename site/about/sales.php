@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/styles.css" />
+<link rel="stylesheet" href="../assets/css/theme-atx.css" />
+<link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <a href="leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
           <a href="sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
           <a href="experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
-          <a href="locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+          <a href="locations.php" role="menuitem"><strong>Locations</strong><span>Rooted in Austin. Backed by GBI.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -32,8 +34,8 @@
         <div class="nav-dropdown" role="menu">
           <a href="../services/index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
           <a href="../services/new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
-          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
-          <a href="../services/tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="../services/commercial-construction.php" role="menuitem"><strong>Commercial Construction</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -60,14 +62,38 @@
   <div class="container">
     <div class="crumbs"><a href="../index.php">Home</a><span>/</span><a href="our-story.php">About</a><span>/</span>Sales</div>
     <span class="eyebrow on-dark">About / Sales</span>
-    <h1>Estimators Who've Worked the Field.</h1>
-    <p class="hero-sub">GBI Austin's sales team has been working and growing together in the Austin market since the founding of the branch. Every estimator worked their way up from field electrician first.</p>
+    <h1>Let’s Talk About Your Project.</h1>
+    <p class="hero-sub">Bidding a job in the Austin market? Our sales and estimating team is led by people who have built the work they bid — so the number you get reflects how the job actually goes together, not a guess.</p>
   </div>
 </section>
 
-<section class="bg-offwhite tight">
-  <div class="container" style="max-width:920px;">
-    <p>With all of our estimators working their way up from field electricians, the GBI estimating team isn't just pricing a project off the plans, it's pricing the practicality of the installation in the field. With experience in every aspect of the electrical trade, you can count on GBI Austin for pricing and installation that actually meets your project's needs.</p>
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>What You Can Expect</h2>
+    </div>
+    <div class="cap-card-grid" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="cap-card"><div class="num">01</div><p>A responsive team that answers the phone and returns the call.</p></div>
+      <div class="cap-card"><div class="num">02</div><p>Estimates grounded in real field experience across commercial, industrial, data center, and critical-facility work.</p></div>
+      <div class="cap-card"><div class="num">03</div><p>Value engineering that protects your scope, schedule, and budget — before the work begins.</p></div>
+      <div class="cap-card"><div class="num">04</div><p>A single point of contact from bid through closeout.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-offwhite">
+  <div class="container">
+    <div class="editorial-row" style="grid-template-columns:1fr;">
+      <div class="editorial-text" style="max-width:820px;">
+        <h2>Who We Work With</h2>
+        <p>We partner with general contractors, engineers, architects, facility owners, and property managers across the Austin market. Whether it is a ground-up build, a tenant finish-out, or a live-facility upgrade, we will tell you straight how we would approach it.</p>
+        <p><strong>Bidding &amp; Project Inquiries</strong><br/><a href="mailto:sales@gbiatx.com">sales@gbiatx.com</a> &nbsp;|&nbsp; <a href="tel:5126432015">(512) 643-2015</a></p>
+        <div class="actions" style="display:flex; flex-wrap:wrap; gap:14px; margin-top:24px;">
+          <a class="btn btn-primary" href="../contact.php">Start a Project <span class="arr">→</span></a>
+          <a class="btn btn-outline" href="../contact.php">Contact Us <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -118,15 +144,16 @@
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container">
+<section class="cta-split">
+  <div class="cta-split-text">
     <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+    <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
       <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/lone-star-imaging/LStarPic11200wx800h-1024x683.jpg')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/styles.css" />
+<link rel="stylesheet" href="../assets/css/theme-atx.css" />
+<link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <a href="leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
           <a href="sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
           <a href="experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
-          <a href="locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+          <a href="locations.php" role="menuitem"><strong>Locations</strong><span>Rooted in Austin. Backed by GBI.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -32,8 +34,8 @@
         <div class="nav-dropdown" role="menu">
           <a href="../services/index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
           <a href="../services/new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
-          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
-          <a href="../services/tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="../services/commercial-construction.php" role="menuitem"><strong>Commercial Construction</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -61,27 +63,53 @@
     <div class="crumbs"><a href="../index.php">Home</a><span>/</span>Safety &amp; Quality</div>
     <span class="eyebrow on-dark">Safety &amp; Quality</span>
     <h1>Safety Is Not a Compliance Exercise.</h1>
-    <p class="hero-sub">Great Basin Industrial embraces a philosophy of health and safety excellence. We believe every injury is preventable, and we expect every GBI employee and business partner to fully embrace our Zero Harm culture.</p>
+    <p class="hero-sub">It is the first measure of whether a job succeeded. At GBI, a project that finishes on schedule with an injury is not a success &mdash; regardless of any other outcome.</p>
   </div>
 </section>
 
 <section class="bg-offwhite">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">The I-SHARE System</span>
-      <h2>A Daily Habit. Not a Checklist.</h2>
-      <p class="lead">I-SHARE is not a training program. It is a daily operating habit: Stop, Help, Analyze, Recommend, Encourage.</p>
+      <span class="eyebrow">Zero Harm</span>
+      <h2>Zero Harm &mdash; What We Believe.</h2>
+      <p class="lead">We believe all injuries are preventable, and we are committed to world-class performance in health and safety. Zero Harm is not a poster on the wall. It is a standard we plan for, staff for, and hold every crew and every partner to &mdash; on every job.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Safety Principles</span>
+      <h2>Four Principles Guide It.</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card"><div class="marker"></div><h3>Leadership Accountability</h3><p>Management provides the resources, training, and time it takes to work safely. Safety is never traded for schedule.</p></div>
+      <div class="value-card"><div class="marker"></div><h3>Employee Empowerment</h3><p>Every person on a GBI site owns safety &mdash; and every person has the right and the responsibility to stop work that isn&rsquo;t right, without fear of retaliation.</p></div>
+      <div class="value-card"><div class="marker"></div><h3>Preventive Planning</h3><p>Safety is planned into every task before the work begins, through pre-task planning and job hazard analysis.</p></div>
+      <div class="value-card"><div class="marker"></div><h3>Verified Conditions</h3><p>We assess and correct site conditions continuously. What gets checked gets done right.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-offwhite">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">SHARE</span>
+      <h2>How Safety Lives on the Job &mdash; SHARE.</h2>
+      <p class="lead">Every day starts with a SHARE moment: a safety observation, a near-miss, a lesson learned, or a recognition. It is a daily habit, not a checklist.</p>
+      <img class="program-logo" src="../assets/images/logos/GBI%20Share%20Logo.svg" alt="GBI SHARE program logo" />
     </div>
     <div class="acronym-grid">
       <div class="acronym-card">
         <div class="letter">S</div>
         <div class="word">STOP</div>
-        <p>When something doesn't look right, you stop. You don't keep moving because it's inconvenient.</p>
+        <p>When something doesn&rsquo;t look right, you stop. You don&rsquo;t keep moving because it&rsquo;s inconvenient.</p>
       </div>
       <div class="acronym-card">
         <div class="letter">H</div>
         <div class="word">HELP</div>
-        <p>You assess the situation and identify what's needed.</p>
+        <p>You assess the situation and identify what&rsquo;s needed.</p>
       </div>
       <div class="acronym-card">
         <div class="letter">A</div>
@@ -96,24 +124,19 @@
       <div class="acronym-card">
         <div class="letter">E</div>
         <div class="word">ENCOURAGE</div>
-        <p>You recognize safe behavior. You reinforce what good looks like.</p>
+        <p>You recognize safe behavior and reinforce what good looks like.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="container">
+  <div class="container" style="max-width:920px;">
     <div class="section-head">
-      <span class="eyebrow">Safety Principles</span>
-      <h2>What We Believe.</h2>
+      <span class="eyebrow">Safety Networks</span>
+      <h2>Pre-Qualified &amp; Approved.</h2>
     </div>
-    <div class="values-grid">
-      <div class="value-card"><div class="marker"></div><h3>All Injuries Preventable</h3><p>We do not accept the idea that injuries are part of the job. We plan accordingly, on every job site.</p></div>
-      <div class="value-card"><div class="marker"></div><h3>A Condition of Employment</h3><p>Every person on a GBI Austin site understands this before they start. Safety is not negotiable.</p></div>
-      <div class="value-card"><div class="marker"></div><h3>Leadership Provides Resources</h3><p>Management is accountable for providing the leadership and resources a safe workplace requires.</p></div>
-      <div class="value-card"><div class="marker"></div><h3>Employees Own Safety</h3><p>Every electrician on our crews is empowered, and expected, to own safety on their task.</p></div>
-    </div>
+    <p>GBI maintains pre-approved contractor status through the leading third-party safety verification networks required by the general contractors and owners we serve. Our safety record is a competitive advantage, not a checkbox.</p>
   </div>
 </section>
 
@@ -121,19 +144,23 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Quality</span>
-      <h2>Built Right the First Time.</h2>
-      <p class="lead">We pride ourselves on the quality of our work and the repeat business we consistently earn. GBI Austin performs every job under strict quality assurance and quality control measures, from a single tenant finish-out to a full critical-facility build.</p>
+      <h2>Quality &mdash; We Build It Right, or We Don&rsquo;t Build It.</h2>
+      <p class="lead">The standard at GBI is not what an inspector will pass. It is what we are proud to put our name on. We build to code, to spec, and to the standard the customer is paying for &mdash; every time.</p>
     </div>
-    <p>Our licensed Master Electricians and journeymen are trained and code-tested on every job. Every install is inspected against the same standard, whether it's a 5,000 sq. ft. retail finish-out or a 500,000 sq. ft. shell building.</p>
+    <ul class="cap-list" style="grid-template-columns:1fr; max-width:720px;">
+      <li>Installations completed on schedule and inspection-ready.</li>
+      <li>Documentation and as-builts kept current through the project.</li>
+      <li>Continuous improvement &mdash; we look for the better way and share it across crews.</li>
+    </ul>
   </div>
 </section>
 
 <section>
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Certifications &amp; Affiliations</span>
-      <h2>The Credentials Behind the Work.</h2>
-      <p class="lead">GBI Austin is a licensed Texas electrical contractor and a pre-qualified contractor through leading third-party safety networks.</p>
+      <span class="eyebrow">Certifications &amp; Standards</span>
+      <h2>Certifications &amp; Standards.</h2>
+      <p class="lead">Licensed in Texas &mdash; TECL #30911. Work performed to the NEC (NFPA 70), NFPA 70E electrical safety, and applicable industry standards where scope requires.</p>
     </div>
     <div class="cert-grid">
       <div class="cell cell--text"><span class="name">TECL #30911</span><span class="sub">Texas Licensed Electrical Contractor</span></div>
@@ -145,15 +172,16 @@
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container">
+<section class="cta-split">
+  <div class="cta-split-text">
     <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+    <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
       <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/truhome2/TruHome2Pic21200wx800h-1024x683.png')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

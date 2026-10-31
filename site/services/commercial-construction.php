@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Commercial Tenant Finish-Out, Great Basin Industrial Austin</title>
+<title>Commercial Construction, Great Basin Industrial Austin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/styles.css" />
+<link rel="stylesheet" href="../assets/css/theme-atx.css" />
+<link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <a href="../about/leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
           <a href="../about/sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
           <a href="../about/experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
-          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>Rooted in Austin. Backed by GBI.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -32,8 +34,8 @@
         <div class="nav-dropdown" role="menu">
           <a href="index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
           <a href="new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
-          <a href="critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
-          <a href="tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="commercial-construction.php" role="menuitem"><strong>Commercial Construction</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="critical-facilities.php" role="menuitem"><strong>Critical Facilities</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -58,10 +60,10 @@
   <div class="hero-media" style="background-image:url('../assets/images/atx/Informatica11170x432.jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="container">
-    <div class="crumbs"><a href="../index.php">Home</a><span>/</span><a href="index.php">Services</a><span>/</span>Tenant Finish-Out</div>
-    <span class="eyebrow on-dark">Services / Commercial Tenant Finish-Out</span>
-    <h1>Finished Spaces, Built to the Same Standard.</h1>
-    <p class="hero-sub">High-end tenant finish-outs for offices, retail, hospitality, and manufacturing clients across the Austin market, delivered on schedule, often while neighboring tenants stay open.</p>
+    <div class="crumbs"><a href="../index.php">Home</a><span>/</span><a href="index.php">Services</a><span>/</span>Commercial Construction</div>
+    <span class="eyebrow on-dark">Services / Commercial Construction</span>
+    <h1>Finish-Outs and Facilities That Have to Be Right.</h1>
+    <p class="hero-sub">Commercial work is where the building meets the people who use it &mdash; and where quality shows. GBI Austin delivers high-end commercial electrical construction across the market&rsquo;s most demanding building types.</p>
   </div>
 </section>
 
@@ -69,38 +71,31 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Capabilities</span>
-      <h2>What Our Finish-Out Group Builds.</h2>
-      <p class="lead">The same craft discipline that defines every GBI Austin trade, applied to the finished spaces your customers and employees actually see.</p>
+      <h2>What We Build</h2>
     </div>
     <ul class="cap-list" style="grid-template-columns:repeat(2,1fr);">
-      <li>High-end office tenant finish-outs</li>
-      <li>Manufacturing facility finish-outs</li>
-      <li>Higher education facilities</li>
+      <li>High-end tenant finish-outs</li>
+      <li>Manufacturing facilities</li>
+      <li>Higher education</li>
       <li>Hotels and suites</li>
       <li>Multi-family apartments</li>
-      <li>Retail finish-outs</li>
-      <li>Custom light fixture packages</li>
-      <li>Advanced lighting controls (nLight)</li>
-      <li>Wire basket tray for low-voltage conductors</li>
-      <li>Floor-box connections to furniture feeds</li>
-      <li>Raceways for exposed-to-deck ceilings</li>
-      <li>Expedited schedules around occupied neighbors</li>
     </ul>
   </div>
 </section>
 
-<section class="material-band">
-  <div class="container">
-    <div class="material-band-grid">
-      <div class="material-stat">
-        <div class="num">35,000<span class="suf"> SF</span></div>
-        <div class="label">Tenant Finish-Out &middot; Informatica</div>
-      </div>
-      <div class="material-copy">
-        <span class="eyebrow">What Scale Looks Like</span>
-        <h2>High-End Finish, On a Tight Ceiling.</h2>
-        <p>35,000 square feet of high-end tenant finish-out inside a 95,000 square foot ground-up building for Informatica. Custom fixtures, advanced lighting controls, and low-voltage raceways in exposed-to-deck ceilings, all self-performed by GBI Austin.</p>
-      </div>
+<section>
+  <div class="container" style="max-width:920px;">
+    <div class="section-head">
+      <span class="eyebrow">Approach</span>
+      <h2>How We Work.</h2>
+    </div>
+    <p>Custom lighting packages, advanced lighting controls, low-voltage infrastructure, and power distribution &mdash; installed clean, coordinated with the finishes, and inspection-ready. We work directly with owners, GCs, and architects to protect the design intent and the schedule at the same time.</p>
+    <div class="inline-pullquote">
+      <p>High-end means the details are the job. We build them the way we&rsquo;d want them in our own building.</p>
+    </div>
+    <div class="actions" style="display:flex; flex-wrap:wrap; gap:14px; margin-top:32px;">
+      <a class="btn btn-primary" href="../contact.php">Start a Project <span class="arr">&rarr;</span></a>
+      <a class="btn btn-outline" href="../projects/index.php#commercial-construction">View Commercial Projects <span class="arr">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -109,12 +104,12 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Representative Projects</span>
-      <h2>Recent Finish-Out Work.</h2>
+      <h2>Recent Commercial Construction Work.</h2>
     </div>
     <ul class="proj-list">
       <li>
         <div class="proj-meta">Informatica<span class="proj-loc">Austin, TX</span></div>
-        <div class="proj-scope">35,000 SF high-end tenant finish-out, custom lighting, advanced controls</div>
+        <div class="proj-scope">95,000 SF ground-up with a 35,000 SF high-end tenant finish-out, custom light fixtures, advanced lighting controls</div>
       </li>
       <li>
         <div class="proj-meta">Firetron<span class="proj-loc">Austin, TX</span></div>
@@ -136,15 +131,16 @@
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container">
+<section class="cta-split">
+  <div class="cta-split-text">
     <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+    <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
       <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/informatica/InformaticaPic21210wx800h-1024x678.png')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

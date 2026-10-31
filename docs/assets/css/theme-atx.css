@@ -116,6 +116,7 @@ h1, h2, h3, h4, .brand {
 
 /* ---------- Split final CTA (replaces the corporate full-bleed photo band) ---------- */
 .cta-split {
+  padding: 0; /* override the global section { padding: 96px 0 } so it sits flush against neighbors */
   display: grid;
   grid-template-columns: 1.15fr 1fr;
   min-height: 460px;
@@ -156,4 +157,16 @@ h1, h2, h3, h4, .brand {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%232C5DA8' stroke-width='1' opacity='0.09'%3E%3Cpath d='M0 60 H40 M40 60 V20 M40 20 H90 M90 20 V90 M90 90 H120'/%3E%3Ccircle cx='40' cy='60' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='40' cy='20' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='90' cy='20' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='90' cy='90' r='2.5' fill='%232C5DA8'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 120px 120px;
+}
+
+/* Bio portrait tiles (initials placeholders / headshots) follow the rounded shape language */
+.bio-portrait::before { border-radius: var(--radius); }
+.bio-portrait img { border-radius: var(--radius); }
+
+/* Non-numeric stat (e.g. "Zero Harm"): one line, same row height as the counters */
+.stat-num--text {
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
+  white-space: nowrap;
+  min-height: clamp(2.2rem, 4vw, 3.4rem);
+  align-items: center;
 }

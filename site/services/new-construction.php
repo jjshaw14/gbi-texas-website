@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/styles.css" />
+<link rel="stylesheet" href="../assets/css/theme-atx.css" />
+<link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <a href="../about/leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
           <a href="../about/sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
           <a href="../about/experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
-          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>Rooted in Austin. Backed by GBI.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -32,8 +34,8 @@
         <div class="nav-dropdown" role="menu">
           <a href="index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
           <a href="new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
-          <a href="critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
-          <a href="tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="commercial-construction.php" role="menuitem"><strong>Commercial Construction</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="critical-facilities.php" role="menuitem"><strong>Critical Facilities</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -60,8 +62,8 @@
   <div class="container">
     <div class="crumbs"><a href="../index.php">Home</a><span>/</span><a href="index.php">Services</a><span>/</span>New Construction</div>
     <span class="eyebrow on-dark">Services / New Construction</span>
-    <h1>Ground-Up Electrical, Done Right the First Time.</h1>
-    <p class="hero-sub">GBI Austin delivers complete electrical site packages for shell buildings, tilt-wall construction, and free-standing commercial buildings across the Austin market.</p>
+    <h1>Ground-Up. Wired Right From Day One.</h1>
+    <p class="hero-sub">New construction is where scope, schedule, and coordination are decided early &mdash; and where the right electrical contractor saves the whole job time and money. GBI Austin builds the complete electrical package, from site work to finish-out.</p>
   </div>
 </section>
 
@@ -69,38 +71,31 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Capabilities</span>
-      <h2>What Our New Construction Group Builds.</h2>
-      <p class="lead">From shell buildings with finish-out to auto dealerships and free-standing medical buildings, GBI Austin self-performs the full electrical scope on new commercial construction.</p>
+      <h2>What We Build</h2>
     </div>
     <ul class="cap-list" style="grid-template-columns:repeat(2,1fr);">
       <li>Shell buildings with finish-out</li>
-      <li>Tilt-wall building construction</li>
+      <li>Tilt-wall buildings</li>
       <li>Data centers</li>
       <li>Auto dealerships</li>
       <li>Free-standing medical buildings</li>
-      <li>Complete electrical site packages</li>
-      <li>Power to lift stations</li>
-      <li>Fire pump and riser room power</li>
-      <li>Warehouse lighting with occupancy controls</li>
-      <li>Motor control stations</li>
-      <li>EV charging station installation</li>
-      <li>Elevator shaft power and raceways</li>
     </ul>
   </div>
 </section>
 
-<section class="material-band">
-  <div class="container">
-    <div class="material-band-grid">
-      <div class="material-stat">
-        <div class="num">530,000<span class="suf"> SF</span></div>
-        <div class="label">Shell Buildings &middot; MET Buildings</div>
-      </div>
-      <div class="material-copy">
-        <span class="eyebrow">What Scale Looks Like</span>
-        <h2>Six Buildings. One Electrical Contractor.</h2>
-        <p>530,000 square feet of shell buildings plus 180,000 square feet of tenant finish-out, across six buildings in the MET complex. Complete electrical site package, fire pump connections, and EV charging stations, all self-performed by GBI Austin.</p>
-      </div>
+<section>
+  <div class="container" style="max-width:920px;">
+    <div class="section-head">
+      <span class="eyebrow">Approach</span>
+      <h2>How We Work.</h2>
+    </div>
+    <p>We come in early, coordinate with the GC and the other trades, and plan the installation before the first conduit goes in the ground. Complete electrical site packages, service and distribution, lighting and controls, and the low-voltage and specialty systems today&rsquo;s buildings depend on &mdash; installed by crews who have done it before.</p>
+    <div class="inline-pullquote">
+      <p>From the site package to the last fixture, one team owns the electrical scope. That is one less interface for the GC to manage.</p>
+    </div>
+    <div class="actions" style="display:flex; flex-wrap:wrap; gap:14px; margin-top:32px;">
+      <a class="btn btn-primary" href="../contact.php">Start a Project <span class="arr">&rarr;</span></a>
+      <a class="btn btn-outline" href="../projects/index.php#new-construction">View New Construction Projects <span class="arr">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -122,7 +117,7 @@
       </li>
       <li>
         <div class="proj-meta">Summit II<span class="proj-loc">La Frontera, Austin, TX</span></div>
-        <div class="proj-scope">95,000 SF ground-up, 2-story, elevator shaft power and raceways</div>
+        <div class="proj-scope">95,000 SF two-story ground-up, complete site and shell electrical, elevator shaft power and raceways</div>
       </li>
       <li>
         <div class="proj-meta">TAB (Travis Association for the Blind)<span class="proj-loc">Austin, TX</span></div>
@@ -140,15 +135,16 @@
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container">
+<section class="cta-split">
+  <div class="cta-split-text">
     <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+    <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
       <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/informatica/InformaticaPic21210wx800h-1024x678.png')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

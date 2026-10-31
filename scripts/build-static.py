@@ -24,7 +24,8 @@ INCLUDE_RE = re.compile(
 def load_footer(prefix):
     text = (SITE / "partials" / "footer.php").read_text(encoding="utf-8")
     # Strip the leading <?php /** ... */ ?> docblock comment.
-    text = re.sub(r"^<\?php.*?\?>\s*", "", text, count=1, flags=re.DOTALL)
+    # The comment itself mentions "?>", so anchor on the closing "*/ ?>".
+    text = re.sub(r"^<\?php\s*/\*\*.*?\*/\s*\?>\s*", "", text, count=1, flags=re.DOTALL)
     # Rewrite absolute root paths to the page's relative prefix.
     text = re.sub(r'(href|src)="/', rf'\1="{prefix}', text)
     return text

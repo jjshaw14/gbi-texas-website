@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/styles.css" />
+<link rel="stylesheet" href="../assets/css/theme-atx.css" />
+<link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <a href="../about/leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
           <a href="../about/sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
           <a href="../about/experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
-          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>Rooted in Austin. Backed by GBI.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -32,8 +34,8 @@
         <div class="nav-dropdown" role="menu">
           <a href="../services/index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
           <a href="../services/new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
-          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
-          <a href="../services/tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="../services/commercial-construction.php" role="menuitem"><strong>Commercial Construction</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -61,12 +63,11 @@
       <span class="eyebrow">Project</span>
       <h2>Summit II</h2>
       <div class="cs-meta">
-        <span class="cs-client">La Frontera Shopping Center</span>
+        <span class="cs-client">La Frontera</span>
         <span class="cs-dot">&middot;</span>
         <span class="cs-location">Austin, Texas</span>
       </div>
-      <div class="cs-services"><span class="cs-service-chip">New Construction</span></div>
-      <p class="cs-summary">A ground-up, 2-story, 95,000 SF building in the La Frontera shopping center — GBI Austin was later rehired by the general contractor for additional tenant improvements.</p>
+      <div class="cs-services"><span class="cs-service-chip">New Construction</span><span class="cs-service-chip">Complete Site &amp; Shell Electrical</span></div>
     </div>
   </div>
 </section>
@@ -79,8 +80,9 @@
   <div class="container">
     <div class="cs-body">
       <div class="cs-narrative">
-        <p>GBI Austin delivered the complete electrical site package for Summit II, a ground-up two-story, 95,000 square foot building in Austin's La Frontera shopping center, including an intricate recessed exterior and interior lighting package and elevator shaft power and raceways.</p>
-        <p>The general contractor was pleased enough with the results to rehire GBI Austin for additional tenant improvement work after the shell was complete.</p>
+        <p><strong>The Project.</strong> A 95,000-square-foot, two-story ground-up commercial building developed as leasable space in the La Frontera center.</p>
+        <p><strong>Our Scope.</strong> GBI delivered the complete electrical site package, intricate recessed exterior and interior lighting, and elevator shaft power and raceways for the shell and site.</p>
+        <p><strong>The Result.</strong> The general contractor brought GBI back for the tenant finish-out phase &mdash; the clearest measure of a job done right.</p>
         <div class="cs-scope cs-scope--inline">
           <span class="eyebrow">Scope of Work</span>
           <h2 style="margin-bottom:24px;">What GBI Delivered.</h2>
@@ -89,7 +91,7 @@
             <li>95,000 SF ground-up, 2-story building</li>
             <li>Intricate recessed exterior/interior lighting</li>
             <li>Elevator shaft power and raceways</li>
-            <li>Additional tenant improvements (rehire)</li>
+            <li>Tenant finish-out phase (rehire)</li>
           </ul>
         </div>
       </div>
@@ -97,7 +99,7 @@
         <div class="cs-by-numbers-label">By the Numbers</div>
         <div class="cs-stat"><div class="num">95,000</div><div class="lbl">SF Total</div></div>
         <div class="cs-stat"><div class="num">2</div><div class="lbl">Stories</div></div>
-        <div class="cs-stat"><div class="num">1</div><div class="lbl">Rehire for Added TI</div></div>
+        <div class="cs-stat"><div class="num">1</div><div class="lbl">Rehire for Tenant Finish-Out</div></div>
       </aside>
     </div>
   </div>
@@ -115,15 +117,16 @@
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container">
+<section class="cta-split">
+  <div class="cta-split-text">
     <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+    <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
       <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/truhome2/TruHome2Pic21200wx800h-1024x683.png')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

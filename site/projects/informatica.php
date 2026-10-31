@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/styles.css" />
+<link rel="stylesheet" href="../assets/css/theme-atx.css" />
+<link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <a href="../about/leadership.php" role="menuitem"><strong>Management Team</strong><span>Master Electricians who came up through the trade.</span></a>
           <a href="../about/sales.php" role="menuitem"><strong>Sales</strong><span>Estimators who've worked the field, not just the plans.</span></a>
           <a href="../about/experience.php" role="menuitem"><strong>Experience</strong><span>Full-scope electrical capability, turnkey to trade partner.</span></a>
-          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>GBI offices across the western U.S.</span></a>
+          <a href="../about/locations.php" role="menuitem"><strong>Locations</strong><span>Rooted in Austin. Backed by GBI.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -32,8 +34,8 @@
         <div class="nav-dropdown" role="menu">
           <a href="../services/index.php" class="dd-overview" role="menuitem"><strong>All Services</strong><span>Commercial electrical construction, self-performed start to finish.</span></a>
           <a href="../services/new-construction.php" role="menuitem"><strong>New Construction</strong><span>Shell buildings, tilt-wall, auto dealerships, medical buildings.</span></a>
-          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities &amp; Data Centers</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
-          <a href="../services/tenant-finish-out.php" role="menuitem"><strong>Commercial Tenant Finish-Out</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="../services/commercial-construction.php" role="menuitem"><strong>Commercial Construction</strong><span>High-end finish-outs, manufacturing, hospitality, retail.</span></a>
+          <a href="../services/critical-facilities.php" role="menuitem"><strong>Critical Facilities</strong><span>PDUs, UPS systems, generators, surgery and imaging centers.</span></a>
         </div>
       </div>
       <div class="nav-item has-dropdown">
@@ -65,8 +67,7 @@
         <span class="cs-dot">&middot;</span>
         <span class="cs-location">Austin, Texas</span>
       </div>
-      <div class="cs-services"><span class="cs-service-chip">Tenant Finish-Out</span></div>
-      <p class="cs-summary">A 35,000 SF high-end tenant finish-out within a 95,000 SF ground-up building, with a custom light fixture package and advanced lighting controls.</p>
+      <div class="cs-services"><span class="cs-service-chip">Commercial Construction</span><span class="cs-service-chip">Ground-Up + High-End Finish-Out</span></div>
     </div>
   </div>
 </section>
@@ -79,17 +80,19 @@
   <div class="container">
     <div class="cs-body">
       <div class="cs-narrative">
-        <p>GBI Austin delivered a 35,000 square foot high-end tenant finish-out for Informatica within a 95,000 square foot ground-up building.</p>
-        <p>The scope included a custom light fixture package, advanced lighting controls, a wire basket tray system for low-voltage conductors, and raceways for low-voltage cabling in exposed-to-deck ceilings, plus elevator shaft power and raceways as part of the complete electrical site package.</p>
+        <p><strong>The Project.</strong> A 95,000-square-foot ground-up building with a 35,000-square-foot high-end tenant finish-out.</p>
+        <p><strong>Our Scope.</strong> Complete electrical site package, intricate recessed exterior and interior lighting, and elevator shaft power and raceways &mdash; plus a high-end finish featuring custom light fixtures, advanced lighting controls, and a wire-basket tray system carrying low-voltage conductors through exposed-to-deck ceilings.</p>
+        <p><strong>The Result.</strong> A finished space where the electrical work matches the architecture.</p>
         <div class="cs-scope cs-scope--inline">
           <span class="eyebrow">Scope of Work</span>
           <h2 style="margin-bottom:24px;">What GBI Delivered.</h2>
           <ul>
             <li>Complete electrical site package</li>
+            <li>Intricate recessed exterior and interior lighting</li>
             <li>35,000 SF high-end tenant finish-out</li>
             <li>Custom light fixture package</li>
             <li>Advanced lighting controls</li>
-            <li>Wire basket tray for low-voltage conductors</li>
+            <li>Wire-basket tray for low-voltage conductors in exposed-to-deck ceilings</li>
             <li>Elevator shaft power and raceways</li>
           </ul>
         </div>
@@ -115,15 +118,16 @@
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container">
+<section class="cta-split">
+  <div class="cta-split-text">
     <span class="eyebrow on-dark">Ready to Build Something?</span>
-    <h2>Tell us about your project. We'll tell you how we'd wire it.</h2>
+    <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
       <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
       <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/informatica/InformaticaPic21210wx800h-1024x678.png')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>
