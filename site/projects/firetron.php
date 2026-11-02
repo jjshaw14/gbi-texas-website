@@ -110,10 +110,14 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">Project Images</span><h2>On Site.</h2></div>
     <div class="cs-gallery">
-      <img src="../assets/images/atx/projects/firetron/FiretronPic2800wx600h.png" alt="Firetron headquarters exterior" loading="lazy" />
-      <img src="../assets/images/atx/projects/firetron/FiretronPic3800wx600h.png" alt="Firetron office finish-out" loading="lazy" />
-      <img src="../assets/images/atx/projects/firetron/FiretronPic4800wx600h.png" alt="Firetron warehouse finish-out" loading="lazy" />
-      <img src="../assets/images/atx/projects/firetron/FiretronPic5800wx600h.png" alt="Firetron electrical installation" loading="lazy" />
+      <img src="../assets/images/atx/projects/firetron/gallery/firetron-01.jpg" alt="Firetron project photo 1" loading="lazy" />
+      <img src="../assets/images/atx/projects/firetron/gallery/firetron-02.jpg" alt="Firetron project photo 2" loading="lazy" />
+      <img src="../assets/images/atx/projects/firetron/gallery/firetron-03.jpg" alt="Firetron project photo 3" loading="lazy" />
+      <img src="../assets/images/atx/projects/firetron/gallery/firetron-04.jpg" alt="Firetron project photo 4" loading="lazy" />
+      <img src="../assets/images/atx/projects/firetron/gallery/firetron-05.jpg" alt="Firetron project photo 5" loading="lazy" />
+      <img src="../assets/images/atx/projects/firetron/gallery/firetron-06.jpg" alt="Firetron project photo 6" loading="lazy" />
+      <img src="../assets/images/atx/projects/firetron/gallery/firetron-07.jpg" alt="Firetron project photo 7" loading="lazy" />
+      <img src="../assets/images/atx/projects/firetron/gallery/firetron-08.jpg" alt="Firetron project photo 8" loading="lazy" />
     </div>
   </div>
 </section>

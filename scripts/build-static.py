@@ -63,7 +63,9 @@ def main():
         convert(f)
     print(f"Converted {len(php_files)} pages.")
 
-    shutil.copytree(SITE / "assets", OUT / "assets")
+    # Skip macOS/iCloud "name 2.png" conflict copies; nothing references them.
+    shutil.copytree(SITE / "assets", OUT / "assets",
+                    ignore=shutil.ignore_patterns("* [0-9].*"))
     print("Copied assets/.")
 
     # GitHub Pages otherwise runs Jekyll and ignores files/folders starting with "_".

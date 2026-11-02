@@ -109,6 +109,10 @@
           <a href="tel:5126432015" style="font-size:1.1rem; font-weight:600;">(512) 643-2015</a>
         </div>
         <div style="margin-bottom:14px;">
+          <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Fax</div>
+          <span style="font-size:1.1rem; font-weight:600;">(801) 543-1133</span>
+        </div>
+        <div style="margin-bottom:14px;">
           <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Bidding &amp; Project Inquiries</div>
           <a href="mailto:sales@gbiatx.com" style="font-size:1.1rem; font-weight:600;">sales@gbiatx.com</a>
         </div>

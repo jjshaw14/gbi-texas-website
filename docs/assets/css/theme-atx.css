@@ -163,10 +163,95 @@ h1, h2, h3, h4, .brand {
 .bio-portrait::before { border-radius: var(--radius); }
 .bio-portrait img { border-radius: var(--radius); }
 
+/* ---------- Pull quote: a standalone navy card, no side-border ---------- */
+.pullquote {
+  position: relative;
+  margin: 40px 0 0;
+  padding: 64px 44px 40px;
+  border: 0;
+  border-radius: var(--radius);
+  background-color: var(--gbi-navy);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%232C5DA8' stroke-width='1' opacity='0.18'%3E%3Cpath d='M0 60 H40 M40 60 V20 M40 20 H90 M90 20 V90 M90 90 H120'/%3E%3Ccircle cx='40' cy='60' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='40' cy='20' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='90' cy='20' r='2.5' fill='%232C5DA8'/%3E%3Ccircle cx='90' cy='90' r='2.5' fill='%232C5DA8'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 120px 120px;
+  color: var(--white);
+  font-family: 'Poppins', var(--font-sans);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1.9vw, 1.65rem);
+  line-height: 1.45;
+  box-shadow: 0 18px 40px -22px rgba(9, 25, 51, .55);
+}
+.pullquote::before {
+  content: "\201C";
+  position: absolute;
+  top: 18px;
+  left: 40px;
+  font-family: 'Poppins', var(--font-sans);
+  font-weight: 800;
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--gbi-lime);
+}
+@media (max-width: 560px) {
+  .pullquote { padding: 56px 24px 28px; }
+  .pullquote::before { left: 22px; }
+}
+
 /* Non-numeric stat (e.g. "Zero Harm"): one line, same row height as the counters */
 .stat-num--text {
   font-size: clamp(1.5rem, 2.3vw, 2rem);
   white-space: nowrap;
   min-height: clamp(2.2rem, 4vw, 3.4rem);
   align-items: center;
+}
+
+/* Inline MP4 on service pages (e.g. generator set on Critical Facilities) */
+.cf-video {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  background: var(--gbi-navy);
+  box-shadow: 0 18px 40px -22px rgba(9, 25, 51, .55);
+}
+
+/* ---------- Photo lightbox (.cs-gallery click-to-enlarge) ---------- */
+.cs-gallery img { cursor: zoom-in; transition: transform .25s ease, filter .25s ease; }
+.cs-gallery img:hover { transform: scale(1.02); filter: brightness(1.05); }
+.cs-gallery img:focus-visible { outline: 3px solid var(--gbi-lime); outline-offset: 2px; }
+
+.lightbox {
+  position: fixed; inset: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity .2s ease;
+}
+.lightbox[hidden] { display: none; }
+.lightbox[data-open] { opacity: 1; }
+.lightbox-backdrop { position: absolute; inset: 0; background: rgba(5, 12, 26, .92); }
+.lightbox-fig { position: relative; margin: 0; max-width: min(92vw, 1400px); text-align: center; }
+.lightbox-fig img {
+  display: block; max-width: 100%; max-height: 82vh; margin: 0 auto;
+  border-radius: var(--radius); box-shadow: 0 24px 60px -20px rgba(0, 0, 0, .7);
+}
+.lightbox-fig figcaption {
+  margin-top: 12px; color: rgba(255, 255, 255, .7);
+  font-size: .85rem; letter-spacing: .14em;
+}
+.lightbox-btn {
+  position: absolute; z-index: 1; width: 48px; height: 48px; border: 0; border-radius: 50%;
+  background: rgba(255, 255, 255, .12); color: #fff; font-size: 2rem; line-height: 1;
+  cursor: pointer; display: grid; place-items: center; transition: background .2s ease, transform .2s ease;
+}
+.lightbox-btn:hover { background: var(--gbi-blue); transform: scale(1.08); }
+.lightbox-btn:focus-visible { outline: 3px solid var(--gbi-lime); outline-offset: 2px; }
+.lightbox-close { top: 20px; right: 20px; }
+.lightbox-prev { left: 20px; top: 50%; margin-top: -24px; }
+.lightbox-next { right: 20px; top: 50%; margin-top: -24px; }
+body.lightbox-open { overflow: hidden; }
+@media (max-width: 640px) {
+  .lightbox-prev { left: 8px; top: auto; bottom: 20px; margin: 0; }
+  .lightbox-next { right: 8px; top: auto; bottom: 20px; margin: 0; }
+  .lightbox-fig img { max-height: 70vh; }
 }

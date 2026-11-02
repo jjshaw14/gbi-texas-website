@@ -109,10 +109,14 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">Project Images</span><h2>On Site.</h2></div>
     <div class="cs-gallery">
-      <img src="../assets/images/atx/projects/vandelay/VandelayPic11200wx800h-1024x683.png" alt="Vandelay Education Center exterior" loading="lazy" />
-      <img src="../assets/images/atx/projects/vandelay/VandelayPic21200wx800h-1024x683.png" alt="Vandelay Education Center tenant finish-out" loading="lazy" />
-      <img src="../assets/images/atx/projects/vandelay/VandelayPic31200wx800h-1024x683.png" alt="Vandelay Education Center interior lighting" loading="lazy" />
-      <img src="../assets/images/atx/projects/vandelay/VandelayPic41200wx800h-1024x683.png" alt="Vandelay Education Center electrical installation" loading="lazy" />
+      <img src="../assets/images/atx/projects/vandelay/gallery/vandelay-01.jpg" alt="Vandelay Education Center project photo 1" loading="lazy" />
+      <img src="../assets/images/atx/projects/vandelay/gallery/vandelay-02.jpg" alt="Vandelay Education Center project photo 2" loading="lazy" />
+      <img src="../assets/images/atx/projects/vandelay/gallery/vandelay-03.jpg" alt="Vandelay Education Center project photo 3" loading="lazy" />
+      <img src="../assets/images/atx/projects/vandelay/gallery/vandelay-04.jpg" alt="Vandelay Education Center project photo 4" loading="lazy" />
+      <img src="../assets/images/atx/projects/vandelay/gallery/vandelay-05.jpg" alt="Vandelay Education Center project photo 5" loading="lazy" />
+      <img src="../assets/images/atx/projects/vandelay/gallery/vandelay-06.jpg" alt="Vandelay Education Center project photo 6" loading="lazy" />
+      <img src="../assets/images/atx/projects/vandelay/gallery/vandelay-07.jpg" alt="Vandelay Education Center project photo 7" loading="lazy" />
+      <img src="../assets/images/atx/projects/vandelay/gallery/vandelay-08.jpg" alt="Vandelay Education Center project photo 8" loading="lazy" />
     </div>
   </div>
 </section>

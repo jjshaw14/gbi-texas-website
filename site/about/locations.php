@@ -69,10 +69,26 @@
 
 <section>
   <div class="container">
-    <div class="office-grid" style="grid-template-columns: minmax(240px, 440px);">
+    <div class="office-grid">
       <div class="office">
-        <h4>GBI Austin — Texas Electrical Division</h4>
-        <p>16813 Calply Dr.<br/>Round Rock, TX 78664<br/><a href="tel:5126432015">Tel: (512) 643-2015</a></p>
+        <h4>GBI Austin &mdash; Texas Electrical Division</h4>
+        <p>Located off I-35<br/>16813 Calply Dr.<br/>Round Rock, TX 78664<br/><a href="tel:5126432015">Tel: (512) 643-2015</a></p>
+      </div>
+      <div class="office">
+        <h4>GBI Headquarters</h4>
+        <p>25 miles north of SLC Intl Airport<br/>1284 W. Flint Meadow Dr.<br/>Kaysville, UT 84037<br/><a href="tel:8015432100">Tel: (801) 543-2100</a></p>
+      </div>
+      <div class="office">
+        <h4>Fabrication Division</h4>
+        <p>Near junction of I-84 and I-15<br/>20655 N 6000 W<br/>Plymouth, UT 84330<br/><a href="tel:4355381250">Tel: (435) 538-1250</a></p>
+      </div>
+      <div class="office">
+        <h4>Field Warehouse &mdash; Permian Basin</h4>
+        <p>3122 National Parks Hwy<br/>Carlsbad, NM 88220<br/><a href="tel:5753956868">Tel: (575) 395-6868</a></p>
+      </div>
+      <div class="office">
+        <h4>WY Field Services</h4>
+        <p>Located off I-80<br/>2000 Mineral Dr.<br/>Rock Springs, WY 82901<br/><a href="tel:3073626543">Tel: (307) 362-6543</a></p>
       </div>
     </div>
   </div>
@@ -83,7 +99,7 @@
     <div class="editorial-row" style="grid-template-columns:1fr;">
       <div class="editorial-text" style="max-width:820px;">
         <h2>Part of the GBI Family</h2>
-        <p>GBI’s operations reach across the western United States, with headquarters near Salt Lake City and field operations from Utah to Texas. For Austin-area electrical work, GBI Austin is your local team.</p>
+        <p>GBI’s operations reach across the western United States, with headquarters near Salt Lake City and field operations from Utah to Texas. For Austin-area electrical work, GBI Austin is your local team. <a href="https://www.mygbi.com/" target="_blank" rel="noopener">Visit GBI Corporate &#8599;</a></p>
       </div>
     </div>
   </div>

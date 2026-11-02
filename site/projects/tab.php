@@ -109,10 +109,13 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">Project Images</span><h2>On Site.</h2></div>
     <div class="cs-gallery">
-      <img src="../assets/images/atx/projects/tab/TABPic11200wx800h-1024x683.png" alt="TAB construction" loading="lazy" />
-      <img src="../assets/images/atx/projects/tab/TABPic21200wx800h-1024x683.png" alt="TAB exterior" loading="lazy" />
-      <img src="../assets/images/atx/projects/tab/TABPic31200wx800h-1024x683.png" alt="TAB interior" loading="lazy" />
-      <img src="../assets/images/atx/projects/tab/TABPic41200wx800h-1024x683.png" alt="TAB electrical work" loading="lazy" />
+      <img src="../assets/images/atx/projects/tab/gallery/tab-01.jpg" alt="TAB (Travis Association for the Blind) project photo 1" loading="lazy" />
+      <img src="../assets/images/atx/projects/tab/gallery/tab-02.jpg" alt="TAB (Travis Association for the Blind) project photo 2" loading="lazy" />
+      <img src="../assets/images/atx/projects/tab/gallery/tab-03.jpg" alt="TAB (Travis Association for the Blind) project photo 3" loading="lazy" />
+      <img src="../assets/images/atx/projects/tab/gallery/tab-04.jpg" alt="TAB (Travis Association for the Blind) project photo 4" loading="lazy" />
+      <img src="../assets/images/atx/projects/tab/gallery/tab-05.jpg" alt="TAB (Travis Association for the Blind) project photo 5" loading="lazy" />
+      <img src="../assets/images/atx/projects/tab/gallery/tab-06.jpg" alt="TAB (Travis Association for the Blind) project photo 6" loading="lazy" />
+      <img src="../assets/images/atx/projects/tab/gallery/tab-07.jpg" alt="TAB (Travis Association for the Blind) project photo 7" loading="lazy" />
     </div>
   </div>
 </section>

@@ -122,6 +122,7 @@
   <div class="container">
     <div class="section-head">
       <h2>The values that run through it</h2>
+      <p class="lead">&ldquo;Welcome to GBI Austin, where knowledge and performance will keep you coming back!&rdquo;</p>
     </div>
     <div class="values-grid">
       <div class="value-card"><div class="marker"></div><div class="word">DRIVEN</div><h3>Find a way to win.</h3><p>Passionate, accountable, humbly confident. Own the result.</p></div>

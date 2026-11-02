@@ -109,10 +109,18 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">Project Images</span><h2>On Site.</h2></div>
     <div class="cs-gallery">
-      <img src="../assets/images/atx/projects/met-buildings/METPic1875wx575h.png" alt="MET Buildings construction" loading="lazy" />
-      <img src="../assets/images/atx/projects/met-buildings/METPic2875wx575h.png" alt="MET Buildings exterior" loading="lazy" />
-      <img src="../assets/images/atx/projects/met-buildings/METPic3875wx575h.png" alt="MET Buildings interior" loading="lazy" />
-      <img src="../assets/images/atx/projects/met-buildings/METPic4875wx575h.png" alt="MET Buildings electrical work" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-01.jpg" alt="MET Buildings project photo 1" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-02.jpg" alt="MET Buildings project photo 2" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-03.jpg" alt="MET Buildings project photo 3" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-04.jpg" alt="MET Buildings project photo 4" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-05.jpg" alt="MET Buildings project photo 5" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-06.jpg" alt="MET Buildings project photo 6" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-07.jpg" alt="MET Buildings project photo 7" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-08.jpg" alt="MET Buildings project photo 8" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-09.jpg" alt="MET Buildings project photo 9" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-10.jpg" alt="MET Buildings project photo 10" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-11.jpg" alt="MET Buildings project photo 11" loading="lazy" />
+      <img src="../assets/images/atx/projects/met-buildings/gallery/met-buildings-12.jpg" alt="MET Buildings project photo 12" loading="lazy" />
     </div>
   </div>
 </section>

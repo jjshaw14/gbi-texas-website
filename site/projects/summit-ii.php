@@ -109,10 +109,17 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">Project Images</span><h2>On Site.</h2></div>
     <div class="cs-gallery">
-      <img src="../assets/images/atx/projects/summit-ii/SummitIIPic11200wx800h-1024x683.png" alt="Summit II construction" loading="lazy" />
-      <img src="../assets/images/atx/projects/summit-ii/SummitIIPic21200wx800h-1024x683.png" alt="Summit II exterior" loading="lazy" />
-      <img src="../assets/images/atx/projects/summit-ii/SummitIIPic31200wx800h-1024x683.png" alt="Summit II interior" loading="lazy" />
-      <img src="../assets/images/atx/projects/summit-ii/SummitIIPic41200wx800h-1024x683.png" alt="Summit II electrical work" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-01.jpg" alt="Summit II project photo 1" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-02.jpg" alt="Summit II project photo 2" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-03.jpg" alt="Summit II project photo 3" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-04.jpg" alt="Summit II project photo 4" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-05.jpg" alt="Summit II project photo 5" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-06.jpg" alt="Summit II project photo 6" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-07.jpg" alt="Summit II project photo 7" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-08.jpg" alt="Summit II project photo 8" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-09.jpg" alt="Summit II project photo 9" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-10.jpg" alt="Summit II project photo 10" loading="lazy" />
+      <img src="../assets/images/atx/projects/summit-ii/gallery/summit-ii-11.jpg" alt="Summit II project photo 11" loading="lazy" />
     </div>
   </div>
 </section>

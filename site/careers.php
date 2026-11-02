@@ -115,6 +115,19 @@
   </div>
 </section>
 
+<section>
+  <div class="container" style="max-width:920px;">
+    <div class="section-head">
+      <span class="eyebrow">Careers in the Trade</span>
+      <h2>Why Choose the Electrical Trade.</h2>
+      <p class="lead">A PSA produced in partnership with TradeUpTexas on the advantages of the electrical trade as a career path. Thanks to the GBI electricians who took part &mdash; great job!</p>
+    </div>
+    <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden; background:var(--gbi-navy);">
+      <iframe src="https://player.vimeo.com/video/308435993?h=bd82163e47&amp;dnt=1" title="TradeUpTexas electrical trade PSA" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%; border:0;"></iframe>
+    </div>
+  </div>
+</section>
+
 <section class="bg-offwhite">
   <div class="container">
     <div class="section-head">

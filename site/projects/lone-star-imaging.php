@@ -109,8 +109,10 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">Project Images</span><h2>On Site.</h2></div>
     <div class="cs-gallery">
-      <img src="../assets/images/atx/projects/lone-star-imaging/LStarPic11200wx800h-1024x683.jpg" alt="Lone Star Imaging exterior" loading="lazy" />
-      <img src="../assets/images/atx/projects/lone-star-imaging/LStarPic21200wx800h-1024x683.jpg" alt="Lone Star Imaging exam room finish-out" loading="lazy" />
+      <img src="../assets/images/atx/projects/lone-star-imaging/gallery/lone-star-imaging-01.jpg" alt="Lone Star Imaging project photo 1" loading="lazy" />
+      <img src="../assets/images/atx/projects/lone-star-imaging/gallery/lone-star-imaging-02.jpg" alt="Lone Star Imaging project photo 2" loading="lazy" />
+      <img src="../assets/images/atx/projects/lone-star-imaging/gallery/lone-star-imaging-03.jpg" alt="Lone Star Imaging project photo 3" loading="lazy" />
+      <img src="../assets/images/atx/projects/lone-star-imaging/gallery/lone-star-imaging-04.jpg" alt="Lone Star Imaging project photo 4" loading="lazy" />
     </div>
   </div>
 </section>

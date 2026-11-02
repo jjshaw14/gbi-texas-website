@@ -104,6 +104,19 @@
   </div>
 </section>
 
+<section class="bg-offwhite">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Project Images</span><h2>On Site.</h2></div>
+    <div class="cs-gallery">
+      <img src="../assets/images/atx/projects/h-m/gallery/h-m-01.jpg" alt="H&amp;M project photo 1" loading="lazy" />
+      <img src="../assets/images/atx/projects/h-m/gallery/h-m-02.jpg" alt="H&amp;M project photo 2" loading="lazy" />
+      <img src="../assets/images/atx/projects/h-m/gallery/h-m-03.jpg" alt="H&amp;M project photo 3" loading="lazy" />
+      <img src="../assets/images/atx/projects/h-m/gallery/h-m-04.jpg" alt="H&amp;M project photo 4" loading="lazy" />
+      <img src="../assets/images/atx/projects/h-m/gallery/h-m-05.jpg" alt="H&amp;M project photo 5" loading="lazy" />
+    </div>
+  </div>
+</section>
+
 <section class="cta-split">
   <div class="cta-split-text">
     <span class="eyebrow on-dark">Ready to Build Something?</span>

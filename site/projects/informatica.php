@@ -110,10 +110,11 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">Project Images</span><h2>On Site.</h2></div>
     <div class="cs-gallery">
-      <img src="../assets/images/atx/projects/informatica/InformaticaPic11210wx500h-1024x423.png" alt="Informatica office exterior" loading="lazy" />
-      <img src="../assets/images/atx/projects/informatica/InformaticaPic21210wx800h-1024x678.png" alt="Informatica tenant finish-out" loading="lazy" />
-      <img src="../assets/images/atx/projects/informatica/InformaticaPic31210wx500h-1024x423.png" alt="Informatica lighting installation" loading="lazy" />
-      <img src="../assets/images/atx/projects/informatica/InformaticaPic41210wx800h-1024x677.png" alt="Informatica electrical installation" loading="lazy" />
+      <img src="../assets/images/atx/projects/informatica/gallery/informatica-01.jpg" alt="Informatica project photo 1" loading="lazy" />
+      <img src="../assets/images/atx/projects/informatica/gallery/informatica-02.jpg" alt="Informatica project photo 2" loading="lazy" />
+      <img src="../assets/images/atx/projects/informatica/gallery/informatica-03.jpg" alt="Informatica project photo 3" loading="lazy" />
+      <img src="../assets/images/atx/projects/informatica/gallery/informatica-04.jpg" alt="Informatica project photo 4" loading="lazy" />
+      <img src="../assets/images/atx/projects/informatica/gallery/informatica-05.jpg" alt="Informatica project photo 5" loading="lazy" />
     </div>
   </div>
 </section>

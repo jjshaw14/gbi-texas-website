@@ -108,10 +108,12 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">Project Images</span><h2>On Site.</h2></div>
     <div class="cs-gallery">
-      <img src="../assets/images/atx/projects/truhome2/TruHome2Pic11200wx800h-1024x683.png" alt="TruHome2 construction" loading="lazy" />
-      <img src="../assets/images/atx/projects/truhome2/TruHome2Pic21200wx800h-1024x683.png" alt="TruHome2 exterior" loading="lazy" />
-      <img src="../assets/images/atx/projects/truhome2/TruHome2Pic31200wx800h-1024x683.png" alt="TruHome2 interior" loading="lazy" />
-      <img src="../assets/images/atx/projects/truhome2/TruHome2Pic41200wx800h-1024x683.png" alt="TruHome2 electrical work" loading="lazy" />
+      <img src="../assets/images/atx/projects/truhome2/gallery/truhome2-01.jpg" alt="TruHome2 project photo 1" loading="lazy" />
+      <img src="../assets/images/atx/projects/truhome2/gallery/truhome2-02.jpg" alt="TruHome2 project photo 2" loading="lazy" />
+      <img src="../assets/images/atx/projects/truhome2/gallery/truhome2-03.jpg" alt="TruHome2 project photo 3" loading="lazy" />
+      <img src="../assets/images/atx/projects/truhome2/gallery/truhome2-04.jpg" alt="TruHome2 project photo 4" loading="lazy" />
+      <img src="../assets/images/atx/projects/truhome2/gallery/truhome2-05.jpg" alt="TruHome2 project photo 5" loading="lazy" />
+      <img src="../assets/images/atx/projects/truhome2/gallery/truhome2-06.jpg" alt="TruHome2 project photo 6" loading="lazy" />
     </div>
   </div>
 </section>
