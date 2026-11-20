@@ -69,11 +69,11 @@
 
 <section class="bg-offwhite">
   <div class="container cap-split">
-    <div class="cap-split-lead">
+    <div class="cap-split-head">
       <span class="eyebrow">Capabilities</span>
       <h2>What We Build</h2>
-      <img class="cap-split-photo" src="../assets/images/atx/projects/informatica/gallery/informatica-01.jpg" alt="Informatica tenant finish-out office interior" loading="lazy" />
     </div>
+    <img class="cap-split-photo" src="../assets/images/atx/projects/informatica/gallery/informatica-01.jpg" alt="Informatica tenant finish-out office interior" loading="lazy" />
     <ul class="cap-rows">
       <li>High-end tenant finish-outs</li>
       <li>Manufacturing facilities</li>

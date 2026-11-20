@@ -69,11 +69,11 @@
 
 <section class="bg-offwhite">
   <div class="container cap-split">
-    <div class="cap-split-lead">
+    <div class="cap-split-head">
       <span class="eyebrow">Capabilities</span>
       <h2>What We Build &amp; Maintain</h2>
-      <img class="cap-split-photo" src="../assets/images/atx/critical-facilities/gallery/critical-facilities-02.jpg" alt="Switchgear installed at a critical facility" loading="lazy" />
     </div>
+    <img class="cap-split-photo" src="../assets/images/atx/critical-facilities/gallery/critical-facilities-02.jpg" alt="Switchgear installed at a critical facility" loading="lazy" />
     <ul class="cap-rows">
       <li>Data centers</li>
       <li>UPS system upgrades</li>
