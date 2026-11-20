@@ -114,7 +114,7 @@
   <div class="container">
     <div class="section-head">
       <h2>Commercial Construction</h2>
-      <p class="lead">Firetron &middot; H&amp;M &middot; Informatica &middot; Lone Star Imaging &middot; Urban Air &middot; Vandelay</p>
+      <p class="lead">Firetron &middot; H&amp;M &middot; Informatica &middot; Lone Star Imaging &middot; Urban Air &middot; Vandelay<button type="button" class="rv-flag" data-rv="lsi-category"></button></p>
     </div>
     <div class="project-grid">
       <a class="project-card" href="firetron.php" style="background-image:url('../assets/images/atx/projects/firetron/FiretronPic2800wx600h.png')">

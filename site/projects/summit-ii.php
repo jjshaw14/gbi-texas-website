@@ -73,7 +73,7 @@
         <span class="cs-location">Austin, Texas</span>
       </div>
       <div class="cs-services"><span class="cs-service-chip">New Construction</span><span class="cs-service-chip">Complete Site &amp; Shell Electrical</span></div>
-      <p class="cs-summary">A 95,000 SF, two-story ground-up building in La Frontera: complete site and shell electrical, then back for the tenant finish-out.</p>
+      <p class="cs-summary">A 95,000 SF, two-story ground-up building in La Frontera: complete site and shell electrical, then back for the tenant finish-out.<button type="button" class="rv-flag" data-rv="informatica-summit"></button></p>
     </div>
   </div>
 </section>

@@ -73,7 +73,7 @@
 <section id="start-a-project">
   <div class="container two-col">
     <div style="background:var(--gbi-offwhite); padding:32px; border:1px solid var(--rule);">
-      <span class="eyebrow">Start a Project</span>
+      <span class="eyebrow">Start a Project</span><button type="button" class="rv-flag" data-rv="form-routing"></button>
       <form class="form-grid" data-form="project" novalidate style="margin-top:20px;">
         <div class="field"><label for="sp-first">First Name</label><input id="sp-first" name="first_name" required type="text" /></div>
         <div class="field"><label for="sp-last">Last Name</label><input id="sp-last" name="last_name" required type="text" /></div>
@@ -110,15 +110,15 @@
         </div>
         <div style="margin-bottom:14px;">
           <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Fax</div>
-          <span style="font-size:1.1rem; font-weight:600;">(801) 543-1133</span>
+          <span style="font-size:1.1rem; font-weight:600;">(801) 543-1133</span><button type="button" class="rv-flag" data-rv="fax"></button>
         </div>
         <div style="margin-bottom:14px;">
           <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Bidding &amp; Project Inquiries</div>
-          <a href="mailto:sales@gbiatx.com" style="font-size:1.1rem; font-weight:600;">sales@gbiatx.com</a>
+          <a href="mailto:sales@gbiatx.com" style="font-size:1.1rem; font-weight:600;">sales@gbiatx.com</a><button type="button" class="rv-flag" data-rv="sales-email"></button>
         </div>
         <div style="margin-bottom:14px;">
           <div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700;">Careers</div>
-          <a href="mailto:careers@gbiatx.com" style="font-size:1.1rem; font-weight:600;">careers@gbiatx.com</a>
+          <a href="mailto:careers@gbiatx.com" style="font-size:1.1rem; font-weight:600;">careers@gbiatx.com</a><button type="button" class="rv-flag" data-rv="careers-email"></button>
         </div>
         <p style="font-size:.9rem; color:var(--muted);">TECL #30911 &mdash; Regulated by the Texas Department of Licensing and Regulation, P.O. Box 12157, Austin, TX 78711 &mdash; <a href="tel:8008039202">(800) 803-9202</a></p>
       </div>

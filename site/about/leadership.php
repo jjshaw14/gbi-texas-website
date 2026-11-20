@@ -66,7 +66,7 @@
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="crumbs"><a href="../index.php">Home</a><span>/</span><a href="our-story.php">About</a><span>/</span>Management Team</div>
-    <span class="eyebrow on-dark">About / Management Team</span>
+    <span class="eyebrow on-dark">About / Management Team</span><button type="button" class="rv-flag" data-rv="headshots"></button>
     <h1>A company built and run by electricians.</h1>
     <p class="hero-sub">GBI Austin’s leadership has worked and grown together in the Austin market for more than 30 years. These are not administrators. They are Master Electricians and field-proven managers who still know what the work takes.</p>
   </div>

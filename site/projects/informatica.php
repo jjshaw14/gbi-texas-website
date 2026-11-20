@@ -73,7 +73,7 @@
         <span class="cs-location">Austin, Texas</span>
       </div>
       <div class="cs-services"><span class="cs-service-chip">Commercial Construction</span><span class="cs-service-chip">Ground-Up + High-End Finish-Out</span></div>
-      <p class="cs-summary">A 35,000 SF high-end tenant finish-out inside a 95,000 SF ground-up building, with custom light fixtures and advanced lighting controls.</p>
+      <p class="cs-summary">A 35,000 SF high-end tenant finish-out inside a 95,000 SF ground-up building, with custom light fixtures and advanced lighting controls.<button type="button" class="rv-flag" data-rv="informatica-summit"></button></p>
     </div>
   </div>
 </section>

@@ -62,6 +62,10 @@ def convert(php_path: Path):
     text = php_links_to_html(text)
     if not PRODUCTION:
         text = text.replace("</head>", PREVIEW_HEAD + "</head>", 1)
+    else:
+        # The client review layer (markers + scripts) is for the preview only.
+        text = re.sub(r"<!-- review:start -->.*?<!-- review:end -->\n?", "", text, flags=re.DOTALL)
+        text = re.sub(r'<button type="button" class="rv-flag"[^>]*></button>', "", text)
     out_path = OUT / rel.with_suffix(".html")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(text, encoding="utf-8")
@@ -85,8 +89,10 @@ def main():
 
     # Sync (not wipe) assets; also drops any "name 2.png" conflict copies,
     # which nothing references.
-    subprocess.run(["rsync", "-a", "--delete", "--delete-excluded",
-                    "--exclude", "* [0-9].*",
+    skip = ["--exclude", "* [0-9].*"]
+    if PRODUCTION:
+        skip += ["--exclude", "review.js", "--exclude", "review-items.js"]
+    subprocess.run(["rsync", "-a", "--delete", "--delete-excluded", *skip,
                     f"{SITE / 'assets'}/", f"{OUT / 'assets'}/"], check=True)
     print("Copied assets/.")
 

@@ -66,7 +66,7 @@
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="crumbs"><a href="../index.php">Home</a><span>/</span><a href="our-story.php">About</a><span>/</span>Locations</div>
-    <span class="eyebrow on-dark">About / Locations</span>
+    <span class="eyebrow on-dark">About / Locations</span><button type="button" class="rv-flag" data-rv="other-offices"></button>
     <h1>Rooted in Austin. Backed by GBI.</h1>
     <p class="hero-sub">GBI Austin operates from Round Rock and builds across the greater Austin market. As the Texas electrical division of the GBI family of companies, we are backed by a national industrial builder — with the responsiveness of a local contractor who lives and works here.</p>
   </div>

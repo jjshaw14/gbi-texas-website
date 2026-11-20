@@ -138,7 +138,7 @@
 <section>
   <div class="container" style="max-width:920px;">
     <div class="section-head">
-      <span class="eyebrow">Safety Networks</span>
+      <span class="eyebrow">Safety Networks</span><button type="button" class="rv-flag" data-rv="safety-networks"></button>
       <h2>Pre-Qualified &amp; Approved.</h2>
     </div>
     <p>GBI maintains pre-approved contractor status through the leading third-party safety verification networks required by the general contractors and owners we serve. Our safety record is a competitive advantage, not a checkbox.</p>

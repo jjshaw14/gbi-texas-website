@@ -27,3 +27,7 @@ elementor-kit/
 # Node (if anyone ever adds a build tool later)
 node_modules/
 dist/
+
+# Review endpoint: holds an email address + export key, and saved client feedback
+feedback-server/feedback-config.php
+feedback-server/data/
