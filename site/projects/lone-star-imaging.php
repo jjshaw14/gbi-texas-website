@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lone Star Imaging, Great Basin Industrial Austin</title>
+<meta name="description" content="A 5,500 SF medical imaging center with hospital-grade exam rooms, MRI and X-ray equipment installation, and a complete turnkey electrical package." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GBI Austin" />
+<meta property="og:title" content="Lone Star Imaging, Great Basin Industrial Austin" />
+<meta property="og:description" content="A 5,500 SF medical imaging center with hospital-grade exam rooms, MRI and X-ray equipment installation, and a complete turnkey electrical package." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -51,7 +56,7 @@
       <a href="../careers.php">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
-    <a class="nav-cta" href="../contact.php">Contact Us →</a>
+    <a class="nav-cta" href="../contact.php" data-drawer-open="contact">Contact Us →</a>
     <button class="nav-mobile" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -61,13 +66,14 @@
     <div class="crumbs cs-crumbs"><a href="../index.php">Home</a><span>/</span><a href="index.php">Projects</a><span>/</span>Lone Star Imaging</div>
     <div class="cs-header">
       <span class="eyebrow">Project</span>
-      <h2>Lone Star Imaging</h2>
+      <h1>Lone Star Imaging</h1>
       <div class="cs-meta">
         <span class="cs-client">Lone Star Imaging</span>
         <span class="cs-dot">&middot;</span>
         <span class="cs-location">Austin, Texas</span>
       </div>
       <div class="cs-services"><span class="cs-service-chip">Commercial Construction</span><span class="cs-service-chip">Critical Facilities</span><span class="cs-service-chip">Medical Finish-Out</span></div>
+      <p class="cs-summary">A 5,500 SF medical imaging center with hospital-grade exam rooms, MRI and X-ray equipment installation, and a complete turnkey electrical package.</p>
     </div>
   </div>
 </section>
@@ -122,11 +128,11 @@
     <span class="eyebrow on-dark">Ready to Build Something?</span>
     <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
-      <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
+      <a class="btn btn-lime" href="../contact.php" data-drawer-open="project">Start a Project <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="../contact.php" data-drawer-open="contact">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
-  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/truhome2/TruHome2Pic21200wx800h-1024x683.png')"></div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/firetron/gallery/firetron-04.jpg')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

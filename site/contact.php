@@ -54,13 +54,13 @@
       <a href="careers.php" class="">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
-    <a class="nav-cta" href="contact.php">Contact Us →</a>
+    <a class="nav-cta" href="contact.php" data-drawer-open="contact">Contact Us →</a>
     <button class="nav-mobile" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <section class="hero hero-sm">
-  <div class="hero-media" style="background-image:url('assets/images/hero-contact.jpg')"></div>
+  <div class="hero-media" style="background-image:url('assets/images/atx/projects/vandelay/gallery/vandelay-08.jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="crumbs"><a href="index.php">Home</a><span>/</span>Contact</div>
@@ -74,16 +74,16 @@
   <div class="container two-col">
     <div style="background:var(--gbi-offwhite); padding:32px; border:1px solid var(--rule);">
       <span class="eyebrow">Start a Project</span>
-      <form class="form-grid" onsubmit="return false;" style="margin-top:20px;">
-        <div class="field"><label for="sp-first">First Name</label><input id="sp-first" type="text" /></div>
-        <div class="field"><label for="sp-last">Last Name</label><input id="sp-last" type="text" /></div>
-        <div class="field"><label for="sp-company">Company</label><input id="sp-company" type="text" /></div>
-        <div class="field"><label for="sp-title">Title</label><input id="sp-title" type="text" /></div>
-        <div class="field"><label for="sp-phone">Phone</label><input id="sp-phone" type="tel" /></div>
-        <div class="field"><label for="sp-email">Email</label><input id="sp-email" type="email" /></div>
-        <div class="field full"><label for="sp-location">Project Location</label><input id="sp-location" type="text" /></div>
+      <form class="form-grid" data-form="project" novalidate style="margin-top:20px;">
+        <div class="field"><label for="sp-first">First Name</label><input id="sp-first" name="first_name" required type="text" /></div>
+        <div class="field"><label for="sp-last">Last Name</label><input id="sp-last" name="last_name" required type="text" /></div>
+        <div class="field"><label for="sp-company">Company</label><input id="sp-company" name="company" type="text" /></div>
+        <div class="field"><label for="sp-title">Title</label><input id="sp-title" name="title" type="text" /></div>
+        <div class="field"><label for="sp-phone">Phone</label><input id="sp-phone" name="phone" type="tel" /></div>
+        <div class="field"><label for="sp-email">Email</label><input id="sp-email" name="email" required type="email" /></div>
+        <div class="field full"><label for="sp-location">Project Location</label><input id="sp-location" name="location" type="text" /></div>
         <div class="field full"><label for="sp-type">Project Type</label>
-          <select id="sp-type">
+          <select id="sp-type" name="project_type">
             <option>New Construction</option>
             <option>Commercial</option>
             <option>Critical Facilities</option>
@@ -92,8 +92,8 @@
             <option>Not Sure</option>
           </select>
         </div>
-        <div class="field full"><label for="sp-desc">Project Description</label><textarea id="sp-desc"></textarea></div>
-        <div class="field full"><label for="sp-hear">How did you hear about us?</label><input id="sp-hear" type="text" /></div>
+        <div class="field full"><label for="sp-desc">Project Description</label><textarea id="sp-desc" name="description" required></textarea></div>
+        <div class="field full"><label for="sp-hear">How did you hear about us?</label><input id="sp-hear" name="heard_from" type="text" /></div>
         <div class="full"><button type="submit" class="btn btn-primary">Submit <span class="arr">→</span></button></div>
       </form>
     </div>
@@ -167,14 +167,14 @@
       </div>
     </div>
     <div style="background:var(--white); padding:32px; border:1px solid var(--rule);">
-      <form class="form-grid" onsubmit="return false;">
-        <div class="field full"><label for="em-name">Name</label><input id="em-name" type="text" /></div>
-        <div class="field"><label for="em-phone">Phone</label><input id="em-phone" type="tel" /></div>
-        <div class="field"><label for="em-email">Email</label><input id="em-email" type="email" /></div>
-        <div class="field full"><label for="em-position">Position of Interest</label><input id="em-position" type="text" /></div>
-        <div class="field"><label for="em-years">Years of Experience</label><input id="em-years" type="text" /></div>
-        <div class="field"><label for="em-license">License</label><input id="em-license" type="text" /></div>
-        <div class="field full"><label for="em-resume">Upload Resume</label><input id="em-resume" type="file" /></div>
+      <form class="form-grid" data-form="employment" novalidate>
+        <div class="field full"><label for="em-name">Name</label><input id="em-name" name="name" required type="text" /></div>
+        <div class="field"><label for="em-phone">Phone</label><input id="em-phone" name="phone" type="tel" /></div>
+        <div class="field"><label for="em-email">Email</label><input id="em-email" name="email" required type="email" /></div>
+        <div class="field full"><label for="em-position">Position of Interest</label><input id="em-position" name="position" required type="text" /></div>
+        <div class="field"><label for="em-years">Years of Experience</label><input id="em-years" name="years_experience" type="text" /></div>
+        <div class="field"><label for="em-license">License</label><input id="em-license" name="license" type="text" /></div>
+        <div class="field full"><label for="em-resume">Upload Resume</label><input id="em-resume" name="resume" type="file" /></div>
         <div class="full"><button type="submit" class="btn btn-primary">Submit <span class="arr">→</span></button></div>
       </form>
     </div>
@@ -186,11 +186,11 @@
     <span class="eyebrow on-dark">Ready to Build Something?</span>
     <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
-      <a class="btn btn-lime" href="contact.php">Start a Project <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="contact.php">Contact Us <span class="arr">→</span></a>
+      <a class="btn btn-lime" href="contact.php" data-drawer-open="project">Start a Project <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="contact.php" data-drawer-open="contact">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
-  <div class="cta-split-photo" style="background-image:url('assets/images/atx/projects/tab/TABPic21200wx800h-1024x683.png')"></div>
+  <div class="cta-split-photo" style="background-image:url('assets/images/atx/projects/tab/gallery/tab-04.jpg')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>TAB, Great Basin Industrial Austin</title>
+<meta name="description" content="A 450,000 SF ground-up building and finish-out serving as a manufacturing and employment center for blind and vision-impaired workers." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GBI Austin" />
+<meta property="og:title" content="TAB, Great Basin Industrial Austin" />
+<meta property="og:description" content="A 450,000 SF ground-up building and finish-out serving as a manufacturing and employment center for blind and vision-impaired workers." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -51,7 +56,7 @@
       <a href="../careers.php">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
-    <a class="nav-cta" href="../contact.php">Contact Us →</a>
+    <a class="nav-cta" href="../contact.php" data-drawer-open="contact">Contact Us →</a>
     <button class="nav-mobile" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -61,7 +66,7 @@
     <div class="crumbs cs-crumbs"><a href="../index.php">Home</a><span>/</span><a href="index.php">Projects</a><span>/</span>TAB (Travis Association for the Blind)</div>
     <div class="cs-header">
       <span class="eyebrow">Project</span>
-      <h2>TAB (Travis Association for the Blind)</h2>
+      <h1>TAB (Travis Association for the Blind)</h1>
       <div class="cs-meta">
         <span class="cs-client">Travis Association for the Blind</span>
         <span class="cs-dot">&middot;</span>
@@ -98,8 +103,6 @@
       <aside class="cs-by-numbers">
         <div class="cs-by-numbers-label">By the Numbers</div>
         <div class="cs-stat"><div class="num">450,000</div><div class="lbl">SF Total</div></div>
-        <div class="cs-stat"><div class="num">1</div><div class="lbl">Motor Control Station</div></div>
-        <div class="cs-stat"><div class="num">100%</div><div class="lbl">Occupancy-Controlled Lighting</div></div>
       </aside>
     </div>
   </div>
@@ -125,11 +128,11 @@
     <span class="eyebrow on-dark">Ready to Build Something?</span>
     <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
-      <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
+      <a class="btn btn-lime" href="../contact.php" data-drawer-open="project">Start a Project <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="../contact.php" data-drawer-open="contact">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
-  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/tab/TABPic21200wx800h-1024x683.png')"></div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/summit-ii/gallery/summit-ii-01.jpg')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

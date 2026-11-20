@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Terms & Conditions, Great Basin Industrial Austin</title>
+<meta name="description" content="Terms of use for the GBI Austin website." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GBI Austin" />
+<meta property="og:title" content="Terms &amp; Conditions, Great Basin Industrial Austin" />
+<meta property="og:description" content="Terms of use for the GBI Austin website." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -54,7 +59,7 @@
       <a href="careers.php">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
-    <a class="nav-cta" href="contact.php">Contact Us &rarr;</a>
+    <a class="nav-cta" href="contact.php" data-drawer-open="contact">Contact Us &rarr;</a>
     <button class="nav-mobile" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>

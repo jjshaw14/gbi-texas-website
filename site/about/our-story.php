@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Our Story, Great Basin Industrial Austin</title>
+<meta name="description" content="GBI Austin was founded in 2015 by Master Electrician Travis O&#x27;Neal and has built commercial electrical projects across Austin ever since." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GBI Austin" />
+<meta property="og:title" content="Our Story, Great Basin Industrial Austin" />
+<meta property="og:description" content="GBI Austin was founded in 2015 by Master Electrician Travis O&#x27;Neal and has built commercial electrical projects across Austin ever since." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -51,13 +56,13 @@
       <a href="../careers.php">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
-    <a class="nav-cta" href="../contact.php">Contact Us →</a>
+    <a class="nav-cta" href="../contact.php" data-drawer-open="contact">Contact Us →</a>
     <button class="nav-mobile" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <section class="hero hero-sm">
-  <div class="hero-media" style="background-image:url('../assets/images/atx/SummitIITwilight1170x432.jpg')"></div>
+  <div class="hero-media" style="background-image:url('../assets/images/atx/projects/tab/gallery/tab-01.jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="crumbs"><a href="../index.php">Home</a><span>/</span><a href="our-story.php">About</a><span>/</span>Our Story</div>
@@ -113,7 +118,7 @@
         <h2>What That Means</h2>
         <p>The people who run GBI Austin have run crews. They have been on the tools. They have solved real problems on live job sites with the schedule on the line. That background is not incidental — it is the source of how this company operates. Leaders who have done the work make better decisions, hold a higher standard, and build the next generation of electricians by example.</p>
       </div>
-      <div class="editorial-photo" style="background-image:url('../assets/images/atx/Informatica11170x432.jpg');"></div>
+      <div class="editorial-photo" style="background-image:url('../assets/images/atx/projects/titan-iii/gallery/titan-iii-05.jpg');"></div>
     </div>
   </div>
 </section>
@@ -142,11 +147,11 @@
     <span class="eyebrow on-dark">Ready to Build Something?</span>
     <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
-      <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
+      <a class="btn btn-lime" href="../contact.php" data-drawer-open="project">Start a Project <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="../contact.php" data-drawer-open="contact">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
-  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/lone-star-imaging/LStarPic11200wx800h-1024x683.jpg')"></div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/summit-ii/gallery/summit-ii-10.jpg')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

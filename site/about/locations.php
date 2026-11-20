@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Locations, Great Basin Industrial Austin</title>
+<meta name="description" content="GBI Austin works from Round Rock, TX and is backed by GBI offices and shops in Utah, New Mexico, and Wyoming." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GBI Austin" />
+<meta property="og:title" content="Locations, Great Basin Industrial Austin" />
+<meta property="og:description" content="GBI Austin works from Round Rock, TX and is backed by GBI offices and shops in Utah, New Mexico, and Wyoming." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -51,13 +56,13 @@
       <a href="../careers.php">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
-    <a class="nav-cta" href="../contact.php">Contact Us →</a>
+    <a class="nav-cta" href="../contact.php" data-drawer-open="contact">Contact Us →</a>
     <button class="nav-mobile" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <section class="hero hero-sm">
-  <div class="hero-media" style="background-image:url('../assets/images/atx/SummitII1170x432.jpg')"></div>
+  <div class="hero-media" style="background-image:url('../assets/images/atx/projects/met-buildings/gallery/met-buildings-03.jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="crumbs"><a href="../index.php">Home</a><span>/</span><a href="our-story.php">About</a><span>/</span>Locations</div>
@@ -110,11 +115,11 @@
     <span class="eyebrow on-dark">Ready to Build Something?</span>
     <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
-      <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
+      <a class="btn btn-lime" href="../contact.php" data-drawer-open="project">Start a Project <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="../contact.php" data-drawer-open="contact">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
-  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/informatica/InformaticaPic21210wx800h-1024x678.png')"></div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/summit-ii/gallery/summit-ii-03.jpg')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

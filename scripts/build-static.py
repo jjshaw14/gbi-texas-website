@@ -10,6 +10,7 @@ that page's depth, then rewrites internal *.php links to *.html and
 writes the result under docs/ as plain .html files.
 """
 import re
+import sys
 from pathlib import Path
 import shutil
 import subprocess
@@ -17,6 +18,17 @@ import subprocess
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 OUT = ROOT / "docs"
+
+# The GitHub Pages copy is a client preview of an unfinished site. By default it
+# tells search engines to stay away and carries an absolute share image so link
+# previews (Slack, iMessage, email) look right. Run with --production to omit both.
+PRODUCTION = "--production" in sys.argv
+PREVIEW_BASE = "https://jjshaw14.github.io/gbi-texas-website"
+PREVIEW_HEAD = (
+    '<meta name="robots" content="noindex, nofollow" />\n'
+    f'<meta property="og:image" content="{PREVIEW_BASE}/assets/images/atx/SummitIITwilight1170x432.jpg" />\n'
+    '<meta name="twitter:card" content="summary_large_image" />\n'
+)
 
 INCLUDE_RE = re.compile(
     r"<\?php\s+include\s+\$_SERVER\['DOCUMENT_ROOT'\]\s*\.\s*'/partials/footer\.php';\s*\?>"
@@ -48,6 +60,8 @@ def convert(php_path: Path):
     text = php_path.read_text(encoding="utf-8")
     text = INCLUDE_RE.sub(load_footer(prefix), text)
     text = php_links_to_html(text)
+    if not PRODUCTION:
+        text = text.replace("</head>", PREVIEW_HEAD + "</head>", 1)
     out_path = OUT / rel.with_suffix(".html")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(text, encoding="utf-8")
@@ -78,6 +92,11 @@ def main():
 
     # GitHub Pages otherwise runs Jekyll and ignores files/folders starting with "_".
     (OUT / ".nojekyll").touch()
+    robots = OUT / "robots.txt"
+    if PRODUCTION:
+        robots.unlink(missing_ok=True)
+    else:
+        robots.write_text("User-agent: *\nDisallow: /\n")
 
 if __name__ == "__main__":
     main()

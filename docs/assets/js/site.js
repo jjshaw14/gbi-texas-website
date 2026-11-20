@@ -346,13 +346,113 @@
   applyFilters();
 })();
 
-// Mobile menu toggle (very lightweight)
+// Header: compact once the page has scrolled
 (function () {
-  document.querySelectorAll('.nav-mobile').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const nav = btn.closest('.nav-row')?.querySelector('.primary-nav');
-      if (nav) nav.classList.toggle('is-open');
-    });
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const update = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+})();
+
+// Mobile menu — a slide-in sheet built from the desktop nav so the two never drift apart.
+(function () {
+  const btn = document.querySelector('.nav-mobile');
+  const nav = document.querySelector('.primary-nav');
+  if (!btn || !nav) return;
+
+  const sheet = document.createElement('div');
+  sheet.className = 'm-nav';
+  sheet.id = 'm-nav';
+  sheet.hidden = true;
+
+  const panel = document.createElement('nav');
+  panel.className = 'm-nav-panel';
+  panel.setAttribute('aria-label', 'Mobile');
+
+  Array.from(nav.children).forEach((el) => {
+    if (el.classList.contains('nav-item')) {
+      const parent = el.querySelector('.nav-parent');
+      const label = (parent.childNodes[0] ? parent.childNodes[0].textContent : parent.textContent).trim();
+      const group = document.createElement('div');
+      group.className = 'm-group';
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'm-group-btn';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.innerHTML = '<span></span><i class="m-caret" aria-hidden="true"></i>';
+      toggle.firstChild.textContent = label;
+      const sub = document.createElement('div');
+      sub.className = 'm-sub';
+      sub.hidden = true;
+      el.querySelectorAll('.nav-dropdown a').forEach((a) => {
+        const link = document.createElement('a');
+        link.href = a.getAttribute('href');
+        const strong = a.querySelector('strong');
+        link.textContent = (strong ? strong.textContent : a.textContent).trim();
+        sub.appendChild(link);
+      });
+      toggle.addEventListener('click', () => {
+        const open = sub.hidden;
+        sub.hidden = !open;
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        group.classList.toggle('is-open', open);
+      });
+      group.append(toggle, sub);
+      panel.appendChild(group);
+    } else if (el.tagName === 'A') {
+      const link = document.createElement('a');
+      link.className = 'm-link';
+      link.href = el.getAttribute('href');
+      link.textContent = el.textContent.trim();
+      if (el.classList.contains('is-active')) link.setAttribute('aria-current', 'page');
+      panel.appendChild(link);
+    }
+  });
+
+  const foot = document.createElement('div');
+  foot.className = 'm-foot';
+  foot.innerHTML =
+    '<button type="button" class="btn btn-lime" data-drawer-open="project">Start a Project <span class="arr">&rarr;</span></button>' +
+    '<a class="m-phone" href="tel:5126432015">(512) 643-2015</a>';
+  panel.appendChild(foot);
+
+  const backdrop = document.createElement('div');
+  backdrop.className = 'm-nav-backdrop';
+  sheet.append(backdrop, panel);
+  document.body.appendChild(sheet);
+
+  btn.setAttribute('aria-controls', 'm-nav');
+  btn.setAttribute('aria-expanded', 'false');
+  if (!btn.getAttribute('aria-label')) btn.setAttribute('aria-label', 'Menu');
+
+  function open() {
+    sheet.hidden = false;
+    void sheet.offsetWidth;
+    sheet.setAttribute('data-open', '');
+    btn.classList.add('is-open');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('m-nav-open');
+  }
+  function close(returnFocus) {
+    sheet.removeAttribute('data-open');
+    btn.classList.remove('is-open');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('m-nav-open');
+    setTimeout(() => { if (!sheet.hasAttribute('data-open')) sheet.hidden = true; }, 360);
+    if (returnFocus) btn.focus();
+  }
+
+  btn.addEventListener('click', () => (sheet.hasAttribute('data-open') ? close(false) : open()));
+  backdrop.addEventListener('click', () => close(false));
+  panel.addEventListener('click', (e) => {
+    if (e.target.closest('a, [data-drawer-open]')) close(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sheet.hasAttribute('data-open')) close(true);
+  });
+  window.matchMedia('(min-width: 981px)').addEventListener('change', (m) => {
+    if (m.matches && sheet.hasAttribute('data-open')) close(false);
   });
 })();
 
@@ -600,5 +700,230 @@
     if (e.key === 'Escape') close();
     else if (e.key === 'ArrowLeft') show(idx - 1);
     else if (e.key === 'ArrowRight') show(idx + 1);
+  });
+})();
+
+
+// Slide-out drawer: Start a Project + Contact forms.
+// Triggers: any [data-drawer-open="project|contact"], or load a page with #start-a-project / #contact-us.
+// Submission: with no data-endpoint on the drawer, forms run in preview mode (validate, show a
+// confirmation that says nothing was sent). Set data-endpoint in partials/footer.php at go-live.
+(function () {
+  const root = document.querySelector('[data-drawer-root]');
+  if (!root) return;
+  const panel = root.querySelector('.drawer-panel');
+  const tabs = Array.from(root.querySelectorAll('[data-drawer-tab]'));
+  const forms = { project: root.querySelector('#panel-project'), contact: root.querySelector('#panel-contact') };
+  const done = root.querySelector('[data-form-done]');
+  const title = root.querySelector('#drawer-title');
+  const sub = root.querySelector('[data-drawer-sub]');
+  const endpoint = root.getAttribute('data-endpoint') || '';
+  const preview = !endpoint;
+  const copy = {
+    project: { t: 'Start a Project', s: 'Tell us about your project. We’ll tell you how we’d build it.' },
+    contact: { t: 'Contact Us', s: 'Questions, bids, or careers — send us a note.' },
+  };
+  root.querySelector('[data-drawer-preview]').hidden = !preview;
+
+  let lastFocus = null;
+  let closeTimer = null;
+
+  function select(name, focusField) {
+    tabs.forEach((t) => {
+      const on = t.dataset.drawerTab === name;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+    });
+    forms.project.hidden = name !== 'project';
+    forms.contact.hidden = name !== 'contact';
+    done.hidden = true;
+    root.querySelector('[data-drawer-preview]').hidden = !preview;
+    title.textContent = copy[name].t;
+    sub.textContent = copy[name].s;
+    root.querySelector('.drawer-body').scrollTop = 0;
+    if (focusField) forms[name].querySelector('input, select, textarea').focus({ preventScroll: true });
+  }
+
+  function open(name, trigger) {
+    clearTimeout(closeTimer);
+    lastFocus = trigger || document.activeElement;
+    const gap = window.innerWidth - document.documentElement.clientWidth;
+    if (gap > 0) document.body.style.paddingRight = gap + 'px';
+    select(name, false);
+    root.hidden = false;
+    root.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('drawer-open');
+    void root.offsetWidth; // let the slide transition run from its closed state
+    root.setAttribute('data-open', '');
+    setTimeout(() => {
+      const first = forms[name].querySelector('input, select, textarea');
+      (first || panel).focus({ preventScroll: true });
+    }, 120);
+  }
+
+  function close() {
+    root.removeAttribute('data-open');
+    root.setAttribute('aria-hidden', 'true');
+    closeTimer = setTimeout(() => {
+      root.hidden = true;
+      document.body.classList.remove('drawer-open');
+      document.body.style.paddingRight = '';
+      forms.project.reset();
+      forms.contact.reset();
+      select('project', false);
+    }, 420);
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  }
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-drawer-open]');
+    if (trigger) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return; // let the href work in a new tab
+      e.preventDefault();
+      open(trigger.getAttribute('data-drawer-open') === 'contact' ? 'contact' : 'project', trigger);
+      return;
+    }
+    if (e.target.closest('[data-drawer-close]') && root.contains(e.target)) close();
+  });
+
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t.dataset.drawerTab, true));
+    t.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      select(next.dataset.drawerTab, false);
+      next.focus();
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (root.hidden) return;
+    if (e.key === 'Escape') { close(); return; }
+    if (e.key !== 'Tab') return;
+    const f = Array.from(panel.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+      .filter((el) => !el.disabled && el.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  const hash = window.location.hash;
+  if (hash === '#start-a-project') open('project', null);
+  else if (hash === '#contact-us') open('contact', null);
+
+  // ---- Submission (drawer forms and the forms on the Contact page) ----
+  function firstName(data) {
+    const n = (data.get('name') || data.get('first_name') || '').toString().trim();
+    return n.split(/\s+/)[0] || '';
+  }
+
+  function showDone(form, data, wasPreview) {
+    const who = firstName(data);
+    const heading = who ? 'Thanks, ' + who + '.' : 'Thanks.';
+    const text = wasPreview
+      ? 'This is a preview, so nothing was actually sent.'
+      : 'We’ve received your message and will be in touch.';
+    if (form.closest('[data-drawer-root]')) {
+      forms.project.hidden = true;
+      forms.contact.hidden = true;
+      done.querySelector('[data-form-done-title]').textContent = heading;
+      done.querySelector('[data-form-done-text]').textContent = text;
+      root.querySelector('[data-drawer-preview]').hidden = true;
+      done.hidden = false;
+      done.focus({ preventScroll: true });
+      return;
+    }
+    const note = document.createElement('div');
+    note.className = 'form-done form-done--inline';
+    note.tabIndex = -1;
+    note.innerHTML = '<div class="form-done-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><h3></h3><p></p>';
+    note.querySelector('h3').textContent = heading;
+    note.querySelector('p').textContent = text;
+    form.hidden = true;
+    form.parentNode.insertBefore(note, form.nextSibling);
+    note.focus({ preventScroll: true });
+  }
+
+  document.addEventListener('submit', async (e) => {
+    const form = e.target.closest('form[data-form]');
+    if (!form) return;
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const data = new FormData(form);
+    const url = form.closest('[data-drawer-root]') ? endpoint : (form.getAttribute('data-endpoint') || '');
+    const btn = form.querySelector('[type="submit"]');
+    if (!url) { showDone(form, data, true); return; }
+    if (btn) btn.disabled = true;
+    try {
+      const res = await fetch(url, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error('bad status');
+      showDone(form, data, false);
+    } catch (err) {
+      if (btn) btn.disabled = false;
+      let msg = form.querySelector('.form-error');
+      if (!msg) {
+        msg = document.createElement('p');
+        msg.className = 'form-error full';
+        msg.setAttribute('role', 'alert');
+        form.appendChild(msg);
+      }
+      msg.textContent = 'Something went wrong sending that. Please call (512) 643-2015 or try again.';
+    }
+  });
+
+  // Page forms (Contact page) get the same preview notice the drawer shows.
+  if (preview) {
+    document.querySelectorAll('form[data-form]:not(.drawer-form)').forEach((f) => {
+      const note = document.createElement('p');
+      note.className = 'drawer-preview full';
+      note.innerHTML = '<strong>Preview.</strong> This form isn’t connected yet, so nothing is sent.';
+      f.insertBefore(note, f.firstChild);
+    });
+  }
+})();
+
+// CTA band: a pulse of current runs along the circuit trace. Decorative; skipped for reduced motion.
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const panels = document.querySelectorAll('.cta-split-text');
+  if (!panels.length) return;
+  const NS = 'http://www.w3.org/2000/svg';
+  const TILE = 120; // matches the background texture tile
+
+  function route(width, y) {
+    let d = 'M0 ' + y;
+    for (let x = 0; x < width + TILE; x += TILE) {
+      d += ' H' + (x + 40) + ' V' + (y - 40) + ' H' + (x + 90) + ' V' + (y + 30) + ' H' + (x + TILE) + ' V' + y;
+    }
+    return d;
+  }
+
+  function build(panel) {
+    const old = panel.querySelector('.cta-pulse');
+    if (old) old.remove();
+    const w = panel.clientWidth, h = panel.clientHeight;
+    const rows = [120, Math.max(240, Math.floor((h - TILE) / TILE) * TILE)];
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('class', 'cta-pulse');
+    svg.setAttribute('width', w);
+    svg.setAttribute('height', h);
+    svg.setAttribute('aria-hidden', 'true');
+    rows.forEach((top, i) => {
+      const p = document.createElementNS(NS, 'path');
+      p.setAttribute('d', route(w, top + 60));
+      p.setAttribute('pathLength', '1000');
+      p.setAttribute('class', 'cta-pulse-spark');
+      p.style.animationDelay = (i * 3.2) + 's';
+      svg.appendChild(p);
+    });
+    panel.insertBefore(svg, panel.firstChild);
+  }
+
+  panels.forEach((panel) => {
+    build(panel);
+    let t;
+    window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => build(panel), 200); });
   });
 })();

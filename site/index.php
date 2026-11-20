@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Great Basin Industrial Austin, Commercial Electrical Contractor</title>
   <meta name="description" content="GBI Austin is a commercial electrical contractor serving the Austin, TX market for over 30 years. New construction, tenant finish-out, and critical facilities electrical work, self-performed by licensed Master Electricians." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GBI Austin" />
+<meta property="og:title" content="Great Basin Industrial Austin, Commercial Electrical Contractor" />
+<meta property="og:description" content="GBI Austin is a commercial electrical contractor serving the Austin, TX market for over 30 years. New construction, tenant finish-out, and critical facilities electrical work, self-performed by licensed Master Electricians." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -95,7 +99,7 @@
       <a href="careers.php">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
-    <a class="nav-cta" href="contact.php">Contact Us →</a>
+    <a class="nav-cta" href="contact.php" data-drawer-open="contact">Contact Us →</a>
     <button class="nav-mobile" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -109,7 +113,7 @@
     <p class="hero-sub">Commercial electrical construction, done right the first time. From ground-up shell and site power to data centers, critical facilities, and high-end finish-outs — one Austin team that has done this work for more than 30 years.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="projects/index.php">Our Work <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="contact.php">Start a Project <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="contact.php" data-drawer-open="project">Start a Project <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -298,11 +302,11 @@
     <span class="eyebrow on-dark">Ready to Build Something?</span>
     <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
-      <a class="btn btn-lime" href="contact.php">Start a Project <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="contact.php">Contact Us <span class="arr">→</span></a>
+      <a class="btn btn-lime" href="contact.php" data-drawer-open="project">Start a Project <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="contact.php" data-drawer-open="contact">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
-  <div class="cta-split-photo" style="background-image:url('assets/images/atx/projects/informatica/InformaticaPic21210wx800h-1024x678.png')"></div>
+  <div class="cta-split-photo" style="background-image:url('assets/images/atx/projects/truhome2/gallery/truhome2-01.jpg')"></div>
 </section>
 
 <!-- ============ FOOTER ============ -->

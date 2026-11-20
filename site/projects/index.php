@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Projects, Great Basin Industrial Austin</title>
+<meta name="description" content="Recent GBI Austin electrical projects across new construction, commercial construction, and critical facilities." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GBI Austin" />
+<meta property="og:title" content="Projects, Great Basin Industrial Austin" />
+<meta property="og:description" content="Recent GBI Austin electrical projects across new construction, commercial construction, and critical facilities." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -51,7 +56,7 @@
       <a href="../careers.php">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
-    <a class="nav-cta" href="../contact.php">Contact Us →</a>
+    <a class="nav-cta" href="../contact.php" data-drawer-open="contact">Contact Us →</a>
     <button class="nav-mobile" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -116,7 +121,7 @@
         <div class="pc-tag">Commercial Construction</div>
         <div><h3>Firetron</h3><div class="pc-meta">Austin, TX &middot; 11,550 SF Office + Warehouse</div></div>
       </a>
-      <a class="project-card" href="h-m.php" style="background-image:url('../assets/images/hero-services.jpg')">
+      <a class="project-card" href="h-m.php" style="background-image:url('../assets/images/atx/projects/h-m/gallery/h-m-01.jpg')">
         <div class="pc-tag">Commercial Construction</div>
         <div><h3>H&amp;M</h3><div class="pc-meta">Austin, TX &middot; 20,017 SF Retail Finish-Out</div></div>
       </a>
@@ -163,11 +168,11 @@
     <span class="eyebrow on-dark">Ready to Build Something?</span>
     <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
-      <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
+      <a class="btn btn-lime" href="../contact.php" data-drawer-open="project">Start a Project <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="../contact.php" data-drawer-open="contact">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
-  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/truhome2/TruHome2Pic21200wx800h-1024x683.png')"></div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/summit-ii/gallery/summit-ii-01.jpg')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>

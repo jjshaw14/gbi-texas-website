@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Informatica, Great Basin Industrial Austin</title>
+<meta name="description" content="A 35,000 SF high-end tenant finish-out inside a 95,000 SF ground-up building, with custom light fixtures and advanced lighting controls." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GBI Austin" />
+<meta property="og:title" content="Informatica, Great Basin Industrial Austin" />
+<meta property="og:description" content="A 35,000 SF high-end tenant finish-out inside a 95,000 SF ground-up building, with custom light fixtures and advanced lighting controls." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -51,7 +56,7 @@
       <a href="../careers.php">Careers</a>
     </nav>
     <div class="nav-spacer"></div>
-    <a class="nav-cta" href="../contact.php">Contact Us →</a>
+    <a class="nav-cta" href="../contact.php" data-drawer-open="contact">Contact Us →</a>
     <button class="nav-mobile" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -61,13 +66,14 @@
     <div class="crumbs cs-crumbs"><a href="../index.php">Home</a><span>/</span><a href="index.php">Projects</a><span>/</span>Informatica</div>
     <div class="cs-header">
       <span class="eyebrow">Project</span>
-      <h2>Informatica</h2>
+      <h1>Informatica</h1>
       <div class="cs-meta">
         <span class="cs-client">Informatica</span>
         <span class="cs-dot">&middot;</span>
         <span class="cs-location">Austin, Texas</span>
       </div>
       <div class="cs-services"><span class="cs-service-chip">Commercial Construction</span><span class="cs-service-chip">Ground-Up + High-End Finish-Out</span></div>
+      <p class="cs-summary">A 35,000 SF high-end tenant finish-out inside a 95,000 SF ground-up building, with custom light fixtures and advanced lighting controls.</p>
     </div>
   </div>
 </section>
@@ -124,11 +130,11 @@
     <span class="eyebrow on-dark">Ready to Build Something?</span>
     <h2>Tell us about your project. We'll tell you how we'd build it.</h2>
     <div class="actions">
-      <a class="btn btn-lime" href="../contact.php">Start a Project <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="../contact.php">Contact Us <span class="arr">→</span></a>
+      <a class="btn btn-lime" href="../contact.php" data-drawer-open="project">Start a Project <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="../contact.php" data-drawer-open="contact">Contact Us <span class="arr">→</span></a>
     </div>
   </div>
-  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/informatica/InformaticaPic21210wx800h-1024x678.png')"></div>
+  <div class="cta-split-photo" style="background-image:url('../assets/images/atx/projects/urban-air/gallery/urban-air-03.jpg')"></div>
 </section>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php'; ?>
