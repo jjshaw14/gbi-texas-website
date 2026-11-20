@@ -68,12 +68,13 @@
 </section>
 
 <section class="bg-offwhite">
-  <div class="container">
-    <div class="section-head">
+  <div class="container cap-split">
+    <div class="cap-split-lead">
       <span class="eyebrow">Capabilities</span>
       <h2>What We Build</h2>
+      <img class="cap-split-photo" src="../assets/images/atx/projects/titan-iii/gallery/titan-iii-01.jpg" alt="Completed Titan III shell building" loading="lazy" />
     </div>
-    <ul class="cap-list" style="grid-template-columns:repeat(2,1fr);">
+    <ul class="cap-rows">
       <li>Shell buildings with finish-out</li>
       <li>Tilt-wall buildings</li>
       <li>Data centers</li>

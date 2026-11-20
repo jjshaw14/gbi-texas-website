@@ -255,3 +255,54 @@ body.lightbox-open { overflow: hidden; }
   .lightbox-next { right: 8px; top: auto; bottom: 20px; margin: 0; }
   .lightbox-fig img { max-height: 70vh; }
 }
+
+/* ---------- Capabilities: photo + ruled rows (service pages) ----------
+   Replaces a two-column bullet grid that left five short items stranded
+   across a 1440px band. Heading and photo anchor the left; the list gets
+   real type size and hairline rules so it reads as the section's content. */
+.cap-split {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: center;
+}
+.cap-split-lead h2 { margin-bottom: 28px; }
+.cap-split-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 18px 40px -22px rgba(9, 25, 51, .55);
+}
+.cap-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+.cap-rows li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: 'Poppins', var(--font-sans);
+  font-weight: 600;
+  font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+  line-height: 1.25;
+  color: var(--gbi-navy);
+}
+.cap-rows li::before {
+  content: "";
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--gbi-lime);
+}
+@media (max-width: 860px) {
+  .cap-split { grid-template-columns: 1fr; gap: 32px; }
+  .cap-split-photo { aspect-ratio: 16 / 9; }
+  .cap-rows li { padding: 20px 0; }
+}

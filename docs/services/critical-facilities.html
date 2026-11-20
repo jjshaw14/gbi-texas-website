@@ -68,12 +68,13 @@
 </section>
 
 <section class="bg-offwhite">
-  <div class="container">
-    <div class="section-head">
+  <div class="container cap-split">
+    <div class="cap-split-lead">
       <span class="eyebrow">Capabilities</span>
       <h2>What We Build &amp; Maintain</h2>
+      <img class="cap-split-photo" src="../assets/images/atx/critical-facilities/gallery/critical-facilities-02.jpg" alt="Switchgear installed at a critical facility" loading="lazy" />
     </div>
-    <ul class="cap-list" style="grid-template-columns:repeat(2,1fr);">
+    <ul class="cap-rows">
       <li>Data centers</li>
       <li>UPS system upgrades</li>
       <li>Generator system replacements</li>
