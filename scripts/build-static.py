@@ -12,6 +12,7 @@ writes the result under docs/ as plain .html files.
 import re
 from pathlib import Path
 import shutil
+import subprocess
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
@@ -53,9 +54,14 @@ def convert(php_path: Path):
     return out_path
 
 def main():
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    OUT.mkdir(parents=True)
+    # Rebuild pages from scratch, but leave docs/assets in place and sync it
+    # below: wiping and re-copying ~170 MB of images on every build churns the
+    # folder, and iCloud/Documents sync answers that churn with "name 2.jpg"
+    # conflict copies.
+    OUT.mkdir(parents=True, exist_ok=True)
+    for old in OUT.rglob("*.html"):
+        if "assets" not in old.relative_to(OUT).parts:
+            old.unlink()
 
     php_files = sorted(SITE.rglob("*.php"))
     php_files = [f for f in php_files if "partials" not in f.parts]
@@ -63,9 +69,11 @@ def main():
         convert(f)
     print(f"Converted {len(php_files)} pages.")
 
-    # Skip macOS/iCloud "name 2.png" conflict copies; nothing references them.
-    shutil.copytree(SITE / "assets", OUT / "assets",
-                    ignore=shutil.ignore_patterns("* [0-9].*"))
+    # Sync (not wipe) assets; also drops any "name 2.png" conflict copies,
+    # which nothing references.
+    subprocess.run(["rsync", "-a", "--delete", "--delete-excluded",
+                    "--exclude", "* [0-9].*",
+                    f"{SITE / 'assets'}/", f"{OUT / 'assets'}/"], check=True)
     print("Copied assets/.")
 
     # GitHub Pages otherwise runs Jekyll and ignores files/folders starting with "_".
