@@ -103,7 +103,7 @@
 </section>
 
 <section class="bg-offwhite">
-  <div class="container" style="max-width:920px;">
+  <div class="container prose-left">
     <div class="section-head">
       <span class="eyebrow">Self-Perform Advantage</span>
       <h2>Why One Electrical Contractor Matters.</h2>

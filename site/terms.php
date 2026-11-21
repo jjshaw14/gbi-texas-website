@@ -74,7 +74,7 @@
 </section>
 
 <section class="bg-offwhite">
-  <div class="container" style="max-width: 820px;">
+  <div class="container">
     <div class="legal-doc">
       <p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use which govern GBI's relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>
 

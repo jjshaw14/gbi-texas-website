@@ -121,7 +121,7 @@
 </section>
 
 <section>
-  <div class="container" style="max-width:920px;">
+  <div class="container prose-left">
     <div class="section-head">
       <span class="eyebrow">Careers in the Trade</span><button type="button" class="rv-flag" data-rv="tradeup-video"></button>
       <h2>Why Choose the Electrical Trade.</h2>

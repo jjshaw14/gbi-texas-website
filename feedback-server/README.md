@@ -36,6 +36,12 @@ Client's browser (preview on GitHub Pages)  --POST-->  feedback.php (Cloudways)
 5. **Send a test** from the preview (answer one item, press Send feedback). Look for the
    email, or read it back (below).
 
+## Updating feedback.php
+
+When `feedback.php` itself changes in the repo (for example, to accept wording approvals), upload
+the new copy over the one on the server. Leave `feedback-config.php` alone: it holds your
+email address and export key, and it is not in the repo.
+
 ## Reading the answers
 
 ```

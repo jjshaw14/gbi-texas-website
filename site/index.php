@@ -119,7 +119,7 @@
 </section>
 
 <!-- ============ STATS ============ -->
-<section class="stat-cards-section bg-offwhite">
+<section class="stat-cards-section bg-offwhite" data-rv-title="Key numbers">
   <div class="container">
     <div class="stat-cards">
       <div class="stat-card">

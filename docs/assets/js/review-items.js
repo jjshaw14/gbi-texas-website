@@ -9,6 +9,36 @@
 // While it is empty, "Send feedback" gives the client a summary to copy or download instead.
 window.GBI_REVIEW = {
   endpoint: 'https://phpstack-163463-6797246.cloudwaysapps.com/gbi-review/feedback.php',
+  // Every page of the site, for the wording checklist in the Review panel.
+  pages: [
+    { key: 'index', label: 'Home' },
+    { key: 'about/our-story', label: 'About: Our Story' },
+    { key: 'about/leadership', label: 'About: Management Team' },
+    { key: 'about/sales', label: 'About: Sales' },
+    { key: 'about/experience', label: 'About: Experience' },
+    { key: 'about/locations', label: 'About: Locations' },
+    { key: 'services/index', label: 'Services overview' },
+    { key: 'services/new-construction', label: 'Services: New Construction' },
+    { key: 'services/commercial-construction', label: 'Services: Commercial Construction' },
+    { key: 'services/critical-facilities', label: 'Services: Critical Facilities' },
+    { key: 'projects/index', label: 'Projects overview' },
+    { key: 'projects/clean-scapes', label: 'Project: Clean Scapes' },
+    { key: 'projects/met-buildings', label: 'Project: MET Buildings' },
+    { key: 'projects/summit-ii', label: 'Project: Summit II' },
+    { key: 'projects/tab', label: 'Project: TAB' },
+    { key: 'projects/titan-iii', label: 'Project: Titan III' },
+    { key: 'projects/truhome2', label: 'Project: TruHome2' },
+    { key: 'projects/firetron', label: 'Project: Firetron' },
+    { key: 'projects/h-m', label: 'Project: H&M' },
+    { key: 'projects/informatica', label: 'Project: Informatica' },
+    { key: 'projects/lone-star-imaging', label: 'Project: Lone Star Imaging' },
+    { key: 'projects/urban-air', label: 'Project: Urban Air' },
+    { key: 'projects/vandelay', label: 'Project: Vandelay' },
+    { key: 'about/safety-quality', label: 'Safety & Quality' },
+    { key: 'careers', label: 'Careers' },
+    { key: 'contact', label: 'Contact' },
+    { key: 'terms', label: 'Terms & Conditions' }
+  ],
   items: [
     {
       id: 'sales-email', page: 'contact', where: 'Contact page',

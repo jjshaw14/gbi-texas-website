@@ -809,3 +809,117 @@ body.rv-visible .rv-flag:hover { transform: scale(1.12); }
   .rv-panel, .rv-welcome { left: 12px; bottom: 66px; width: calc(100vw - 24px); }
   .rv-reviewer { grid-template-columns: 1fr; }
 }
+
+/* Terms: the reading column shares the heading's left edge (it used to sit in a
+   centered 820px box under a left-aligned heading, so nothing lined up). */
+.legal-doc { max-width: 780px; }
+.legal-hero { padding-bottom: 40px; }
+
+/* Prose sections share the page's left edge instead of floating in a centered
+   920px box. Line length is limited on the text itself. */
+.prose-left > *:not(.section-head) { max-width: 820px; }
+.prose-left .section-head p { max-width: 760px; }
+.prose-left .inline-pullquote { margin: 36px 0 0; text-align: left; }
+
+/* ---- Review layer: wording approval on every section ---- */
+.rv-sec { display: none; }
+.rv-sec-host { position: relative; }
+body.rv-visible .rv-sec {
+  display: inline-flex;
+  position: absolute; top: 14px; right: 18px; z-index: 8;
+  align-items: center; gap: 6px;
+  max-width: calc(100% - 24px);
+  padding: 4px 4px 4px 12px;
+  background: var(--white); color: var(--gbi-navy);
+  border: 1px solid var(--rule); border-radius: 999px;
+  box-shadow: 0 10px 24px -14px rgba(5, 12, 26, .55);
+  font: 600 12px/1 var(--font-sans);
+}
+.rv-sec-check { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; white-space: nowrap; }
+.rv-sec-check[hidden] { display: none; }
+.rv-sec input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.rv-sec-box {
+  position: relative; flex: none; width: 18px; height: 18px;
+  border: 2px solid var(--gbi-navy); border-radius: 5px; background: var(--white);
+  transition: background .15s ease, border-color .15s ease;
+}
+.rv-sec-box::after {
+  content: ""; position: absolute; left: 4px; top: 1px; width: 5px; height: 9px;
+  border: solid var(--white); border-width: 0 2px 2px 0; transform: rotate(45deg) scale(0);
+  transition: transform .2s cubic-bezier(.16, 1, .3, 1);
+}
+.rv-sec input:checked + .rv-sec-box { background: var(--gbi-navy); }
+.rv-sec input:checked + .rv-sec-box::after { transform: rotate(45deg) scale(1); }
+.rv-sec input:focus-visible + .rv-sec-box { outline: 3px solid var(--gbi-lime); outline-offset: 2px; }
+.rv-sec-text { overflow: hidden; text-overflow: ellipsis; }
+.rv-sec-edit {
+  flex: none; border: 0; border-radius: 999px; padding: 8px 12px; cursor: pointer;
+  background: var(--gbi-offwhite); color: var(--gbi-navy);
+  font: 700 11.5px/1 var(--font-sans);
+  transition: background .15s ease, color .15s ease;
+}
+.rv-sec-edit:hover { background: var(--gbi-blue); color: var(--white); }
+body.rv-visible .rv-sec--approved { background: var(--gbi-navy); color: var(--white); border-color: var(--gbi-navy); }
+.rv-sec--approved .rv-sec-box { background: var(--gbi-lime); border-color: var(--gbi-lime); }
+.rv-sec--approved input:checked + .rv-sec-box::after { border-color: var(--gbi-navy); }
+body.rv-visible .rv-sec--edited { background: var(--gbi-blue); color: var(--white); border-color: var(--gbi-blue); padding-left: 14px; }
+body.rv-visible .rv-sec--outdated { border: 2px solid var(--gbi-lime); }
+.rv-sec--approved .rv-sec-edit, .rv-sec--edited .rv-sec-edit { background: rgba(255, 255, 255, .16); color: var(--white); }
+.rv-sec--approved .rv-sec-edit:hover, .rv-sec--edited .rv-sec-edit:hover { background: var(--white); color: var(--gbi-navy); }
+
+.rv-pop--wide { width: min(560px, calc(100vw - 24px)); }
+.rv-edit-where { margin: -4px 36px 12px 0; font-size: .82rem; color: var(--muted); }
+.rv-edit-label { display: block; margin-bottom: 6px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.rv-pop--wide textarea { min-height: 220px; line-height: 1.55; }
+.rv-edit-hint { margin: 8px 0 0; font-size: .8rem; color: var(--muted); line-height: 1.45; }
+.rv-pop--wide .rv-actions { flex-wrap: wrap; }
+.rv-pop .btn[disabled] { opacity: .45; cursor: not-allowed; transform: none; box-shadow: none; }
+.rv-pop .btn-outline { padding: 11px 18px; }
+
+.rv-tabs { display: flex; gap: 4px; padding: 4px; margin: 4px 0 14px; background: var(--gbi-offwhite); border-radius: 999px; }
+.rv-tab {
+  flex: 1; padding: 9px 10px; border: 0; border-radius: 999px; cursor: pointer; background: none;
+  font: 700 12px/1 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; color: var(--gbi-navy);
+  transition: background .2s ease, color .2s ease;
+}
+.rv-tab span { margin-left: 6px; opacity: .65; font-weight: 600; }
+.rv-tab[aria-selected="true"] { background: var(--gbi-navy); color: var(--white); }
+.rv-item.is-current { background: var(--gbi-tint); }
+.rv-bar-count--w { color: var(--white); }
+.rv-panel { width: min(440px, calc(100vw - 36px)); }
+@media (max-width: 560px) {
+  body.rv-visible .rv-sec { top: 8px; right: 10px; font-size: 11px; padding-left: 10px; }
+  .rv-sec-edit { padding: 7px 10px; }
+}
+
+.rv-sec-check.is-static { cursor: default; }
+.rv-sec-check.is-static .rv-sec-box { display: none; }
+.rv-sec--edited .rv-sec-text::before { content: "\270E\00a0"; }
+
+/* ---- Review panel v2: fixed head + foot, scrolling middle, three tabs ---- */
+.rv-panel { overflow: hidden; display: flex; flex-direction: column; }
+.rv-panel-body { position: relative; display: flex; flex-direction: column; min-height: 0; flex: 1; padding: 0; max-height: min(78vh, 720px); }
+.rv-panel-head { padding: 22px 24px 0; flex: none; }
+.rv-panel-scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 24px 14px; }
+.rv-panel-scroll--pad { position: relative; padding: 26px 24px 24px; }
+.rv-panel-foot { flex: none; padding: 14px 24px 18px; border-top: 1px solid var(--rule); background: var(--white); }
+.rv-panel-foot .rv-reviewer { margin-bottom: 12px; }
+.rv-tab { padding: 9px 6px; font-size: 11.5px; letter-spacing: .04em; white-space: nowrap; }
+button.rv-item { width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--rule); cursor: pointer; font: inherit; }
+.rv-sub-h { display: flex; justify-content: space-between; align-items: baseline; margin: 18px 0 8px; font: 700 11px/1 var(--font-sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.rv-sub-h span { color: var(--gbi-deep); }
+.rv-empty { display: flex; gap: 14px; align-items: center; padding: 18px 4px 8px; }
+.rv-empty p { margin: 0; color: var(--ink-soft); font-size: .92rem; line-height: 1.5; }
+.rv-empty p strong { color: var(--gbi-navy); }
+.rv-note-label { display: block; margin-bottom: 6px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.rv-panel-scroll > textarea { min-height: 150px; }
+@keyframes rv-pulse { 0% { box-shadow: 0 0 0 0 rgba(168, 200, 32, .9); } 100% { box-shadow: 0 0 0 16px rgba(168, 200, 32, 0); } }
+body.rv-visible .rv-sec.rv-pulse { animation: rv-pulse .9s ease-out 2; }
+@media (max-width: 560px) {
+  .rv-panel-body { max-height: min(76vh, 640px); }
+  .rv-panel-head, .rv-panel-scroll, .rv-panel-foot { padding-left: 18px; padding-right: 18px; }
+}
+@media (max-width: 560px) {
+  .rv-panel-foot .rv-reviewer { grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+  .rv-panel-foot { padding-top: 10px; padding-bottom: 14px; }
+}

@@ -21,7 +21,7 @@ $cfg += [
     'allowed_origins' => [],                    // e.g. ['https://jjshaw14.github.io']
     'export_key'      => '',                    // long random string; empty = export disabled
     'store'           => __DIR__ . '/data',
-    'max_bytes'       => 200000,
+    'max_bytes'       => 900000,
     'rate_per_hour'   => 30,
     'subject_prefix'  => '[GBI Austin review]',
 ];
@@ -171,6 +171,21 @@ foreach (array_slice($in['answers'], 0, 100) as $a) {
         'note'    => clean($a['note'] ?? ''),
     ];
 }
+$record['sections'] = [];
+foreach (array_slice(is_array($in['sections'] ?? null) ? $in['sections'] : [], 0, 800) as $sec) {
+    if (!is_array($sec)) {
+        continue;
+    }
+    $record['sections'][] = [
+        'page'     => clean($sec['page'] ?? '', 120),
+        'id'       => clean($sec['id'] ?? '', 120),
+        'heading'  => clean($sec['heading'] ?? '', 300),
+        'hash'     => clean($sec['hash'] ?? '', 20),
+        'status'   => in_array($sec['status'] ?? '', ['approved', 'edited', 'outdated', 'not reviewed'], true) ? $sec['status'] : 'not reviewed',
+        'original' => clean($sec['original'] ?? '', 12000),
+        'edited'   => clean($sec['edited'] ?? '', 12000),
+    ];
+}
 foreach (array_slice(is_array($in['general'] ?? null) ? $in['general'] : [], 0, 50) as $g) {
     if (is_array($g)) {
         $record['general'][] = ['page' => clean($g['page'] ?? '', 200), 'text' => clean($g['text'] ?? '')];
@@ -205,6 +220,26 @@ if ($cfg['to'] !== '') {
         }
         $lines[] = '';
     }
+    if ($record['sections']) {
+        $by = [];
+        foreach ($record['sections'] as $sc) {
+            $by[$sc['page']][] = $sc;
+        }
+        $lines[] = 'WORDING';
+        foreach ($by as $pg => $rows) {
+            $cnt = static fn(string $st): int => count(array_filter($rows, static fn($r) => $r['status'] === $st));
+            $lines[] = '   ' . $pg . ': ' . $cnt('approved') . ' approved, ' . $cnt('edited') . ' edited, ' . ($cnt('not reviewed') + $cnt('outdated')) . ' not reviewed';
+        }
+        $lines[] = '';
+        foreach ($record['sections'] as $sc) {
+            if ($sc['status'] === 'edited') {
+                $lines[] = '[EDITED] ' . $sc['page'] . ' > ' . $sc['heading'];
+                $lines[] = '   Original: ' . str_replace("\n", "\n   ", $sc['original']);
+                $lines[] = '   New: ' . str_replace("\n", "\n   ", $sc['edited']);
+                $lines[] = '';
+            }
+        }
+    }
     if ($record['general']) {
         $lines[] = 'Other comments';
         foreach ($record['general'] as $g) {
@@ -220,7 +255,8 @@ if ($cfg['to'] !== '') {
     if ($record['reviewer']['email'] !== '') {
         $headers[] = 'Reply-To: ' . oneLine($record['reviewer']['email']);
     }
-    $changes = count(array_filter($record['answers'], static fn($a) => $a['status'] === 'change'));
+    $changes = count(array_filter($record['answers'], static fn($a) => $a['status'] === 'change'))
+        + count(array_filter($record['sections'], static fn($sc) => $sc['status'] === 'edited'));
     $subject = oneLine($cfg['subject_prefix'] . ' ' . ($record['reviewer']['name'] ?: 'New feedback') . ($changes ? " ($changes change" . ($changes > 1 ? 's' : '') . ')' : ''));
     $emailed = @mail($cfg['to'], $subject, implode("\n", $lines), implode("\r\n", $headers));
 }
