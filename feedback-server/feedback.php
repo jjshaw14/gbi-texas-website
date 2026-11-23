@@ -186,6 +186,30 @@ foreach (array_slice(is_array($in['sections'] ?? null) ? $in['sections'] : [], 0
         'edited'   => clean($sec['edited'] ?? '', 12000),
     ];
 }
+$record['photos'] = [];
+foreach (array_slice(is_array($in['photos'] ?? null) ? $in['photos'] : [], 0, 600) as $ph) {
+    if (!is_array($ph)) {
+        continue;
+    }
+    $list = static function (mixed $v): array {
+        $out = [];
+        foreach (array_slice(is_array($v) ? $v : [], 0, 80) as $item) {
+            $out[] = clean($item, 300);
+        }
+        return $out;
+    };
+    $record['photos'][] = [
+        'page'    => clean($ph['page'] ?? '', 120),
+        'id'      => clean($ph['id'] ?? '', 120),
+        'heading' => clean($ph['heading'] ?? '', 300),
+        'hash'    => clean($ph['hash'] ?? '', 20),
+        'count'   => (int) ($ph['count'] ?? 0),
+        'status'  => in_array($ph['status'] ?? '', ['approved', 'change', 'outdated', 'not reviewed'], true) ? $ph['status'] : 'not reviewed',
+        'srcs'    => $list($ph['srcs'] ?? []),
+        'flagged' => $list($ph['flagged'] ?? []),
+        'note'    => clean($ph['note'] ?? ''),
+    ];
+}
 foreach (array_slice(is_array($in['general'] ?? null) ? $in['general'] : [], 0, 50) as $g) {
     if (is_array($g)) {
         $record['general'][] = ['page' => clean($g['page'] ?? '', 200), 'text' => clean($g['text'] ?? '')];
@@ -240,6 +264,30 @@ if ($cfg['to'] !== '') {
             }
         }
     }
+    if ($record['photos']) {
+        $byPh = [];
+        foreach ($record['photos'] as $ph) {
+            $byPh[$ph['page']][] = $ph;
+        }
+        $lines[] = 'PHOTOS';
+        foreach ($byPh as $pg => $rows) {
+            $cnt = static fn(string $st): int => count(array_filter($rows, static fn($r) => $r['status'] === $st));
+            $lines[] = '   ' . $pg . ': ' . $cnt('approved') . ' approved, ' . $cnt('change') . ' changes requested, ' . ($cnt('not reviewed') + $cnt('outdated')) . ' not reviewed';
+        }
+        $lines[] = '';
+        foreach ($record['photos'] as $ph) {
+            if ($ph['status'] === 'change') {
+                $lines[] = '[PHOTO CHANGE] ' . $ph['page'] . ' > ' . $ph['heading'];
+                if ($ph['flagged']) {
+                    $lines[] = '   Flagged: ' . implode(', ', array_map(static fn($f) => basename($f), $ph['flagged']));
+                }
+                if ($ph['note'] !== '') {
+                    $lines[] = '   Note: ' . $ph['note'];
+                }
+                $lines[] = '';
+            }
+        }
+    }
     if ($record['general']) {
         $lines[] = 'Other comments';
         foreach ($record['general'] as $g) {
@@ -256,7 +304,8 @@ if ($cfg['to'] !== '') {
         $headers[] = 'Reply-To: ' . oneLine($record['reviewer']['email']);
     }
     $changes = count(array_filter($record['answers'], static fn($a) => $a['status'] === 'change'))
-        + count(array_filter($record['sections'], static fn($sc) => $sc['status'] === 'edited'));
+        + count(array_filter($record['sections'], static fn($sc) => $sc['status'] === 'edited'))
+        + count(array_filter($record['photos'], static fn($ph) => $ph['status'] === 'change'));
     $subject = oneLine($cfg['subject_prefix'] . ' ' . ($record['reviewer']['name'] ?: 'New feedback') . ($changes ? " ($changes change" . ($changes > 1 ? 's' : '') . ')' : ''));
     $emailed = @mail($cfg['to'], $subject, implode("\n", $lines), implode("\r\n", $headers));
 }

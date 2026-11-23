@@ -27,7 +27,7 @@
 
   const blank = () => ({
     answers: {}, general: {}, reviewer: { name: '', email: '' },
-    sec: {}, seen: {}, visible: true, welcomed: false, sentAt: ''
+    sec: {}, seen: {}, ph: {}, seenPh: {}, visible: true, welcomed: false, sentAt: ''
   });
   let state = blank();
   try { state = Object.assign(blank(), JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) { /* private mode: keep in memory */ }
@@ -45,6 +45,7 @@
     change: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11a2.1 2.1 0 0 0-3-3L5 16l-1 4z"/></svg>',
     skip: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg>'
   };
+  ICON.photo = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="9" cy="10.5" r="1.6"/><path d="M21 16l-5-5-8 8"/></svg>';
   const X_ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>';
   const STATUS_LABEL = { ok: 'Looks right', change: 'Needs a change', skip: 'Not sure' };
 
@@ -86,6 +87,43 @@
     return out;
   }
 
+
+  // ---- Photos: <img> elements and inline background images inside a section ----
+  const PH_SKIP = '.brand-logo,.program-logo,.rv-sec,.rv-ph,.rv-flag,.drawer,.video-modal,.cert-grid,.stat-icon,svg,nav';
+  const PH_FRIENDLY = { 'hero-media': 'Hero background photo', 'cta-split-photo': 'Closing banner photo', 'cs-photo': 'Project photo', 'editorial-photo': 'Section photo', 'project-card': 'Project card photo' };
+  const relKey = (u) => { try { const a = new URL(u, location.href); return a.pathname.startsWith(root.pathname) ? a.pathname.slice(root.pathname.length) : a.pathname; } catch (e) { return u; } };
+  function photosOf(sec) {
+    const out = [];
+    const seenKeys = {};
+    const add = (u, label) => {
+      if (!u || /^data:/.test(u)) return;
+      const k = relKey(u);
+      if (seenKeys[k]) return;
+      seenKeys[k] = 1;
+      out.push({ key: k, url: new URL(u, location.href).href, label: norm(label || '') || k.split('/').pop() });
+    };
+    sec.querySelectorAll('img').forEach((im) => {
+      if (im.closest(PH_SKIP + ',[aria-hidden="true"]')) return;
+      add(im.getAttribute('src'), im.getAttribute('alt'));
+    });
+    sec.querySelectorAll('[style*="url("]').forEach((n) => {
+      if (n.closest(PH_SKIP)) return;
+      const m = /url\((['"]?)(.*?)\1\)/.exec(n.getAttribute('style') || '');
+      if (!m) return;
+      const h3 = n.querySelector('h3');
+      const cls = (n.className || '').toString().split(/\s+/).find((c) => PH_FRIENDLY[c]);
+      add(m[2], n.getAttribute('aria-label') || (h3 ? textOf(h3) : '') || PH_FRIENDLY[cls] || '');
+    });
+    return out;
+  }
+  const phRec = (page, id) => (state.ph[page] || {})[id];
+  function phStatus(page, id, h) {
+    const r = phRec(page, id);
+    if (!r) return 'pending';
+    if (r.hash !== h) return 'outdated';
+    return r.status === 'change' ? 'change' : 'approved';
+  }
+
   const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48) || 'section';
   const sections = []; // {el, page, id, heading, text, hash}
 
@@ -94,7 +132,9 @@
     const list = Array.from(document.querySelectorAll('body > section, body > footer.site-footer'));
     list.forEach((sec, i) => {
       const blocks = blocksOf(sec);
-      if (!blocks.length) return;
+      const photos = sec.matches('footer.site-footer') ? [] : photosOf(sec);
+      if (!blocks.length && !photos.length) return;
+      const hasText = blocks.length > 0;
       let page = pageKey;
       let id;
       let heading;
@@ -102,18 +142,24 @@
       else if (sec.matches('.cta-split')) { page = 'shared'; id = 'closing-banner'; heading = 'Closing banner: Ready to Build Something? (shown on every page)'; }
       else {
         const h = sec.querySelector('h1,h2');
-        heading = sec.getAttribute('data-rv-title') || (h ? textOf(h) : '') || (sec.querySelector('.eyebrow') ? textOf(sec.querySelector('.eyebrow')) : '') || ('Section ' + (i + 1) + ': ' + blocks.join(' ').slice(0, 40).trim() + '\u2026');
+        heading = sec.getAttribute('data-rv-title') || (h ? textOf(h) : '') || (sec.querySelector('.eyebrow') ? textOf(sec.querySelector('.eyebrow')) : '') ||
+          (hasText ? ('Section ' + (i + 1) + ': ' + blocks.join(' ').slice(0, 40).trim() + '…') : ('Photos: ' + photos[0].label));
         id = slug(heading);
         const k = page + '/' + id;
         used[k] = (used[k] || 0) + 1;
         if (used[k] > 1) id += '-' + used[k];
       }
       const text = blocks.join('\n\n');
-      sections.push({ el: sec, page, id, heading, text, hash: hash(norm(text)) });
+      sections.push({
+        el: sec, page, id, heading, text, hasText, hash: hash(norm(text)),
+        photos, phHash: hash(photos.map((x) => x.key).join('|')),
+        phHeading: id === 'closing-banner' ? 'Closing banner photo' : heading
+      });
     });
     // remember what exists on this page so the panel can count it
-    state.seen[pageKey] = sections.filter((s) => s.page === pageKey).map((s) => ({ id: s.id, heading: s.heading, hash: s.hash }));
-    const sharedNow = sections.filter((s) => s.page === 'shared');
+    state.seen[pageKey] = sections.filter((s) => s.page === pageKey && s.hasText).map((s) => ({ id: s.id, heading: s.heading, hash: s.hash }));
+    state.seenPh[pageKey] = sections.filter((s) => s.photos.length).map((s) => ({ id: s.id, heading: s.phHeading, hash: s.phHash, count: s.photos.length, srcs: s.photos.map((x) => x.key) }));
+    const sharedNow = sections.filter((s) => s.page === 'shared' && s.hasText);
     if (sharedNow.length) {
       const merged = {};
       (state.seen.shared || []).forEach((r) => { merged[r.id] = r; });
@@ -144,6 +190,7 @@
   }
 
   function paintSection(s) {
+    if (!s.hasText) return;
     const st = secStatus(s.page, s.id, s.hash);
     const bar = s.bar;
     bar.className = 'rv-sec rv-sec--' + st;
@@ -158,21 +205,47 @@
     bar.setAttribute('aria-label', 'Review wording: ' + s.heading);
   }
 
+  const phLabel = { pending: 'review', approved: 'Photos approved', change: 'Photo changes requested', outdated: 'Photos changed: review again' };
+  function paintPhotos(s) {
+    if (!s.ph) return;
+    const st = phStatus(pageKey, s.id, s.phHash);
+    s.ph.className = 'rv-ph rv-ph--' + st + (s.hasText ? '' : ' rv-ph--solo');
+    const n = s.photos.length;
+    s.ph.innerHTML = ICON.photo + '<span>' + (st === 'pending' ? 'Photo' + (n > 1 ? 's' : '') + ' (' + n + '): review' : phLabel[st]) + '</span>';
+    s.ph.setAttribute('aria-label', 'Review photos: ' + s.phHeading + '. ' + (st === 'pending' ? 'Not reviewed yet' : phLabel[st]));
+  }
+  function setPh(s, rec) {
+    state.ph[pageKey] = state.ph[pageKey] || {};
+    state.ph[pageKey][s.id] = Object.assign({ hash: s.phHash, at: new Date().toISOString() }, rec);
+    state.sentAt = '';
+    save();
+    paintAll();
+  }
+
   function buildSectionBars() {
     sections.forEach((s) => {
       if (getComputedStyle(s.el).position === 'static') s.el.classList.add('rv-sec-host');
-      const bar = el('div', 'rv-sec');
-      bar.setAttribute('role', 'group');
-      bar.innerHTML =
-        '<label class="rv-sec-check"><input type="checkbox"><span class="rv-sec-box" aria-hidden="true"></span><span class="rv-sec-text"></span></label>' +
-        '<button type="button" class="rv-sec-edit">Edit text</button>';
-      s.el.appendChild(bar);
-      s.bar = bar;
-      bar.querySelector('input').addEventListener('change', (e) => {
-        if (e.target.checked) setSec(s, { status: 'approved' });
-        else setSec(s, null);
-      });
-      bar.querySelector('.rv-sec-edit').addEventListener('click', (e) => { e.stopPropagation(); openEdit(s, e.currentTarget); });
+      if (s.hasText) {
+        const bar = el('div', 'rv-sec');
+        bar.setAttribute('role', 'group');
+        bar.innerHTML =
+          '<label class="rv-sec-check"><input type="checkbox"><span class="rv-sec-box" aria-hidden="true"></span><span class="rv-sec-text"></span></label>' +
+          '<button type="button" class="rv-sec-edit">Edit text</button>';
+        s.el.appendChild(bar);
+        s.bar = bar;
+        bar.querySelector('input').addEventListener('change', (e) => {
+          if (e.target.checked) setSec(s, { status: 'approved' });
+          else setSec(s, null);
+        });
+        bar.querySelector('.rv-sec-edit').addEventListener('click', (e) => { e.stopPropagation(); openEdit(s, e.currentTarget); });
+      }
+      if (s.photos.length) {
+        const b = el('button', 'rv-ph');
+        b.type = 'button';
+        b.addEventListener('click', (e) => { e.stopPropagation(); openPhotos(s, e.currentTarget); });
+        s.el.appendChild(b);
+        s.ph = b;
+      }
     });
   }
 
@@ -190,7 +263,7 @@
     btn.title = it.label;
   }
   const flags = () => Array.from(document.querySelectorAll('.rv-flag[data-rv]'));
-  const paintAll = () => { flags().forEach(paintFlag); sections.forEach(paintSection); renderBar(); renderPanel(); };
+  const paintAll = () => { flags().forEach(paintFlag); sections.forEach((s) => { paintSection(s); paintPhotos(s); }); renderBar(); renderPanel(); };
 
   function setVisible(on) {
     state.visible = on;
@@ -349,6 +422,51 @@
     });
   }
 
+  // ---- Photo review popup ----
+  function openPhotos(s, anchor) {
+    const rec = phRec(pageKey, s.id);
+    const valid = rec && rec.hash === s.phHash;
+    const flagged = new Set(valid && rec.flagged ? rec.flagged : []);
+    const node = el('div', 'rv-pop rv-pop--wide');
+    node.setAttribute('role', 'dialog');
+    node.setAttribute('aria-label', 'Photos: ' + s.phHeading);
+    node.innerHTML =
+      '<button type="button" class="rv-x" data-rv-close aria-label="Close">' + X_ICON + '</button>' +
+      '<h3 class="rv-pop-title">Photos in this section</h3>' +
+      '<p class="rv-edit-where">' + esc(s.phHeading) + '</p>' +
+      '<p class="rv-edit-hint rv-ph-hint">Tap any photo you want changed. Leave the rest alone if they look right.</p>' +
+      '<div class="rv-thumbs">' + s.photos.map((p) =>
+        '<button type="button" class="rv-thumb" data-k="' + esc(p.key) + '" aria-pressed="false"><img src="' + esc(p.url) + '" alt="" loading="lazy"><span class="rv-thumb-tag">Change this one</span><span class="rv-thumb-label">' + esc(p.label) + '</span></button>').join('') + '</div>' +
+      '<label class="rv-edit-label" for="rv-ph-note">What should change? (optional)</label>' +
+      '<textarea id="rv-ph-note" rows="3" placeholder="For example: swap the second photo for one of the finished lobby, or remove the last one."></textarea>' +
+      '<div class="rv-actions"><button type="button" class="btn btn-primary rv-save"></button><button type="button" class="rv-link" data-rv-close>Cancel</button></div>';
+    showPop(node, anchor, '.rv-thumb');
+    const note = node.querySelector('#rv-ph-note');
+    note.value = valid ? (rec.note || '') : '';
+    const saveBtn = node.querySelector('.rv-save');
+    const sync = () => {
+      node.querySelectorAll('.rv-thumb').forEach((t) => {
+        const on = flagged.has(t.dataset.k);
+        t.classList.toggle('is-flagged', on);
+        t.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      saveBtn.textContent = (flagged.size || note.value.trim()) ? 'Request changes' : 'These photos look right';
+    };
+    note.addEventListener('input', sync);
+    sync();
+    node.addEventListener('click', (e) => {
+      const t = e.target.closest('.rv-thumb');
+      if (t) { flagged.has(t.dataset.k) ? flagged.delete(t.dataset.k) : flagged.add(t.dataset.k); sync(); return; }
+      if (e.target.closest('[data-rv-close]')) { closePop(true); return; }
+      if (e.target.closest('.rv-save')) {
+        const text = note.value.trim();
+        if (flagged.size || text) { setPh(s, { status: 'change', flagged: Array.from(flagged), note: text }); toast('Photo changes noted.'); }
+        else { setPh(s, { status: 'approved', flagged: [], note: '' }); toast('Photos approved.'); }
+        closePop(true);
+      }
+    });
+  }
+
   // ---- Toast ----
   let toastEl = null;
   let toastTimer = null;
@@ -403,9 +521,17 @@
       rows.push({ kind: 'q', id: it.id, label: it.label, meta: 'Question' });
     });
     sections.forEach((s) => {
+      if (!s.hasText) return;
       const st = secStatus(s.page, s.id, s.hash);
       if (st === 'pending' || st === 'outdated') {
         rows.push({ kind: 's', page: s.page, id: s.id, label: s.heading, meta: st === 'outdated' ? 'Text changed: review again' : 'Wording' });
+      }
+    });
+    sections.forEach((s) => {
+      if (!s.photos.length) return;
+      const st = phStatus(pageKey, s.id, s.phHash);
+      if (st === 'pending' || st === 'outdated') {
+        rows.push({ kind: 'ph', id: s.id, label: s.phHeading, meta: (st === 'outdated' ? 'Photos changed: review again' : 'Photos') + ' \u00b7 ' + s.photos.length });
       }
     });
     return rows;
@@ -422,7 +548,13 @@
       secs += open;
       if (open > 0) pg.push({ key: p.key, label: p.label, opened: true, open });
     });
-    return { qs, pg, count: qs.length + secs, unopened };
+    const ph = [];
+    let phOpen = 0;
+    pages.forEach((p) => {
+      const open = (state.seenPh[p.key] || []).filter((x) => { const st = phStatus(p.key, x.id, x.hash); return st === 'pending' || st === 'outdated'; });
+      if (open.length) { phOpen += open.length; ph.push({ key: p.key, label: p.label, open: open.length, first: open[0].id }); }
+    });
+    return { qs, pg, ph, count: qs.length + secs + phOpen, unopened };
   }
 
   function renderBar() {
@@ -440,7 +572,7 @@
     const dot = '<span class="rv-dot rv-pending">' + ICON.pending + '</span>';
     const main = '<span class="rv-item-main"><strong>' + esc(r.label) + '</strong><small>' + esc(r.meta) + '</small></span>';
     if (r.href) return '<li><a class="rv-item" href="' + esc(r.href) + '">' + dot + main + '</a></li>';
-    const attr = r.kind === 'q' ? 'data-rv-go-q="' + esc(r.id) + '"' : 'data-rv-go-s="' + esc(r.page + '|' + r.id) + '"';
+    const attr = r.kind === 'q' ? 'data-rv-go-q="' + esc(r.id) + '"' : r.kind === 'ph' ? 'data-rv-go-ph="' + esc(r.id) + '"' : 'data-rv-go-s="' + esc(r.page + '|' + r.id) + '"';
     return '<li><button type="button" class="rv-item" ' + attr + '>' + dot + main + '</button></li>';
   }
 
@@ -477,7 +609,11 @@
             return rowHtml({ kind: 'p', label: p.label, meta: p.opened ? p.open + ' section' + (p.open > 1 ? 's' : '') + ' open' : 'Not opened yet', href });
           }).join('') + '</ul>';
         }
-        if (!all.qs.length && !all.pg.length) html += '<div class="rv-empty"><div class="rv-dot rv-ok">' + ICON.ok + '</div><p><strong>Everything you have opened is reviewed.</strong></p></div>';
+        if (all.ph.length) {
+          html += '<h3 class="rv-sub-h">Photos by page</h3><ul class="rv-list">' + all.ph.map((p) =>
+            rowHtml({ kind: 'p', label: p.label, meta: p.open + ' photo set' + (p.open > 1 ? 's' : '') + ' open', href: pageHref(p.key) + '#rv-p:' + encodeURIComponent(p.key + '|' + p.first) })).join('') + '</ul>';
+        }
+        if (!all.qs.length && !all.pg.length && !all.ph.length) html += '<div class="rv-empty"><div class="rv-dot rv-ok">' + ICON.ok + '</div><p><strong>Everything you have opened is reviewed.</strong></p></div>';
       } else {
         const others = Object.keys(state.general).filter((k) => k !== pageKey && state.general[k].trim());
         html += '<p class="rv-panel-sub">A note about <strong>' + esc(pageLabel(pageKey)) + '</strong>: photos, tone, missing information, anything that does not fit a single section. It’s saved with this page.</p>' +
@@ -526,6 +662,16 @@
     btn.scrollIntoView({ block: 'center', behavior: reducedMotion ? 'auto' : 'smooth' });
     setTimeout(() => openPop(btn), reducedMotion ? 50 : 450);
   }
+  function goToPhotos(id) {
+    const s = sections.find((x) => x.id === id && x.photos.length);
+    if (!s || !s.ph) return;
+    const top = s.el.getBoundingClientRect().top + window.scrollY - 110;
+    window.scrollTo({ top: Math.max(0, top), behavior: reducedMotion ? 'auto' : 'smooth' });
+    s.ph.classList.remove('rv-pulse');
+    void s.ph.offsetWidth;
+    s.ph.classList.add('rv-pulse');
+    setTimeout(() => { s.ph.classList.remove('rv-pulse'); s.ph.focus({ preventScroll: true }); }, reducedMotion ? 50 : 900);
+  }
   function goToSection(page, id) {
     const s = sections.find((x) => x.page === page && x.id === id);
     if (!s) return;
@@ -573,6 +719,20 @@
         });
       });
     });
+    const photoRows = [];
+    Object.keys(state.seenPh).forEach((pg) => {
+      state.seenPh[pg].forEach((x) => {
+        const st = phStatus(pg, x.id, x.hash);
+        const rec = (state.ph[pg] || {})[x.id] || {};
+        photoRows.push({
+          page: pg, id: x.id, heading: x.heading, hash: x.hash, count: x.count,
+          status: st === 'pending' ? 'not reviewed' : st,
+          srcs: (st === 'approved' || st === 'change') ? (x.srcs || []) : [],
+          flagged: st === 'change' ? (rec.flagged || []) : [],
+          note: st === 'change' ? (rec.note || '') : ''
+        });
+      });
+    });
     return {
       submittedAt: new Date().toISOString(),
       site: location.origin + root.pathname,
@@ -583,6 +743,7 @@
         return { id: i.id, label: i.label, where: i.where, current: i.current, status: a ? a.status : 'not reviewed', change: a ? a.value : '', note: a ? a.note : '' };
       }),
       sections: sectionRows,
+      photos: photoRows,
       general: Object.keys(state.general).filter((k) => state.general[k].trim()).map((k) => ({ page: k, text: state.general[k].trim() }))
     };
   }
@@ -616,6 +777,26 @@
         lines.push('   Original:', '   ' + s.original.replace(/\n/g, '\n   '), '   New:', '   ' + s.edited.replace(/\n/g, '\n   '), '');
       });
     }
+    const phs = p.photos || [];
+    if (phs.length) {
+      lines.push('PHOTOS', '');
+      const lab = {};
+      pages.forEach((pg) => { lab[pg.key] = pg.label; });
+      const by = {};
+      phs.forEach((x) => { (by[x.page] = by[x.page] || []).push(x); });
+      Object.keys(by).forEach((pg) => {
+        const rows = by[pg];
+        const c = (st) => rows.filter((r) => r.status === st).length;
+        lines.push((lab[pg] || pg) + ': ' + c('approved') + ' approved, ' + c('change') + ' changes requested, ' + (c('not reviewed') + c('outdated')) + ' not reviewed');
+      });
+      lines.push('');
+      phs.filter((x) => x.status === 'change').forEach((x) => {
+        lines.push('[PHOTO CHANGE] ' + (lab[x.page] || x.page) + ' > ' + x.heading);
+        if (x.flagged.length) lines.push('   Flagged: ' + x.flagged.map((f) => f.split('/').pop()).join(', '));
+        if (x.note) lines.push('   Note: ' + x.note);
+        lines.push('');
+      });
+    }
     if (p.general.length) { lines.push('OTHER COMMENTS', ''); p.general.forEach((g) => lines.push('   ' + g.page + ': ' + g.text)); }
     return lines.join('\n');
   }
@@ -628,7 +809,7 @@
     if (em) state.reviewer.email = em.value;
     save();
     const payload = buildPayload();
-    const hasContent = payload.answers.some((a) => a.status !== 'not reviewed') || payload.sections.some((s) => s.status === 'approved' || s.status === 'edited') || payload.general.length;
+    const hasContent = payload.answers.some((a) => a.status !== 'not reviewed') || payload.sections.some((s) => s.status === 'approved' || s.status === 'edited') || payload.photos.some((x) => x.status === 'approved' || x.status === 'change') || payload.general.length;
     if (!hasContent) { toast('Answer a question, approve some wording, or add a comment first.'); return; }
     panel.dataset.summary = summaryText(payload);
     if (!CFG.endpoint) { panel.dataset.reason = 'noendpoint'; panelView = 'summary'; renderPanel(); return; }
@@ -662,6 +843,8 @@
     if (e.target.closest('[data-rvp-close]')) { closePanel(true); return; }
     const gq = e.target.closest('[data-rv-go-q]');
     if (gq) { closePanel(false); goToQuestion(gq.dataset.rvGoQ); return; }
+    const gp = e.target.closest('[data-rv-go-ph]');
+    if (gp) { closePanel(false); goToPhotos(gp.dataset.rvGoPh); return; }
     const gs = e.target.closest('[data-rv-go-s]');
     if (gs) { const [pg, id] = gs.dataset.rvGoS.split('|'); closePanel(false); goToSection(pg, id); return; }
     const tab = e.target.closest('[data-rv-tab]');
@@ -710,6 +893,13 @@
   // Init
   // =====================================================================
   function openFromHash() {
+    const pm = /^#rv-p:(.+)$/.exec(location.hash);
+    if (pm) {
+      const id = decodeURIComponent(pm[1]).split('|')[1];
+      if (!state.visible) setVisible(true);
+      setTimeout(() => goToPhotos(id), 200);
+      return;
+    }
     const sm = /^#rv-s:(.+)$/.exec(location.hash);
     if (sm) {
       const [pg, id] = decodeURIComponent(sm[1]).split('|');
